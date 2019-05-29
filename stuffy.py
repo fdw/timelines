@@ -21,19 +21,20 @@ categories = [
 
 output_file("output.html", mode='inline')
 
+wheel_pan_tool = WheelPanTool()
 plot = figure(
     plot_height=500,
     x_axis_type="datetime",
     toolbar_location='above',
     tools=[
         BoxZoomTool(),
-        PanTool(),
         WheelZoomTool(dimensions='width'),
-        WheelPanTool(),
+        wheel_pan_tool,
         ZoomInTool(),
         ZoomOutTool(),
         HoverTool(mode='vline', tooltips=[("Name", "$name")])
     ],
+    active_scroll=wheel_pan_tool,
     x_range=(0, pendulum.now()),
     sizing_mode='stretch_both'
 )
