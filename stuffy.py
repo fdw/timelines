@@ -16,7 +16,8 @@ Category = namedtuple('Category', ['Name', 'Filename'])
 categories = [
     Category('Artists', 'data/artists.csv'),
     Category('Composers', 'data/composers.csv'),
-    Category('Writers', 'data/writers.csv')
+    Category('Writers', 'data/writers.csv'),
+    Category('Science', 'data/science.csv'),
 ]
 
 output_file("output.html", mode='inline')
