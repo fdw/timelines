@@ -5,11 +5,15 @@ from operator import attrgetter
 from typing import List
 
 import pendulum
+from bokeh.colors import Color
 from bokeh.plotting import Figure
 
 from Lanes import Lanes
 
 Person = namedtuple('Person', ['Name', 'Birth', 'Death', 'Category'])
+
+LANE_SPACING = 5
+HALF_LANE_HEIGHT = 1
 
 
 def read_data(filename: str) -> List[Person]:
@@ -27,7 +31,7 @@ def read_data(filename: str) -> List[Person]:
     return sorted(values, key=attrgetter('Birth'))
 
 
-def plot_persons(persons: List[Person], plot: Figure):
+def plot_persons(persons: List[Person], offset: int, color: Color, plot: Figure) -> int:
     lanes = Lanes()
     for person in persons:
         lane = lanes.find_lane_ending_before(person.Birth)
@@ -39,8 +43,15 @@ def plot_persons(persons: List[Person], plot: Figure):
         plot.quad(
             left=person.Birth,
             right=person.Death,
-            bottom=lane * 5 - 1,
-            top=lane * 5 + 1,
-            color="#ff0000",
+            bottom=offset + lane * LANE_SPACING - HALF_LANE_HEIGHT,
+            top=offset + lane * LANE_SPACING + HALF_LANE_HEIGHT,
+            color=color,
             name=person.Name
         )
+
+    return offset + lanes.size() * LANE_SPACING
+
+
+def plot_category(filename: str, starting_x: int, color: Color, plot: Figure) -> int:
+    persons = read_data(filename)
+    return plot_persons(persons, starting_x, color, plot)
