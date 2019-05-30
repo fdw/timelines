@@ -36,7 +36,7 @@ plot = figure(
         HoverTool(mode='vline', tooltips=[("Name", "$name")])
     ],
     active_scroll=wheel_pan_tool,
-    x_range=(0, pendulum.now()),
+    x_range=(pendulum.parse('1500-01-01'), pendulum.parse('2000-01-01')),
     sizing_mode='stretch_both'
 )
 plot.yaxis.visible = False
