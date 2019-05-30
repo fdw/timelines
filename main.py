@@ -1,9 +1,7 @@
-import csv
-import logging
-import os
+import json
 from collections import namedtuple
 from operator import attrgetter
-from typing import List
+from typing import List, Dict
 
 import bokeh
 import pendulum
@@ -16,7 +14,7 @@ from bokeh.plotting import figure
 
 from Lanes import Lanes
 
-Person = namedtuple('Person', ['Name', 'Birth', 'Death', 'Category'])
+Person = namedtuple('Person', ['Name', 'Birth', 'Death'])
 
 CATEGORY_OFFSET = 5
 LANE_SPACING = 5
@@ -48,39 +46,28 @@ def create_plot() -> Figure:
     return plot
 
 
-def read_files() -> List[str]:
-    return list(filter(
-        lambda filename: os.fsdecode(filename).endswith('.csv'),
-        os.listdir(os.fsencode('data'))
-    ))
+def read_data() -> Dict[str, List[Person]]:
+    with open('data/data.json', mode='r', newline='') as file:
+        data = json.load(file)
+        thingy = dict()
+        for category in data:
+            persons = []
+            for person in data[category]['persons']:
+                persons.append(Person(
+                    person['name'],
+                    pendulum.parse(person['birth']),
+                    pendulum.parse(person['death']),
+                ))
+            thingy[category] = sorted(persons, key=attrgetter('Birth'))
+
+        return thingy
 
 
-def plot_files(plot: Figure, files: List[str]):
+def plot_categories(plot: Figure, data: Dict[str, List[Person]]):
     colors = bokeh.palettes.viridis(len(files))
     offset = 0
-    for (index, filename) in zip(range(len(files)), files):
-        offset = plot_file_as_category('data/' + os.fsdecode(filename), offset, colors[index],
-                                       plot) + CATEGORY_OFFSET
-
-
-def plot_file_as_category(filename: str, starting_x: int, color: Color, plot: Figure) -> int:
-    persons = read_data(filename)
-    return plot_persons(persons, starting_x, color, plot)
-
-
-def read_data(filename: str) -> List[Person]:
-    values = []
-    with open(filename, mode='r', newline='') as csvfile:
-        reader = csv.reader(csvfile)
-        next(reader)  # skip header
-        for row in reader:
-            values.append(Person(
-                row[0],
-                pendulum.parse(row[1]),
-                pendulum.parse(row[2]),
-                row[3]
-            ))
-    return sorted(values, key=attrgetter('Birth'))
+    for (index, category) in zip(range(len(data)), data):
+        offset = plot_persons(data[category], offset, colors[index], plot)
 
 
 def plot_persons(persons: List[Person], offset: int, color: Color, plot: Figure) -> int:
@@ -88,9 +75,6 @@ def plot_persons(persons: List[Person], offset: int, color: Color, plot: Figure)
     for person in persons:
         lane = lanes.find_lane_ending_before(person.Birth)
         lanes.occupy(lane, person.Death)
-
-        logging.debug(person.Name + ": " + str(lane) + " (" + person.Birth.format(
-            "YYYY-MM-DD") + " - " + person.Death.format("YYYY-MM-DD") + ")")
 
         plot.quad(
             left=person.Birth,
@@ -108,7 +92,7 @@ if __name__ == '__main__':
     output_file('docs/timelines.html', mode='inline')
 
     plot = create_plot()
-    files = read_files()
-    plot_files(plot, files)
+    files = read_data()
+    plot_categories(plot, files)
 
     show(plot)

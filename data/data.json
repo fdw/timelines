@@ -1,0 +1,208 @@
+{
+   "art":{
+      "persons":[
+         {
+            "name":"Leonardo da Vinci",
+            "birth":"1452-04-15",
+            "death":"1519-05-02"
+         },
+         {
+            "name":"Michelangelo di Lodovico Buonarroti Simoni (Michelangelo)",
+            "birth":"1475-03-06",
+            "death":"1564-02-18"
+         },
+         {
+            "name":"Raffaello Sanzio da Urbino (Raffael)",
+            "birth":"1483-04-01",
+            "death":"1520-04-06"
+         },
+         {
+            "name":"Tiziano Vecelli (Tizian)",
+            "birth":"1488-01-01",
+            "death":"1576-08-27"
+         },
+         {
+            "name":"Vincent van Gogh",
+            "birth":"1853-03-30",
+            "death":"1890-07-29"
+         },
+         {
+            "name":"Johannes Vermeer",
+            "birth":"1632-10-01",
+            "death":"1675-12-15"
+         },
+         {
+            "name":"Jan van Eyck",
+            "birth":"1390-01-01",
+            "death":"1441-07-09"
+         },
+         {
+            "name":"Rembrandt Harmenszoon van Rijn (Rembrandt)",
+            "birth":"1606-07-15",
+            "death":"1669-10-04"
+         },
+         {
+            "name":"Francisco Goya",
+            "birth":"1746-03-30",
+            "death":"1828-04-16"
+         },
+         {
+            "name":"Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)",
+            "birth":"1445-01-01",
+            "death":"1510-05-17"
+         },
+         {
+            "name":"Diego Rodríguez de Silva y Velázquez",
+            "birth":"1599-06-06",
+            "death":"1660-08-06"
+         },
+         {
+            "name":"Joseph Mallord William Turner",
+            "birth":"1775-04-23",
+            "death":"1851-12-19"
+         },
+         {
+            "name":"Paul Cézanne",
+            "birth":"1839-01-19",
+            "death":"1906-10-22"
+         },
+         {
+            "name":"Claude Monet",
+            "birth":"1840-11-14",
+            "death":"1926-12-05"
+         },
+         {
+            "name":"Michelangelo Merisi da Caravaggio (Caravaggio)",
+            "birth":"1571-09-28",
+            "death":"1610-07-18"
+         },
+         {
+            "name":"Rogier van der Weyden",
+            "birth":"1399-01-01",
+            "death":"1464-06-18"
+         },
+         {
+            "name":"Piero della Francesca",
+            "birth":"1415-01-01",
+            "death":"1492-10-12"
+         },
+         {
+            "name":"Pieter Bruegel the Elder",
+            "birth":"1525-01-01",
+            "death":"1569-09-09"
+         }
+      ]
+   },
+   "music":{
+      "persons":[
+         {
+            "name":"Wolfgang Amadeus Mozart",
+            "birth":"1756-01-27",
+            "death":"1791-12-05"
+         },
+         {
+            "name":"Johann Sebastian Bach",
+            "birth":"1685-03-31",
+            "death":"1750-07-28"
+         },
+         {
+            "name":"Georg Friedrich Händel",
+            "birth":"1685-03-05",
+            "death":"1759-04-14"
+         },
+         {
+            "name":"Franz Joseph Haydn",
+            "birth":"1732-04-01",
+            "death":"1809-05-31"
+         },
+         {
+            "name":"Richard Strauss",
+            "birth":"1864-06-11",
+            "death":"1949-09-08"
+         },
+         {
+            "name":"Antonio Vivaldo",
+            "birth":"1678-03-04",
+            "death":"1741-07-28"
+         },
+         {
+            "name":"Wilhelm Hieronymus Pachelbel",
+            "birth":"1686-08-29",
+            "death":"1764-01-01"
+         },
+         {
+            "name":"Ludwig van Beethoven",
+            "birth":"1770-12-17",
+            "death":"1827-03-26"
+         },
+         {
+            "name":"Franz Schubert",
+            "birth":"1797-01-31",
+            "death":"1828-11-19"
+         }
+      ]
+   },
+   "science":{
+      "persons":[
+         {
+            "name":"Galileo Galilei",
+            "birth":"1564-02-15",
+            "death":"1642-08-01"
+         },
+         {
+            "name":"Isaac Newton",
+            "birth":"1643-01-04",
+            "death":"1727-03-31"
+         },
+         {
+            "name":"Albert Einstein",
+            "birth":"1879-03-14",
+            "death":"1955-04-18"
+         },
+         {
+            "name":"Nicolaus Copernicus",
+            "birth":"1473-02-19",
+            "death":"1543-05-24"
+         },
+         {
+            "name":"Niels Henrik David Bohr",
+            "birth":"1885-10-07",
+            "death":"1962-11-18"
+         },
+         {
+            "name":"Charles Robert Darwin",
+            "birth":"1809-02-12",
+            "death":"1882-04-19"
+         }
+      ]
+   },
+   "literature":{
+      "persons":[
+         {
+            "name":"William Shakespeare",
+            "birth":"1564-04-26",
+            "death":"1616-04-23"
+         },
+         {
+            "name":"Durante di Alighiero degli Alighieri (Dante)",
+            "birth":"1265-01-01",
+            "death":"1321-01-01"
+         },
+         {
+            "name":"Miguel de Cervantes Saavedra",
+            "birth":"1547-09-29",
+            "death":"1616-04-22"
+         },
+         {
+            "name":"Johann Wolfgang von Goethe",
+            "birth":"1749-08-28",
+            "death":"1832-03-22"
+         },
+         {
+            "name":"Johann Christoph Friedrich von Schiller",
+            "birth":"1759-11-10",
+            "death":"1805-05-09"
+         }
+      ]
+   }
+}
