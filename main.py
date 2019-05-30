@@ -105,7 +105,7 @@ def plot_persons(persons: List[Person], offset: int, color: Color, plot: Figure)
 
 
 if __name__ == '__main__':
-    output_file("output.html", mode='inline')
+    output_file('docs/timelines.html', mode='inline')
 
     plot = create_plot()
     files = read_files()
