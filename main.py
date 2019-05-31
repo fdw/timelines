@@ -8,15 +8,13 @@ import pendulum
 from bokeh.colors import Color
 from bokeh.io import show, output_file
 from bokeh.models import BoxZoomTool, WheelPanTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
-    HoverTool
+    HoverTool, BoxAnnotation
 from bokeh.plotting import Figure
 from bokeh.plotting import figure
 
+from History import parse_json, Person, Facet
 from Lanes import Lanes
 
-Person = namedtuple('Person', ['Name', 'Birth', 'Death'])
-
-CATEGORY_OFFSET = 5
 LANE_SPACING = 5
 HALF_LANE_HEIGHT = 1
 
@@ -46,43 +44,26 @@ def create_plot() -> Figure:
     return plot
 
 
-def read_data() -> Dict[str, List[Person]]:
-    with open('data/data.json', mode='r', newline='') as file:
-        data = json.load(file)
-        thingy = dict()
-        for category in data:
-            persons = []
-            for person in data[category]['persons']:
-                persons.append(Person(
-                    person['name'],
-                    pendulum.parse(person['birth']),
-                    pendulum.parse(person['death']),
-                ))
-            thingy[category] = sorted(persons, key=attrgetter('Birth'))
-
-        return thingy
-
-
-def plot_categories(plot: Figure, data: Dict[str, List[Person]]):
-    colors = bokeh.palettes.viridis(len(files))
+def plot_facets(plot: Figure, data: Dict[str, 'Facet']):
+    colors = bokeh.palettes.viridis(len(data))
     offset = 0
-    for (index, category) in zip(range(len(data)), data):
-        offset = plot_persons(data[category], offset, colors[index], plot)
+    for (index, facet_name) in zip(range(len(data)), data):
+        offset = plot_persons(data[facet_name].people, offset, colors[index], plot)
 
 
 def plot_persons(persons: List[Person], offset: int, color: Color, plot: Figure) -> int:
     lanes = Lanes()
     for person in persons:
-        lane = lanes.find_lane_ending_before(person.Birth)
-        lanes.occupy(lane, person.Death)
+        lane = lanes.find_lane_ending_before(person.birth)
+        lanes.occupy(lane, person.death)
 
         plot.quad(
-            left=person.Birth,
-            right=person.Death,
+            left=person.birth,
+            right=person.death,
             bottom=offset + lane * LANE_SPACING - HALF_LANE_HEIGHT,
             top=offset + lane * LANE_SPACING + HALF_LANE_HEIGHT,
             color=color,
-            name=person.Name
+            name=person.name
         )
 
     return offset + lanes.size() * LANE_SPACING
@@ -92,7 +73,7 @@ if __name__ == '__main__':
     output_file('docs/timelines.html', mode='inline')
 
     plot = create_plot()
-    files = read_data()
-    plot_categories(plot, files)
+    history = parse_json('data/data.json')
+    plot_facets(plot, history.facets)
 
     show(plot)
