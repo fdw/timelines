@@ -1,2 +1,2 @@
-bokeh==1.1.0
+bokeh==1.2.0
 pendulum==2.0.4
