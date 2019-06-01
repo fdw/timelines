@@ -3,7 +3,7 @@ from typing import Dict, List
 import pendulum
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
-    HoverTool
+    HoverTool, PanTool
 from bokeh.plotting import figure
 
 from History import Person, Era, Facet
@@ -18,6 +18,7 @@ class HistoryPlotter(object):
             x_axis_type="datetime",
             toolbar_location='above',
             tools=[
+                PanTool(dimensions='width'),
                 BoxZoomTool(),
                 WheelZoomTool(dimensions='width'),
                 wheel_pan_tool,
