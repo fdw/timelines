@@ -11,6 +11,9 @@ from Lanes import Lanes
 
 
 class HistoryPlotter(object):
+    LANE_PADDING = 2
+    LANE_HEIGHT = 2
+
     def __init__(self):
         wheel_pan_tool = WheelPanTool()
         self._plot = figure(
@@ -38,28 +41,33 @@ class HistoryPlotter(object):
         offset = 0
         for facet_name in data:
             facet = data[facet_name]
-            width = self.plot_persons(facet.people, offset, facet.color)
-            self.plot_eras(facet.eras, offset, width, facet.color)
-            offset = offset + width
+            lanes = self.plot_persons(facet.people, offset, facet.color)
+            self.plot_eras(facet.eras, offset, self._calculate_facet_offset(lanes), facet.color)
+            offset = offset + self._calculate_facet_offset(lanes)
 
-    def plot_persons(self, persons: List[Person], offset: int, color: str) -> int:
-        lane_padding = 3
-        lane_height = 2
+    def _calculate_facet_offset(self, lanes: Lanes):
+        return lanes.size() * (self.LANE_PADDING + self.LANE_HEIGHT)
+
+    def plot_persons(self, persons: List[Person], offset: int, color: str) -> Lanes:
         lanes = Lanes()
         for person in persons:
             lane = lanes.find_lane_ending_before(person.birth)
-            lanes.occupy(lane, person.death)
 
             self._plot.quad(
                 left=person.birth,
                 right=person.death,
-                bottom=offset + lane * (lane_height + lane_padding) + 0.5 * lane_padding,
-                top=offset + lane * (lane_height + lane_padding) + lane_height + 0.5 * lane_padding,
+                bottom=offset + self._calculate_lane_offset(lane),
+                top=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT,
                 color=color,
                 name=person.name
             )
 
-        return lanes.size() * (lane_height + lane_padding)
+            lanes.occupy(lane, person.death)
+
+        return lanes
+
+    def _calculate_lane_offset(self, lane: int):
+        return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_HEIGHT
 
     def plot_eras(self, eras: List['Era'], offset: int, width: int, color: str):
         for era in eras:
@@ -77,7 +85,7 @@ class HistoryPlotter(object):
                 hatch_pattern='right_diagonal_line',
                 hatch_scale=10,
                 hatch_alpha=0.1
-            )
+            ),
 
     def finish(self):
         show(self._plot)
