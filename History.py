@@ -2,6 +2,7 @@ import json
 from operator import attrgetter
 from typing import List, Dict, Union
 
+import bokeh
 import pendulum
 from pendulum import DateTime
 
@@ -20,23 +21,26 @@ class History(object):
 
     @staticmethod
     def from_dict(data: Dict[str, Union[str, Dict[str, str]]]):
+        colors = iter(bokeh.palettes.viridis(len(data)))
         facets = {}
         for facet_name in data:
-            facets[facet_name] = Facet.from_dict(facet_name, data[facet_name])
+            facets[facet_name] = Facet.from_dict(facet_name, next(colors), data[facet_name])
 
         return History(facets)
 
 
 class Facet(object):
-    def __init__(self, name: str, people: List['Person'], eras: List['Era']):
+    def __init__(self, name: str, color: str, people: List['Person'], eras: List['Era']):
         self.name = name
+        self.color = color
         self.people = people
         self.eras = eras
 
     @staticmethod
-    def from_dict(name, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
+    def from_dict(name: str, color: str, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
         return Facet(
             name,
+            color,
             sorted(map(Person.from_dict, data['people']), key=attrgetter('birth')),
             list(map(Era.from_dict, data['eras'])) if 'eras' in data else []
         )

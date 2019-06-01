@@ -1,6 +1,5 @@
 from typing import List, Dict
 
-import bokeh
 import pendulum
 from bokeh.io import show, output_file
 from bokeh.models import BoxZoomTool, WheelPanTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
@@ -38,11 +37,11 @@ def create_plot() -> Figure:
 
 
 def plot_facets(plot: Figure, data: Dict[str, 'Facet']):
-    colors = bokeh.palettes.viridis(len(data))
     offset = 0
-    for (index, facet_name) in zip(range(len(data)), data):
-        width = plot_persons(data[facet_name].people, offset, colors[index], plot)
-        plot_eras(data[facet_name].eras, offset, width, colors[index], plot)
+    for facet_name in data:
+        facet = data[facet_name]
+        width = plot_persons(facet.people, offset, facet.color, plot)
+        plot_eras(facet.eras, offset, width, facet.color, plot)
         offset = offset + width
 
 
