@@ -227,6 +227,56 @@
         "name": "Charles Robert Darwin",
         "birth": "1809-02-12",
         "death": "1882-04-19"
+      },
+      {
+        "name": "Stephen Hawking",
+        "birth": "1941-01-08",
+        "death": "2018-03-14"
+      },
+      {
+        "name": "Claude Elwood Shannon",
+        "birth": "1916-04-30",
+        "death": "2001-02-24"
+      },
+      {
+        "name": "Johannes Kepler",
+        "birth": "1571-12-27",
+        "death": "1630-11-15"
+      },
+      {
+        "name": "Gottfried Wilhelm Leibniz",
+        "birth": "1646-07-01",
+        "death": "1716-11-14"
+      },
+      {
+        "name": "Marie Skłodowska Curie",
+        "birth": "1867-11-07",
+        "death": "1934-07-04"
+      },
+      {
+        "name": "Louis Pasteur",
+        "birth": "1822-12-27",
+        "death": "1895-09-28"
+      },
+      {
+        "name": "Gregor Johann Mendel",
+        "birth": "1822-07-20",
+        "death": "1884-01-06"
+      },
+      {
+        "name": "Hanaoka Seishū",
+        "birth": "1760-10-23",
+        "death": "1835-11-21"
+      }
+    ],
+    "events": [
+      {
+        "name": "Moon landing",
+        "date": "1969-07-20"
+      },
+      {
+        "name": "First peer-reviewed journal",
+        "date": "1665-03-11"
       }
     ]
   },

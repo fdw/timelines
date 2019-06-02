@@ -6,7 +6,7 @@ from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, Z
     HoverTool, PanTool
 from bokeh.plotting import figure
 
-from History import Person, Era, Facet
+from History import Person, Era, Facet, Event
 from Lanes import Lanes
 
 
@@ -41,30 +41,59 @@ class HistoryPlotter(object):
         offset = 0
         for facet_name in data:
             facet = data[facet_name]
-            lanes = self.plot_persons(facet.people, offset, facet.color)
+            lanes = self.plot_lanes(facet.people, facet.events, offset, facet.color)
             self.plot_eras(facet.eras, offset, self._calculate_facet_offset(lanes), facet.color)
             offset = offset + self._calculate_facet_offset(lanes)
 
     def _calculate_facet_offset(self, lanes: Lanes):
         return lanes.size() * (self.LANE_PADDING + self.LANE_HEIGHT)
 
-    def plot_persons(self, persons: List[Person], offset: int, color: str) -> Lanes:
+    def plot_lanes(
+            self,
+            persons: List[Person],
+            events: List[Event],
+            offset: int,
+            color: str
+    ) -> Lanes:
         lanes = Lanes()
-        for person in persons:
-            lane = lanes.find_lane_ending_before(person.birth)
-
-            self._plot.quad(
-                left=person.birth,
-                right=person.death,
-                bottom=offset + self._calculate_lane_offset(lane),
-                top=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT,
-                color=color,
-                name=person.name
-            )
-
-            lanes.occupy(lane, person.death)
+        data = sorted(
+            persons + events,
+            key=lambda elem: elem.birth if isinstance(elem, Person) else elem.date
+        )
+        for element in data:
+            if isinstance(element, Person):
+                self.plot_person(element, lanes, offset, color)
+            else:
+                self.plot_event(element, lanes, offset, color)
 
         return lanes
+
+    def plot_person(self, person, lanes, offset, color):
+        lane = lanes.find_lane_ending_before(person.birth)
+
+        self._plot.quad(
+            left=person.birth,
+            right=person.death,
+            bottom=offset + self._calculate_lane_offset(lane),
+            top=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT,
+            color=color,
+            name=person.name
+        )
+
+        lanes.occupy(lane, person.death)
+
+    def plot_event(self, event, lanes, offset, color):
+        lane = lanes.find_lane_ending_before(event.date)
+
+        self._plot.hex(
+            x=event.date,
+            y=offset + self._calculate_lane_offset(lane) + 0.5 * self.LANE_HEIGHT,
+            color=color,
+            size=20,
+            name=event.name
+        )
+
+        lanes.occupy(lane, event.date)
 
     def _calculate_lane_offset(self, lane: int):
         return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_HEIGHT

@@ -16,6 +16,10 @@ class History(object):
         return [person for facet in self.facets.values() for person in facet.people]
 
     @property
+    def events(self):
+        return [event for facet in self.facets.values() for event in facet.events]
+
+    @property
     def eras(self):
         return [era for facet in self.facets.values() for era in facet.eras]
 
@@ -30,10 +34,18 @@ class History(object):
 
 
 class Facet(object):
-    def __init__(self, name: str, color: str, people: List['Person'], eras: List['Era']):
+    def __init__(
+            self,
+            name: str,
+            color: str,
+            people: List['Person'],
+            events: List['Event'],
+            eras: List['Era']
+    ):
         self.name = name
         self.color = color
         self.people = people
+        self.events = events
         self.eras = eras
 
     @staticmethod
@@ -41,7 +53,8 @@ class Facet(object):
         return Facet(
             name,
             color,
-            sorted(map(Person.from_dict, data['people']), key=attrgetter('birth')),
+            list(map(Person.from_dict, data['people'])) if 'people' in data else [],
+            list(map(Event.from_dict, data['events'])) if 'events' in data else [],
             list(map(Era.from_dict, data['eras'])) if 'eras' in data else []
         )
 
@@ -58,6 +71,19 @@ class Person(object):
             data['name'],
             pendulum.parse(data['birth']),
             pendulum.parse(data['death']),
+        )
+
+
+class Event(object):
+    def __init__(self, name: str, date: DateTime):
+        self.name = name
+        self.date = date
+
+    @staticmethod
+    def from_dict(data: Dict[str, str]) -> 'Event':
+        return Event(
+            data['name'],
+            pendulum.parse(data['date'])
         )
 
 
