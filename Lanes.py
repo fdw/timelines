@@ -14,7 +14,7 @@ class Lanes(object):
 
     def find_lane_ending_before(self, date: datetime) -> int:
         for index in self.__lanes.keys():
-            if self.__lanes[index].add(years=5) < date:
+            if self.__lanes[index].add(years=3) < date:
                 return index
         return self.add_lane()
 
