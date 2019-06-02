@@ -90,6 +90,36 @@
         "name": "Pieter Bruegel the Elder",
         "birth": "1525-01-01",
         "death": "1569-09-09"
+      },
+      {
+        "name": "Édouard Manet",
+        "birth": "1832-01-23",
+        "death": "1883-04-30"
+      },
+      {
+        "name": "Georges-Pierre Seurat",
+        "birth": "1859-12-02",
+        "death": "1891-03-29"
+      },
+      {
+        "name": "Henri Émile Benoît Matisse",
+        "birth": "1869-12-31",
+        "death": "1954-11-03"
+      },
+      {
+        "name": "Pieter Cornelis Mondriaan (Piet Mondrian)",
+        "birth": "1872-03-07",
+        "death": "1944-02-01"
+      },
+      {
+        "name": "Georgia Totto O'Keeffe",
+        "birth": "1887-11-15",
+        "death": "1986-03-06"
+      },
+      {
+        "name": "Paul Jackson Pollock",
+        "birth": "1912-01-28",
+        "death": "1956-08-11"
       }
     ],
     "eras": [
@@ -171,6 +201,37 @@
         "name": "Franz Schubert",
         "birth": "1797-01-31",
         "death": "1828-11-19"
+      },
+      {
+        "name": "The Beach Boys",
+        "birth": "1961",
+        "death": "now"
+      },
+      {
+        "name": "The Beatles",
+        "birth": "1960",
+        "death": "1970"
+      },
+      {
+        "name": "Karl Martin Sandberg (Max Martin)",
+        "birth": "1971-02-26",
+        "death": "now"
+      },
+      {
+        "name": "Niccolò Paganini",
+        "birth": "1782-10-27",
+        "death": "1840-05-27"
+      },
+      {
+        "name": "Sergei Vasilyevich Rachmaninoff",
+        "birth": "1873-04-01",
+        "death": "1943-03-28"
+      }
+    ],
+    "events": [
+      {
+        "name": "Eight-Track Recorder",
+        "date": "1957"
       }
     ],
     "eras": [
