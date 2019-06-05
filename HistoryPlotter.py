@@ -1,6 +1,7 @@
 from typing import Dict, List
 
 import pendulum
+from bokeh.colors import Color
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
     HoverTool, PanTool, Quad, Hex, ColumnDataSource
@@ -56,7 +57,7 @@ class HistoryPlotter(object):
             persons: List[Person],
             events: List[Event],
             offset: int,
-            color: str
+            color: Color
     ) -> Lanes:
         lanes = Lanes()
         data = sorted(
@@ -71,7 +72,7 @@ class HistoryPlotter(object):
 
         return lanes
 
-    def plot_person(self, person, lanes, offset, color):
+    def plot_person(self, person: Person, lanes: Lanes, offset: int, color: Color):
         lane = lanes.find_lane_ending_before(person.birth)
 
         glyph = Quad(
@@ -91,7 +92,7 @@ class HistoryPlotter(object):
         self._plot.add_glyph(source, glyph)
         lanes.occupy(lane, person.death)
 
-    def plot_event(self, event, lanes, offset, color):
+    def plot_event(self, event: Event, lanes: Lanes, offset: int, color: Color):
         lane = lanes.find_lane_ending_before(event.date)
 
         glyph = Hex(
@@ -113,7 +114,7 @@ class HistoryPlotter(object):
     def _calculate_lane_offset(self, lane: int):
         return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_HEIGHT
 
-    def plot_eras(self, eras: List['Era'], offset: int, width: int, color: str):
+    def plot_eras(self, eras: List['Era'], offset: int, width: int, color: Color):
         for era in eras:
             glyph = Quad(
                 left=era.start,
@@ -121,10 +122,10 @@ class HistoryPlotter(object):
                 bottom=offset,
                 top=offset + width,
                 fill_alpha=0.1,
-                fill_color=color,
+                fill_color=color.lighten(0.2),
                 line_width=1,
                 line_alpha=0.2,
-                line_color=color,
+                line_color=color.lighten(0.2),
                 name=era.name,
                 hatch_pattern='right_diagonal_line',
                 hatch_scale=10,

@@ -4,6 +4,7 @@ from typing import List, Dict, Union
 
 import bokeh
 import pendulum
+from bokeh.colors import RGB, Color
 from pendulum import DateTime
 
 
@@ -25,7 +26,7 @@ class History(object):
 
     @staticmethod
     def from_dict(data: Dict[str, Union[str, Dict[str, str]]]):
-        colors = iter(bokeh.palettes.viridis(len(data)))
+        colors = iter([to_color(color) for color in bokeh.palettes.viridis(len(data))])
         facets = {}
         for facet_name in data:
             facets[facet_name] = Facet.from_dict(facet_name, next(colors), data[facet_name])
@@ -37,7 +38,7 @@ class Facet(object):
     def __init__(
             self,
             name: str,
-            color: str,
+            color: Color,
             people: List['Person'],
             events: List['Event'],
             eras: List['Era']
@@ -49,7 +50,7 @@ class Facet(object):
         self.eras = eras
 
     @staticmethod
-    def from_dict(name: str, color: str, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
+    def from_dict(name: str, color: Color, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
         return Facet(
             name,
             color,
@@ -106,3 +107,7 @@ def parse_json(filename: str):
     with open(filename, mode='r', newline='') as file:
         data = json.load(file)
         return History.from_dict(data)
+
+
+def to_color(string: str) -> Color:
+    return RGB(int(string[1:3], 16), int(string[3:5], 16), int(string[5:7], 16))
