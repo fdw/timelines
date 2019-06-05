@@ -3,7 +3,7 @@ from typing import Dict, List
 import pendulum
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
-    HoverTool, PanTool
+    HoverTool, PanTool, Quad, Hex, ColumnDataSource
 from bokeh.plotting import figure
 
 from History import Person, Era, Facet, Event
@@ -27,7 +27,10 @@ class HistoryPlotter(object):
                 wheel_pan_tool,
                 ZoomInTool(),
                 ZoomOutTool(),
-                HoverTool(mode='vline', tooltips=[("Name", "$name")])
+                HoverTool(
+                    mode='vline',
+                    tooltips=[('Name', '@name')]
+                )
             ],
             active_scroll=wheel_pan_tool,
             x_range=(pendulum.parse('1500-01-01'), pendulum.parse('2000-01-01')),
@@ -71,28 +74,40 @@ class HistoryPlotter(object):
     def plot_person(self, person, lanes, offset, color):
         lane = lanes.find_lane_ending_before(person.birth)
 
-        self._plot.quad(
-            left=person.birth,
-            right=person.death,
+        glyph = Quad(
+            left="birth",
+            right="death",
             bottom=offset + self._calculate_lane_offset(lane),
             top=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT,
-            color=color,
-            name=person.name
+            fill_color=color,
+            line_color=color
         )
+        source = ColumnDataSource(dict(
+            name=[person.name],
+            birth=[person.birth],
+            death=[person.death]
+        ))
 
+        self._plot.add_glyph(source, glyph)
         lanes.occupy(lane, person.death)
 
     def plot_event(self, event, lanes, offset, color):
         lane = lanes.find_lane_ending_before(event.date)
 
-        self._plot.hex(
+        glyph = Hex(
             x=event.date,
             y=offset + self._calculate_lane_offset(lane) + 0.5 * self.LANE_HEIGHT,
-            color=color,
+            fill_color=color,
+            line_color=color,
             size=20,
             name=event.name
         )
+        source = ColumnDataSource(dict(
+            name=[event.name],
+            start=[event.date]
+        ))
 
+        self._plot.add_glyph(source, glyph)
         lanes.occupy(lane, event.date)
 
     def _calculate_lane_offset(self, lane: int):
@@ -100,7 +115,7 @@ class HistoryPlotter(object):
 
     def plot_eras(self, eras: List['Era'], offset: int, width: int, color: str):
         for era in eras:
-            self._plot.quad(
+            glyph = Quad(
                 left=era.start,
                 right=era.end,
                 bottom=offset,
@@ -114,7 +129,14 @@ class HistoryPlotter(object):
                 hatch_pattern='right_diagonal_line',
                 hatch_scale=10,
                 hatch_alpha=0.1
-            ),
+            )
+            source = ColumnDataSource(dict(
+                name=[era.name],
+                start=[era.start],
+                end=[era.end]
+            ))
+
+            self._plot.add_glyph(source, glyph)
 
     def finish(self):
         show(self._plot)
