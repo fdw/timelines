@@ -328,6 +328,11 @@
         "name": "Hanaoka Seishū",
         "birth": "1760-10-23",
         "death": "1835-11-21"
+      },
+      {
+        "name": "Sigmund Freud",
+        "birth": "1856-05-06",
+        "death": "1939-09-23"
       }
     ],
     "events": [
@@ -338,6 +343,18 @@
       {
         "name": "First peer-reviewed journal",
         "date": "1665-03-11"
+      },
+      {
+        "name": "Z2",
+        "date": "1940"
+      },
+      {
+        "name": "First message over ARPANET",
+        "date": "1969-10-29"
+      },
+      {
+        "name": "First heavier-than-air, powered, manned flight",
+        "date": "1903-12-17"
       }
     ]
   },
@@ -367,6 +384,18 @@
         "name": "Johann Christoph Friedrich von Schiller",
         "birth": "1759-11-10",
         "death": "1805-05-09"
+      },
+      {
+        "name":"Charlotte Brontë",
+        "birth": "1816-04-21",
+        "death":"1855-03-31"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Sturm und Drang",
+        "start": "1770",
+        "end": "1787"
       }
     ]
   }
