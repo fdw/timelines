@@ -92,6 +92,26 @@ class HistoryPlotter(object):
         self._plot.add_glyph(source, glyph)
         lanes.occupy(lane, person.death)
 
+        for event in person.events:
+            self.plot_persons_event(event, lane, offset, color)
+
+    def plot_persons_event(self, event: Event, lane: int, offset: int, color: Color):
+        glyph = Hex(
+            x=event.date,
+            y=offset + self._calculate_lane_offset(lane) + 0.5 * self.LANE_HEIGHT,
+            fill_color=color.darken(0.2),
+            line_color=color.darken(0.2),
+            fill_alpha=0.1,
+            size=10,
+            name=event.name
+        )
+        source = ColumnDataSource(dict(
+            name=[event.name],
+            start=[event.date]
+        ))
+
+        return self._plot.add_glyph(source, glyph)
+
     def plot_event(self, event: Event, lanes: Lanes, offset: int, color: Color):
         lane = lanes.find_lane_ending_before(event.date)
 

@@ -62,17 +62,19 @@ class Facet(object):
 
 
 class Person(object):
-    def __init__(self, name: str, birth: np.datetime64, death: np.datetime64):
+    def __init__(self, name: str, birth: np.datetime64, death: np.datetime64, events: List['Event']):
         self.name = name
         self.birth = birth
         self.death = death
+        self.events = events
 
     @staticmethod
-    def from_dict(data: Dict[str, str]) -> 'Person':
+    def from_dict(data: Dict[str, Union[str, Dict[str, str]]]) -> 'Person':
         return Person(
             data['name'],
             np.datetime64(data['birth'], 'D'),
             np.datetime64(data['death'], 'D'),
+            list(map(Event.from_dict, data['events'])) if 'events' in data else []
         )
 
 

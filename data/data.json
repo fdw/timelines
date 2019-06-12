@@ -347,12 +347,24 @@
       {
         "name": "Johannes Gensfleisch zur Laden zum Gutenberg",
         "birth": "1400-01-01",
-        "death": "1468-02-03"
+        "death": "1468-02-03",
+        "events": [
+          {
+            "name": "First movable type printing in Europe",
+            "date": "1450"
+          }
+        ]
       },
       {
         "name": "Bì Shēng",
-        "birth":"990-01-01",
-        "death":"1051-01-01"
+        "birth": "990-01-01",
+        "death": "1051-01-01",
+        "events": [
+          {
+            "name": "First movable type printing in China",
+            "date": "1040"
+          }
+        ]
       }
     ],
     "events": [
@@ -510,6 +522,22 @@
       {
         "name": "Storming of the Bastille",
         "date": "1789-07-14"
+      },
+      {
+        "name": "Sack of Rome",
+        "date": "1527-05-06"
+      },
+      {
+        "name": "Bombing of Hiroshima",
+        "date": "1945-08-06"
+      },
+      {
+        "name": "Bombing of Nagasaki",
+        "date": "1945-08-09"
+      },
+      {
+        "name": "Invasion of Poland",
+        "date": "1939-09-01"
       }
     ]
   }
