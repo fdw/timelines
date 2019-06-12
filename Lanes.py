@@ -1,5 +1,7 @@
 import datetime
 
+import numpy as np
+
 
 class Lanes(object):
     def __init__(self):
@@ -12,9 +14,9 @@ class Lanes(object):
         self.__lanes[self.size()] = 0
         return self.size() - 1
 
-    def find_lane_ending_before(self, date: datetime) -> int:
+    def find_lane_ending_before(self, date: np.datetime64) -> int:
         for index in self.__lanes.keys():
-            if self.__lanes[index].add(years=3) < date:
+            if self.__lanes[index] + np.timedelta64(1080, 'D') < date:
                 return index
         return self.add_lane()
 

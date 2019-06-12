@@ -4,6 +4,7 @@ from typing import List, Dict, Union
 
 import bokeh
 import pendulum
+import numpy as np
 from bokeh.colors import RGB, Color
 from pendulum import DateTime
 
@@ -61,7 +62,7 @@ class Facet(object):
 
 
 class Person(object):
-    def __init__(self, name: str, birth: DateTime, death: DateTime):
+    def __init__(self, name: str, birth: np.datetime64, death: np.datetime64):
         self.name = name
         self.birth = birth
         self.death = death
@@ -70,13 +71,13 @@ class Person(object):
     def from_dict(data: Dict[str, str]) -> 'Person':
         return Person(
             data['name'],
-            pendulum.parse(data['birth']),
-            pendulum.parse(data['death']),
+            np.datetime64(data['birth'], 'D'),
+            np.datetime64(data['death'], 'D'),
         )
 
 
 class Event(object):
-    def __init__(self, name: str, date: DateTime):
+    def __init__(self, name: str, date: np.datetime64):
         self.name = name
         self.date = date
 
@@ -84,12 +85,12 @@ class Event(object):
     def from_dict(data: Dict[str, str]) -> 'Event':
         return Event(
             data['name'],
-            pendulum.parse(data['date'])
+            np.datetime64(data['date'], 'D')
         )
 
 
 class Era(object):
-    def __init__(self, name: str, start: DateTime, end: DateTime):
+    def __init__(self, name: str, start: np.datetime64, end: np.datetime64):
         self.name = name
         self.start = start
         self.end = end
@@ -98,8 +99,8 @@ class Era(object):
     def from_dict(data: Dict[str, str]) -> 'Era':
         return Era(
             data['name'],
-            pendulum.parse(data['start']),
-            pendulum.parse(data['end']),
+            np.datetime64(data['start'], 'D'),
+            np.datetime64(data['end'], 'D'),
         )
 
 
