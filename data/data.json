@@ -120,6 +120,11 @@
         "name": "Paul Jackson Pollock",
         "birth": "1912-01-28",
         "death": "1956-08-11"
+      },
+      {
+        "name": "Filippo Brunelleschi",
+        "birth": "1377-01-01",
+        "death": "1446-04-15"
       }
     ],
     "eras": [
@@ -251,7 +256,7 @@
         "end": "1820"
       },
       {
-        "name": "Romantic",
+        "name": "Romanticism",
         "start": "1780",
         "end": "1810"
       }
@@ -333,6 +338,21 @@
         "name": "Sigmund Freud",
         "birth": "1856-05-06",
         "death": "1939-09-23"
+      },
+      {
+        "name": "Aristoteles",
+        "birth": "-0384-01-01",
+        "death": "-0322-01-01"
+      },
+      {
+        "name": "Johannes Gensfleisch zur Laden zum Gutenberg",
+        "birth": "1400-01-01",
+        "death": "1468-02-03"
+      },
+      {
+        "name": "Bì Shēng",
+        "birth":"990-01-01",
+        "death":"1051-01-01"
       }
     ],
     "events": [
@@ -386,9 +406,14 @@
         "death": "1805-05-09"
       },
       {
-        "name":"Charlotte Brontë",
+        "name": "Charlotte Brontë",
         "birth": "1816-04-21",
-        "death":"1855-03-31"
+        "death": "1855-03-31"
+      },
+      {
+        "name": "Mary Wollstonecraft Shelley",
+        "birth": "1797-08-30",
+        "death": "1851-02-01"
       }
     ],
     "eras": [
@@ -396,6 +421,95 @@
         "name": "Sturm und Drang",
         "start": "1770",
         "end": "1787"
+      },
+      {
+        "name": "Romanticism",
+        "start": "1800",
+        "end": "1850"
+      }
+    ]
+  },
+  "politics": {
+    "people": [
+      {
+        "name": "East India Company",
+        "birth": "1600-12-31",
+        "death": "1874-06-01"
+      },
+      {
+        "name": "Great Leap Forward",
+        "birth": "1958",
+        "death": "1962"
+      },
+      {
+        "name": "Gaius Julius Caesar",
+        "birth": "-0100-07-12",
+        "death": "-0044-03-15"
+      },
+      {
+        "name": "Cleopatra VII Philopator",
+        "birth": "-0069-01-01",
+        "death": "-0030-08-11"
+      },
+      {
+        "name": "Alexander III of Macedon",
+        "birth": "-0356-07-20",
+        "death": "-0323-06-10"
+      },
+      {
+        "name": "Nebuchadnezzar II",
+        "birth": "-0605-01-01",
+        "death": "-0562-01-01"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Roman Republic",
+        "start": "-0509",
+        "end": "-0027"
+      },
+      {
+        "name": "Roman Empire",
+        "start": "-0027",
+        "end": "0286"
+      },
+      {
+        "name": "World War 1",
+        "start": "1914-07-28",
+        "end": "1918-11-11"
+      },
+      {
+        "name": "World War 2",
+        "start": "1939-09-01",
+        "end": "1945-09-02"
+      },
+      {
+        "name": "Cold War",
+        "start": "1946",
+        "end": "1991"
+      },
+      {
+        "name": "French Revolution",
+        "start": "1789-05-05",
+        "end": "1799-11-09"
+      }
+    ],
+    "events": [
+      {
+        "name": "9/11",
+        "date": "2001-09-11"
+      },
+      {
+        "name": "D-Day",
+        "date": "1944-06-06"
+      },
+      {
+        "name": "Fall of the Berlin Wall",
+        "date": "1989-11-09"
+      },
+      {
+        "name": "Storming of the Bastille",
+        "date": "1789-07-14"
       }
     ]
   }
