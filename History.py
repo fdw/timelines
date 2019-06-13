@@ -62,11 +62,19 @@ class Facet(object):
 
 
 class Person(object):
-    def __init__(self, name: str, birth: np.datetime64, death: np.datetime64, events: List['Event']):
+    def __init__(
+            self,
+            name: str,
+            birth: np.datetime64,
+            death: np.datetime64,
+            events: List['Event'],
+            url: str = None
+    ):
         self.name = name
         self.birth = birth
         self.death = death
         self.events = events
+        self.url = url
 
     @staticmethod
     def from_dict(data: Dict[str, Union[str, Dict[str, str]]]) -> 'Person':
@@ -74,28 +82,43 @@ class Person(object):
             data['name'],
             np.datetime64(data['birth'], 'D'),
             np.datetime64(data['death'], 'D'),
-            list(map(Event.from_dict, data['events'])) if 'events' in data else []
+            list(map(Event.from_dict, data['events'])) if 'events' in data else [],
+            data['url'] if 'url' in data else None
         )
 
 
 class Event(object):
-    def __init__(self, name: str, date: np.datetime64):
+    def __init__(
+            self,
+            name: str,
+            date: np.datetime64,
+            url: str = None
+    ):
         self.name = name
         self.date = date
+        self.url = url
 
     @staticmethod
     def from_dict(data: Dict[str, str]) -> 'Event':
         return Event(
             data['name'],
-            np.datetime64(data['date'], 'D')
+            np.datetime64(data['date'], 'D'),
+            data['url'] if 'url' in data else None
         )
 
 
 class Era(object):
-    def __init__(self, name: str, start: np.datetime64, end: np.datetime64):
+    def __init__(
+            self,
+            name: str,
+            start: np.datetime64,
+            end: np.datetime64,
+            url: str = None
+    ):
         self.name = name
         self.start = start
         self.end = end
+        self.url = url
 
     @staticmethod
     def from_dict(data: Dict[str, str]) -> 'Era':
@@ -103,6 +126,7 @@ class Era(object):
             data['name'],
             np.datetime64(data['start'], 'D'),
             np.datetime64(data['end'], 'D'),
+            data['url'] if 'url' in data else None
         )
 
 

@@ -4,127 +4,158 @@
       {
         "name": "Leonardo da Vinci",
         "birth": "1452-04-15",
-        "death": "1519-05-02"
+        "death": "1519-05-02",
+        "url": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci"
       },
       {
         "name": "Michelangelo di Lodovico Buonarroti Simoni (Michelangelo)",
         "birth": "1475-03-06",
-        "death": "1564-02-18"
+        "death": "1564-02-18",
+        "url": "https://en.wikipedia.org/wiki/Michelangelo"
       },
       {
-        "name": "Raffaello Sanzio da Urbino (Raffael)",
+        "name": "Raffaello Sanzio da Urbino (Raphael)",
         "birth": "1483-04-01",
-        "death": "1520-04-06"
+        "death": "1520-04-06",
+        "url": "https://en.wikipedia.org/wiki/Raphael"
       },
       {
-        "name": "Tiziano Vecelli (Tizian)",
+        "name": "Tiziano Vecelli (Titian)",
         "birth": "1488-01-01",
-        "death": "1576-08-27"
+        "death": "1576-08-27",
+        "url": "https://en.wikipedia.org/wiki/Titian"
       },
       {
         "name": "Vincent van Gogh",
         "birth": "1853-03-30",
-        "death": "1890-07-29"
+        "death": "1890-07-29",
+        "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh"
       },
       {
         "name": "Johannes Vermeer",
         "birth": "1632-10-01",
-        "death": "1675-12-15"
+        "death": "1675-12-15",
+        "url": "https://en.wikipedia.org/wiki/Johannes_Vermeer"
       },
       {
         "name": "Jan van Eyck",
         "birth": "1390-01-01",
-        "death": "1441-07-09"
+        "death": "1441-07-09",
+        "url": "https://en.wikipedia.org/wiki/Jan_van_Eyck"
       },
       {
         "name": "Rembrandt Harmenszoon van Rijn (Rembrandt)",
         "birth": "1606-07-15",
-        "death": "1669-10-04"
+        "death": "1669-10-04",
+        "url": "https://en.wikipedia.org/wiki/Rembrandt"
       },
       {
         "name": "Francisco Goya",
         "birth": "1746-03-30",
-        "death": "1828-04-16"
+        "death": "1828-04-16",
+        "url": "https://en.wikipedia.org/wiki/Francisco_Goya"
       },
       {
         "name": "Alessandro di Mariano di Vanni Filipepi (Sandro Botticelli)",
         "birth": "1445-01-01",
-        "death": "1510-05-17"
+        "death": "1510-05-17",
+        "url": "https://en.wikipedia.org/wiki/Sandro_Botticelli"
       },
       {
         "name": "Diego Rodríguez de Silva y Velázquez",
         "birth": "1599-06-06",
-        "death": "1660-08-06"
+        "death": "1660-08-06",
+        "url": "https://en.wikipedia.org/wiki/Diego_Vel%C3%A1zquez"
       },
       {
         "name": "Joseph Mallord William Turner",
         "birth": "1775-04-23",
-        "death": "1851-12-19"
+        "death": "1851-12-19",
+        "url": "https://en.wikipedia.org/wiki/J._M._W._Turner"
       },
       {
         "name": "Paul Cézanne",
         "birth": "1839-01-19",
-        "death": "1906-10-22"
+        "death": "1906-10-22",
+        "url": "https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne"
       },
       {
         "name": "Claude Monet",
         "birth": "1840-11-14",
-        "death": "1926-12-05"
+        "death": "1926-12-05",
+        "url": "https://en.wikipedia.org/wiki/Claude_Monet"
       },
       {
         "name": "Michelangelo Merisi da Caravaggio (Caravaggio)",
         "birth": "1571-09-28",
-        "death": "1610-07-18"
+        "death": "1610-07-18",
+        "url": "https://en.wikipedia.org/wiki/Caravaggio"
       },
       {
         "name": "Rogier van der Weyden",
         "birth": "1399-01-01",
-        "death": "1464-06-18"
+        "death": "1464-06-18",
+        "url": "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
       },
       {
         "name": "Piero della Francesca",
         "birth": "1415-01-01",
-        "death": "1492-10-12"
+        "death": "1492-10-12",
+        "url": "https://en.wikipedia.org/wiki/Piero_della_Francesca"
       },
       {
         "name": "Pieter Bruegel the Elder",
         "birth": "1525-01-01",
-        "death": "1569-09-09"
+        "death": "1569-09-09",
+        "url": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
       },
       {
         "name": "Édouard Manet",
         "birth": "1832-01-23",
-        "death": "1883-04-30"
+        "death": "1883-04-30",
+        "url": "https://en.wikipedia.org/wiki/%C3%89douard_Manet"
       },
       {
         "name": "Georges-Pierre Seurat",
         "birth": "1859-12-02",
-        "death": "1891-03-29"
+        "death": "1891-03-29",
+        "url": "https://en.wikipedia.org/wiki/Georges_Seurat"
       },
       {
         "name": "Henri Émile Benoît Matisse",
         "birth": "1869-12-31",
-        "death": "1954-11-03"
+        "death": "1954-11-03",
+        "url": "https://en.wikipedia.org/wiki/Henri_Matisse"
       },
       {
         "name": "Pieter Cornelis Mondriaan (Piet Mondrian)",
         "birth": "1872-03-07",
-        "death": "1944-02-01"
+        "death": "1944-02-01",
+        "url": "https://en.wikipedia.org/wiki/Piet_Mondrian"
       },
       {
         "name": "Georgia Totto O'Keeffe",
         "birth": "1887-11-15",
-        "death": "1986-03-06"
+        "death": "1986-03-06",
+        "url": "https://en.wikipedia.org/wiki/Georgia_O'Keeffe"
       },
       {
         "name": "Paul Jackson Pollock",
         "birth": "1912-01-28",
-        "death": "1956-08-11"
+        "death": "1956-08-11",
+        "url": "https://en.wikipedia.org/wiki/Jackson_Pollock"
       },
       {
         "name": "Filippo Brunelleschi",
         "birth": "1377-01-01",
-        "death": "1446-04-15"
+        "death": "1446-04-15",
+        "url": "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
+      },
+      {
+        "name": "Andy Warhol",
+        "birth": "1928-08-06",
+        "death": "1987-02-22",
+        "url": "https://en.wikipedia.org/wiki/Andy_Warhol"
       }
     ],
     "eras": [
@@ -165,78 +196,93 @@
       {
         "name": "Wolfgang Amadeus Mozart",
         "birth": "1756-01-27",
-        "death": "1791-12-05"
+        "death": "1791-12-05",
+        "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
       },
       {
         "name": "Johann Sebastian Bach",
         "birth": "1685-03-31",
-        "death": "1750-07-28"
+        "death": "1750-07-28",
+        "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach"
       },
       {
         "name": "Georg Friedrich Händel",
         "birth": "1685-03-05",
-        "death": "1759-04-14"
+        "death": "1759-04-14",
+        "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel"
       },
       {
         "name": "Franz Joseph Haydn",
         "birth": "1732-04-01",
-        "death": "1809-05-31"
+        "death": "1809-05-31",
+        "url": "https://en.wikipedia.org/wiki/Joseph_Haydn"
       },
       {
         "name": "Richard Strauss",
         "birth": "1864-06-11",
-        "death": "1949-09-08"
+        "death": "1949-09-08",
+        "url": "https://en.wikipedia.org/wiki/Richard_Strauss"
       },
       {
         "name": "Antonio Vivaldo",
         "birth": "1678-03-04",
-        "death": "1741-07-28"
+        "death": "1741-07-28",
+        "url": "https://en.wikipedia.org/wiki/Antonio_Vivaldi"
       },
       {
         "name": "Wilhelm Hieronymus Pachelbel",
         "birth": "1686-08-29",
-        "death": "1764-01-01"
+        "death": "1764-01-01",
+        "url": "https://en.wikipedia.org/wiki/Wilhelm_Hieronymus_Pachelbel"
       },
       {
         "name": "Ludwig van Beethoven",
         "birth": "1770-12-17",
-        "death": "1827-03-26"
+        "death": "1827-03-26",
+        "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven"
       },
       {
         "name": "Franz Schubert",
         "birth": "1797-01-31",
-        "death": "1828-11-19"
+        "death": "1828-11-19",
+        "url": "https://en.wikipedia.org/wiki/Franz_Schubert"
       },
       {
         "name": "The Beach Boys",
         "birth": "1961",
-        "death": "now"
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/The_Beach_Boys"
       },
       {
         "name": "The Beatles",
         "birth": "1960",
-        "death": "1970"
+        "death": "1970",
+        "url": "https://en.wikipedia.org/wiki/The_Beatles"
       },
       {
         "name": "Karl Martin Sandberg (Max Martin)",
         "birth": "1971-02-26",
-        "death": "now"
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/Max_Martin"
       },
       {
         "name": "Niccolò Paganini",
         "birth": "1782-10-27",
-        "death": "1840-05-27"
+        "death": "1840-05-27",
+        "url": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Paganini"
       },
       {
         "name": "Sergei Vasilyevich Rachmaninoff",
         "birth": "1873-04-01",
-        "death": "1943-03-28"
+        "death": "1943-03-28",
+        "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff"
       }
     ],
     "events": [
       {
         "name": "Eight-Track Recorder",
-        "date": "1957"
+        "date": "1957",
+        "url": "https://en.wikipedia.org/wiki/History_of_multitrack_recording"
       }
     ],
     "eras": [
@@ -267,87 +313,104 @@
       {
         "name": "Galileo Galilei",
         "birth": "1564-02-15",
-        "death": "1642-08-01"
+        "death": "1642-08-01",
+        "url": "https://en.wikipedia.org/wiki/Galileo_Galilei"
       },
       {
         "name": "Isaac Newton",
         "birth": "1643-01-04",
-        "death": "1727-03-31"
+        "death": "1727-03-31",
+        "url": "https://de.wikipedia.org/wiki/Isaac_Newton"
       },
       {
         "name": "Albert Einstein",
         "birth": "1879-03-14",
-        "death": "1955-04-18"
+        "death": "1955-04-18",
+        "url": "https://en.wikipedia.org/wiki/Albert_Einstein"
       },
       {
         "name": "Nicolaus Copernicus",
         "birth": "1473-02-19",
-        "death": "1543-05-24"
+        "death": "1543-05-24",
+        "url": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus"
       },
       {
         "name": "Niels Henrik David Bohr",
         "birth": "1885-10-07",
-        "death": "1962-11-18"
+        "death": "1962-11-18",
+        "url": "https://en.wikipedia.org/wiki/Niels_Bohr"
       },
       {
         "name": "Charles Robert Darwin",
         "birth": "1809-02-12",
-        "death": "1882-04-19"
+        "death": "1882-04-19",
+        "url": "https://en.wikipedia.org/wiki/Charles_Darwin"
       },
       {
         "name": "Stephen Hawking",
         "birth": "1941-01-08",
-        "death": "2018-03-14"
+        "death": "2018-03-14",
+        "url": "https://en.wikipedia.org/wiki/Stephen_Hawking"
       },
       {
         "name": "Claude Elwood Shannon",
         "birth": "1916-04-30",
-        "death": "2001-02-24"
+        "death": "2001-02-24",
+        "url": "https://en.wikipedia.org/wiki/Claude_Shannon"
       },
       {
         "name": "Johannes Kepler",
         "birth": "1571-12-27",
-        "death": "1630-11-15"
+        "death": "1630-11-15",
+        "url": "https://en.wikipedia.org/wiki/Johannes_Kepler"
       },
       {
         "name": "Gottfried Wilhelm Leibniz",
         "birth": "1646-07-01",
-        "death": "1716-11-14"
+        "death": "1716-11-14",
+        "url": "https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz"
       },
       {
         "name": "Marie Skłodowska Curie",
         "birth": "1867-11-07",
-        "death": "1934-07-04"
+        "death": "1934-07-04",
+        "url": "https://en.wikipedia.org/wiki/Marie_Curie"
       },
       {
         "name": "Louis Pasteur",
         "birth": "1822-12-27",
-        "death": "1895-09-28"
+        "death": "1895-09-28",
+        "url": "https://en.wikipedia.org/wiki/Louis_Pasteur"
       },
       {
         "name": "Gregor Johann Mendel",
         "birth": "1822-07-20",
-        "death": "1884-01-06"
+        "death": "1884-01-06",
+        "url": "https://en.wikipedia.org/wiki/Gregor_Mendel"
       },
       {
         "name": "Hanaoka Seishū",
         "birth": "1760-10-23",
-        "death": "1835-11-21"
+        "death": "1835-11-21",
+        "url": "https://en.wikipedia.org/wiki/Hanaoka_Seish%C5%AB"
       },
       {
         "name": "Sigmund Freud",
         "birth": "1856-05-06",
-        "death": "1939-09-23"
+        "death": "1939-09-23",
+        "url": "https://en.wikipedia.org/wiki/Sigmund_Freud"
       },
       {
-        "name": "Aristoteles",
+        "name": "Aristotélēs",
         "birth": "-0384-01-01",
-        "death": "-0322-01-01"
+        "death": "-0322-01-01",
+        "url": "https://en.wikipedia.org/wiki/Aristotle"
       },
       {
         "name": "Johannes Gensfleisch zur Laden zum Gutenberg",
         "birth": "1400-01-01",
         "death": "1468-02-03",
+        "url": "https://en.wikipedia.org/wiki/Johannes_Gutenberg",
         "events": [
           {
             "name": "First movable type printing in Europe",
@@ -359,34 +422,46 @@
         "name": "Bì Shēng",
         "birth": "990-01-01",
         "death": "1051-01-01",
+        "url": "https://en.wikipedia.org/wiki/Bi_Sheng",
         "events": [
           {
             "name": "First movable type printing in China",
             "date": "1040"
           }
         ]
+      },
+      {
+        "name": "Alexander Fleming",
+        "birth":"1881-08-06",
+        "death": "1955-03-11",
+        "url":"https://en.wikipedia.org/wiki/Alexander_Fleming"
       }
     ],
     "events": [
       {
         "name": "Moon landing",
-        "date": "1969-07-20"
+        "date": "1969-07-20",
+        "url": "https://en.wikipedia.org/wiki/Apollo_11"
       },
       {
         "name": "First peer-reviewed journal",
-        "date": "1665-03-11"
+        "date": "1665-03-11",
+        "url": "https://en.wikipedia.org/wiki/Philosophical_Transactions_of_the_Royal_Society"
       },
       {
         "name": "Z2",
-        "date": "1940"
+        "date": "1940",
+        "url": "https://en.wikipedia.org/wiki/Z2_(computer)"
       },
       {
         "name": "First message over ARPANET",
-        "date": "1969-10-29"
+        "date": "1969-10-29",
+        "url": "https://en.wikipedia.org/wiki/History_of_the_Internet"
       },
       {
         "name": "First heavier-than-air, powered, manned flight",
-        "date": "1903-12-17"
+        "date": "1903-12-17",
+        "url": "https://en.wikipedia.org/wiki/History_of_aviation"
       }
     ]
   },
@@ -395,37 +470,44 @@
       {
         "name": "William Shakespeare",
         "birth": "1564-04-26",
-        "death": "1616-04-23"
+        "death": "1616-04-23",
+        "url": "https://en.wikipedia.org/wiki/William_Shakespeare"
       },
       {
         "name": "Durante di Alighiero degli Alighieri (Dante)",
         "birth": "1265-01-01",
-        "death": "1321-01-01"
+        "death": "1321-01-01",
+        "url": "https://en.wikipedia.org/wiki/Dante_Alighieri"
       },
       {
         "name": "Miguel de Cervantes Saavedra",
         "birth": "1547-09-29",
-        "death": "1616-04-22"
+        "death": "1616-04-22",
+        "url": "https://en.wikipedia.org/wiki/Miguel_de_Cervantes"
       },
       {
         "name": "Johann Wolfgang von Goethe",
         "birth": "1749-08-28",
-        "death": "1832-03-22"
+        "death": "1832-03-22",
+        "url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe"
       },
       {
         "name": "Johann Christoph Friedrich von Schiller",
         "birth": "1759-11-10",
-        "death": "1805-05-09"
+        "death": "1805-05-09",
+        "url": "https://en.wikipedia.org/wiki/Friedrich_Schiller"
       },
       {
         "name": "Charlotte Brontë",
         "birth": "1816-04-21",
-        "death": "1855-03-31"
+        "death": "1855-03-31",
+        "url": "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB"
       },
       {
         "name": "Mary Wollstonecraft Shelley",
         "birth": "1797-08-30",
-        "death": "1851-02-01"
+        "death": "1851-02-01",
+        "url": "https://en.wikipedia.org/wiki/Mary_Shelley"
       }
     ],
     "eras": [
@@ -446,57 +528,68 @@
       {
         "name": "East India Company",
         "birth": "1600-12-31",
-        "death": "1874-06-01"
+        "death": "1874-06-01",
+        "url": "https://en.wikipedia.org/wiki/East_India_Company"
       },
       {
         "name": "Great Leap Forward",
         "birth": "1958",
-        "death": "1962"
+        "death": "1962",
+        "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
       },
       {
         "name": "Gaius Julius Caesar",
         "birth": "-0100-07-12",
-        "death": "-0044-03-15"
+        "death": "-0044-03-15",
+        "url": "https://en.wikipedia.org/wiki/Julius_Caesar"
       },
       {
         "name": "Cleopatra VII Philopator",
         "birth": "-0069-01-01",
-        "death": "-0030-08-11"
+        "death": "-0030-08-11",
+        "url": "https://en.wikipedia.org/wiki/Cleopatra"
       },
       {
         "name": "Alexander III of Macedon",
         "birth": "-0356-07-20",
-        "death": "-0323-06-10"
+        "death": "-0323-06-10",
+        "url": "https://en.wikipedia.org/wiki/Alexander_the_Great"
       },
       {
         "name": "Nebuchadnezzar II",
         "birth": "-0605-01-01",
-        "death": "-0562-01-01"
+        "death": "-0562-01-01",
+        "url": "https://en.wikipedia.org/wiki/Nebuchadnezzar_II"
       },
       {
         "name": "Martin Luther King Jr.",
         "birth": "1929-01-15",
-        "death": "1968-04-04"
+        "death": "1968-04-04",
+        "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr."
       },
       {
         "name": "Mary Wollstonecraft",
         "birth": "1759-04-27",
-        "death": "1797-09-10"
+        "death": "1797-09-10",
+        "url": "https://en.wikipedia.org/wiki/Mary_Wollstonecraft"
       },
       {
         "name": "David Hume",
         "birth": "1711-05-07",
-        "death":"1776-08-25"
+        "death": "1776-08-25",
+        "url": "https://en.wikipedia.org/wiki/David_Hume"
       },
       {
         "name": "Thomas Hobbes",
         "birth": "1588-04-05",
-        "death": "1679-12-04"
+        "death": "1679-12-04",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes"
       },
       {
         "name": "John Locke",
         "birth": "1632-08-29",
-        "death": "1704-10-28"
+        "death": "1704-10-28",
+        "url": "https://en.wikipedia.org/wiki/John_Locke"
       }
     ],
     "eras": [
@@ -534,39 +627,48 @@
     "events": [
       {
         "name": "9/11",
-        "date": "2001-09-11"
+        "date": "2001-09-11",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
       },
       {
         "name": "D-Day",
-        "date": "1944-06-06"
+        "date": "1944-06-06",
+        "url": "https://en.wikipedia.org/wiki/Normandy_landings"
       },
       {
         "name": "Fall of the Berlin Wall",
-        "date": "1989-11-09"
+        "date": "1989-11-09",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Wall"
       },
       {
         "name": "Storming of the Bastille",
-        "date": "1789-07-14"
+        "date": "1789-07-14",
+        "url": "https://en.wikipedia.org/wiki/Storming_of_the_Bastille"
       },
       {
         "name": "Sack of Rome",
-        "date": "1527-05-06"
+        "date": "1527-05-06",
+        "url": "https://en.wikipedia.org/wiki/Sack_of_Rome_(1527)"
       },
       {
         "name": "Bombing of Hiroshima",
-        "date": "1945-08-06"
+        "date": "1945-08-06",
+        "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
       },
       {
         "name": "Bombing of Nagasaki",
-        "date": "1945-08-09"
+        "date": "1945-08-09",
+        "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
       },
       {
         "name": "Invasion of Poland",
-        "date": "1939-09-01"
+        "date": "1939-09-01",
+        "url": "https://en.wikipedia.org/wiki/World_War_II"
       },
       {
         "name": "Stonewall Riots",
-        "date": "1969-06-28"
+        "date": "1969-06-28",
+        "url": "https://en.wikipedia.org/wiki/Stonewall_riots"
       }
     ]
   }

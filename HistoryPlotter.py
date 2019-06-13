@@ -4,7 +4,7 @@ import pendulum
 from bokeh.colors import Color
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
-    HoverTool, PanTool, Quad, Hex, ColumnDataSource
+    HoverTool, PanTool, Quad, Hex, ColumnDataSource, TapTool, OpenURL
 from bokeh.plotting import figure
 
 from History import Person, Era, Facet, Event
@@ -31,6 +31,9 @@ class HistoryPlotter(object):
                 HoverTool(
                     mode='vline',
                     tooltips=[('Name', '@name')]
+                ),
+                TapTool(
+                    callback=OpenURL(url="@url")
                 )
             ],
             active_scroll=wheel_pan_tool,
@@ -86,7 +89,8 @@ class HistoryPlotter(object):
         source = ColumnDataSource(dict(
             name=[person.name],
             birth=[person.birth],
-            death=[person.death]
+            death=[person.death],
+            url=[person.url]
         ))
 
         self._plot.add_glyph(source, glyph)
@@ -107,7 +111,8 @@ class HistoryPlotter(object):
         )
         source = ColumnDataSource(dict(
             name=[event.name],
-            start=[event.date]
+            date=[event.date],
+            url=[event.url]
         ))
 
         return self._plot.add_glyph(source, glyph)
@@ -125,7 +130,8 @@ class HistoryPlotter(object):
         )
         source = ColumnDataSource(dict(
             name=[event.name],
-            start=[event.date]
+            date=[event.date],
+            url=[event.url]
         ))
 
         self._plot.add_glyph(source, glyph)
