@@ -472,6 +472,31 @@
         "name": "Nebuchadnezzar II",
         "birth": "-0605-01-01",
         "death": "-0562-01-01"
+      },
+      {
+        "name": "Martin Luther King Jr.",
+        "birth": "1929-01-15",
+        "death": "1968-04-04"
+      },
+      {
+        "name": "Mary Wollstonecraft",
+        "birth": "1759-04-27",
+        "death": "1797-09-10"
+      },
+      {
+        "name": "David Hume",
+        "birth": "1711-05-07",
+        "death":"1776-08-25"
+      },
+      {
+        "name": "Thomas Hobbes",
+        "birth": "1588-04-05",
+        "death": "1679-12-04"
+      },
+      {
+        "name": "John Locke",
+        "birth": "1632-08-29",
+        "death": "1704-10-28"
       }
     ],
     "eras": [
@@ -538,6 +563,10 @@
       {
         "name": "Invasion of Poland",
         "date": "1939-09-01"
+      },
+      {
+        "name": "Stonewall Riots",
+        "date": "1969-06-28"
       }
     ]
   }
