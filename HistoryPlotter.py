@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-import pendulum
+import numpy as numpy
 from bokeh.colors import Color
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
@@ -29,15 +29,21 @@ class HistoryPlotter(object):
                 ZoomInTool(),
                 ZoomOutTool(),
                 HoverTool(
-                    mode='vline',
-                    tooltips=[('Name', '@name')]
+                    # mode='vline',
+                    tooltips=[('Name', '@name')],
+                    formatters={
+                        'birth': 'datetime',
+                        'death': 'datetime',
+                        'start': 'datetime',
+                        'end': 'datetime'
+                    }
                 ),
                 TapTool(
                     callback=OpenURL(url="@url")
                 )
             ],
             active_scroll=wheel_pan_tool,
-            x_range=(pendulum.parse('1500-01-01'), pendulum.parse('2000-01-01')),
+            x_range=(numpy.datetime64('1500-01-01'), numpy.datetime64('2000-01-01')),
             sizing_mode='stretch_both'
         )
 

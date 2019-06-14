@@ -1,12 +1,9 @@
 import json
-from operator import attrgetter
 from typing import List, Dict, Union
 
 import bokeh
-import pendulum
-import numpy as np
+import numpy as numpy
 from bokeh.colors import RGB, Color
-from pendulum import DateTime
 
 
 class History(object):
@@ -80,8 +77,8 @@ class Person(object):
     def __init__(
             self,
             name: str,
-            birth: np.datetime64,
-            death: np.datetime64,
+            birth: numpy.datetime64,
+            death: numpy.datetime64,
             events: List['Event'],
             url: str = None
     ):
@@ -95,8 +92,8 @@ class Person(object):
     def from_dict(data: Dict[str, Union[str, Dict[str, str]]]) -> 'Person':
         return Person(
             data['name'],
-            np.datetime64(data['birth'], 'D'),
-            np.datetime64(data['death'], 'D'),
+            numpy.datetime64(data['birth'], 'D'),
+            numpy.datetime64(data['death'], 'D'),
             list(map(Event.from_dict, data['events'])) if 'events' in data else [],
             data['url'] if 'url' in data else None
         )
@@ -106,7 +103,7 @@ class Event(object):
     def __init__(
             self,
             name: str,
-            date: np.datetime64,
+            date: numpy.datetime64,
             url: str = None
     ):
         self.name = name
@@ -117,7 +114,7 @@ class Event(object):
     def from_dict(data: Dict[str, str]) -> 'Event':
         return Event(
             data['name'],
-            np.datetime64(data['date'], 'D'),
+            numpy.datetime64(data['date'], 'D'),
             data['url'] if 'url' in data else None
         )
 
@@ -126,8 +123,8 @@ class Era(object):
     def __init__(
             self,
             name: str,
-            start: np.datetime64,
-            end: np.datetime64,
+            start: numpy.datetime64,
+            end: numpy.datetime64,
             url: str = None
     ):
         self.name = name
@@ -139,8 +136,8 @@ class Era(object):
     def from_dict(data: Dict[str, str]) -> 'Era':
         return Era(
             data['name'],
-            np.datetime64(data['start'], 'D'),
-            np.datetime64(data['end'], 'D'),
+            numpy.datetime64(data['start'], 'D'),
+            numpy.datetime64(data['end'], 'D'),
             data['url'] if 'url' in data else None
         )
 
