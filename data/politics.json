@@ -1,0 +1,156 @@
+{
+  "politics": {
+    "people": [
+      {
+        "name": "East India Company",
+        "birth": "1600-12-31",
+        "death": "1874-06-01",
+        "url": "https://en.wikipedia.org/wiki/East_India_Company"
+      },
+      {
+        "name": "Great Leap Forward",
+        "birth": "1958",
+        "death": "1962",
+        "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
+      },
+      {
+        "name": "Gaius Julius Caesar",
+        "birth": "-0100-07-12",
+        "death": "-0044-03-15",
+        "url": "https://en.wikipedia.org/wiki/Julius_Caesar"
+      },
+      {
+        "name": "Cleopatra VII Philopator",
+        "birth": "-0069-01-01",
+        "death": "-0030-08-11",
+        "url": "https://en.wikipedia.org/wiki/Cleopatra"
+      },
+      {
+        "name": "Alexander III of Macedon",
+        "birth": "-0356-07-20",
+        "death": "-0323-06-10",
+        "url": "https://en.wikipedia.org/wiki/Alexander_the_Great"
+      },
+      {
+        "name": "Nebuchadnezzar II",
+        "birth": "-0605-01-01",
+        "death": "-0562-01-01",
+        "url": "https://en.wikipedia.org/wiki/Nebuchadnezzar_II"
+      },
+      {
+        "name": "Martin Luther King Jr.",
+        "birth": "1929-01-15",
+        "death": "1968-04-04",
+        "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr."
+      },
+      {
+        "name": "Mary Wollstonecraft",
+        "birth": "1759-04-27",
+        "death": "1797-09-10",
+        "url": "https://en.wikipedia.org/wiki/Mary_Wollstonecraft"
+      },
+      {
+        "name": "David Hume",
+        "birth": "1711-05-07",
+        "death": "1776-08-25",
+        "url": "https://en.wikipedia.org/wiki/David_Hume"
+      },
+      {
+        "name": "Thomas Hobbes",
+        "birth": "1588-04-05",
+        "death": "1679-12-04",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes"
+      },
+      {
+        "name": "John Locke",
+        "birth": "1632-08-29",
+        "death": "1704-10-28",
+        "url": "https://en.wikipedia.org/wiki/John_Locke"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Roman Republic",
+        "start": "-0509",
+        "end": "-0027"
+      },
+      {
+        "name": "Roman Empire",
+        "start": "-0027",
+        "end": "0286"
+      },
+      {
+        "name": "World War 1",
+        "start": "1914-07-28",
+        "end": "1918-11-11"
+      },
+      {
+        "name": "World War 2",
+        "start": "1939-09-01",
+        "end": "1945-09-02"
+      },
+      {
+        "name": "Cold War",
+        "start": "1946",
+        "end": "1991"
+      },
+      {
+        "name": "French Revolution",
+        "start": "1789-05-05",
+        "end": "1799-11-09"
+      }
+    ],
+    "events": [
+      {
+        "name": "9/11",
+        "date": "2001-09-11",
+        "url": "https://en.wikipedia.org/wiki/September_11_attacks"
+      },
+      {
+        "name": "D-Day",
+        "date": "1944-06-06",
+        "url": "https://en.wikipedia.org/wiki/Normandy_landings"
+      },
+      {
+        "name": "Fall of the Berlin Wall",
+        "date": "1989-11-09",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Wall"
+      },
+      {
+        "name": "Storming of the Bastille",
+        "date": "1789-07-14",
+        "url": "https://en.wikipedia.org/wiki/Storming_of_the_Bastille"
+      },
+      {
+        "name": "Sack of Rome",
+        "date": "1527-05-06",
+        "url": "https://en.wikipedia.org/wiki/Sack_of_Rome_(1527)"
+      },
+      {
+        "name": "Bombing of Hiroshima",
+        "date": "1945-08-06",
+        "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      },
+      {
+        "name": "Bombing of Nagasaki",
+        "date": "1945-08-09",
+        "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"
+      },
+      {
+        "name": "Invasion of Poland",
+        "date": "1939-09-01",
+        "url": "https://en.wikipedia.org/wiki/World_War_II"
+      },
+      {
+        "name": "Stonewall Riots",
+        "date": "1969-06-28",
+        "url": "https://en.wikipedia.org/wiki/Stonewall_riots"
+      },
+      {
+        "name": "English Bill of Rights",
+        "date": "1689-12-16",
+        "url": "https://en.wikipedia.org/wiki/Bill_of_Rights_1689"
+      }
+    ]
+  }
+}

@@ -10,27 +10,44 @@ from pendulum import DateTime
 
 
 class History(object):
-    def __init__(self, facets: Dict[str, 'Facet']):
-        self.facets = facets
+    def __init__(self, facets: Dict[str, 'Facet'] = None):
+        self.facets = facets if facets else {}
+        self.__calculate_colors()
 
     @property
-    def people(self):
+    def people(self) -> List['Person']:
         return [person for facet in self.facets.values() for person in facet.people]
 
     @property
-    def events(self):
+    def events(self) -> List['Event']:
         return [event for facet in self.facets.values() for event in facet.events]
 
     @property
-    def eras(self):
+    def eras(self) -> List['Era']:
         return [era for facet in self.facets.values() for era in facet.eras]
 
+    def append(self, other: 'History') -> 'History':
+        for facet in other.facets:
+            if facet in self.facets:
+                self.facets[facet].people.extend(other.facets[facet].people)
+                self.facets[facet].events.extend(other.facets[facet].events)
+                self.facets[facet].eras.extend(other.facets[facet].eras)
+            else:
+                self.facets[facet] = other.facets[facet]
+
+        self.__calculate_colors()
+        return self
+
+    def __calculate_colors(self):
+        colors = iter([to_color(color) for color in bokeh.palettes.viridis(len(self.facets))])
+        for facet in self.facets:
+            self.facets[facet].color = next(colors)
+
     @staticmethod
-    def from_dict(data: Dict[str, Union[str, Dict[str, str]]]):
-        colors = iter([to_color(color) for color in bokeh.palettes.viridis(len(data))])
+    def from_dict(data: Dict[str, Union[str, Dict[str, str]]]) -> 'History':
         facets = {}
         for facet_name in data:
-            facets[facet_name] = Facet.from_dict(facet_name, next(colors), data[facet_name])
+            facets[facet_name] = Facet.from_dict(facet_name, data[facet_name])
 
         return History(facets)
 
@@ -39,22 +56,20 @@ class Facet(object):
     def __init__(
             self,
             name: str,
-            color: Color,
             people: List['Person'],
             events: List['Event'],
             eras: List['Era']
     ):
         self.name = name
-        self.color = color
         self.people = people
         self.events = events
         self.eras = eras
+        self.color = None
 
     @staticmethod
-    def from_dict(name: str, color: Color, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
+    def from_dict(name: str, data: Dict[str, Union[str, Dict[str, str]]]) -> 'Facet':
         return Facet(
             name,
-            color,
             list(map(Person.from_dict, data['people'])) if 'people' in data else [],
             list(map(Event.from_dict, data['events'])) if 'events' in data else [],
             list(map(Era.from_dict, data['eras'])) if 'eras' in data else []
@@ -130,7 +145,7 @@ class Era(object):
         )
 
 
-def parse_json(filename: str):
+def parse_json(filename: str) -> 'History':
     with open(filename, mode='r', newline='') as file:
         data = json.load(file)
         return History.from_dict(data)

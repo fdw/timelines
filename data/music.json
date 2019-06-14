@@ -1,0 +1,119 @@
+{
+  "music": {
+    "people": [
+      {
+        "name": "Wolfgang Amadeus Mozart",
+        "birth": "1756-01-27",
+        "death": "1791-12-05",
+        "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+      },
+      {
+        "name": "Johann Sebastian Bach",
+        "birth": "1685-03-31",
+        "death": "1750-07-28",
+        "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach"
+      },
+      {
+        "name": "Georg Friedrich Händel",
+        "birth": "1685-03-05",
+        "death": "1759-04-14",
+        "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel"
+      },
+      {
+        "name": "Franz Joseph Haydn",
+        "birth": "1732-04-01",
+        "death": "1809-05-31",
+        "url": "https://en.wikipedia.org/wiki/Joseph_Haydn"
+      },
+      {
+        "name": "Richard Strauss",
+        "birth": "1864-06-11",
+        "death": "1949-09-08",
+        "url": "https://en.wikipedia.org/wiki/Richard_Strauss"
+      },
+      {
+        "name": "Antonio Vivaldo",
+        "birth": "1678-03-04",
+        "death": "1741-07-28",
+        "url": "https://en.wikipedia.org/wiki/Antonio_Vivaldi"
+      },
+      {
+        "name": "Wilhelm Hieronymus Pachelbel",
+        "birth": "1686-08-29",
+        "death": "1764-01-01",
+        "url": "https://en.wikipedia.org/wiki/Wilhelm_Hieronymus_Pachelbel"
+      },
+      {
+        "name": "Ludwig van Beethoven",
+        "birth": "1770-12-17",
+        "death": "1827-03-26",
+        "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven"
+      },
+      {
+        "name": "Franz Schubert",
+        "birth": "1797-01-31",
+        "death": "1828-11-19",
+        "url": "https://en.wikipedia.org/wiki/Franz_Schubert"
+      },
+      {
+        "name": "The Beach Boys",
+        "birth": "1961",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/The_Beach_Boys"
+      },
+      {
+        "name": "The Beatles",
+        "birth": "1960",
+        "death": "1970",
+        "url": "https://en.wikipedia.org/wiki/The_Beatles"
+      },
+      {
+        "name": "Karl Martin Sandberg (Max Martin)",
+        "birth": "1971-02-26",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/Max_Martin"
+      },
+      {
+        "name": "Niccolò Paganini",
+        "birth": "1782-10-27",
+        "death": "1840-05-27",
+        "url": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Paganini"
+      },
+      {
+        "name": "Sergei Vasilyevich Rachmaninoff",
+        "birth": "1873-04-01",
+        "death": "1943-03-28",
+        "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff"
+      }
+    ],
+    "events": [
+      {
+        "name": "Eight-Track Recorder",
+        "date": "1957",
+        "url": "https://en.wikipedia.org/wiki/History_of_multitrack_recording"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Renaissance",
+        "start": "1400",
+        "end": "1600"
+      },
+      {
+        "name": "Baroque",
+        "start": "1600",
+        "end": "1760"
+      },
+      {
+        "name": "Classical",
+        "start": "1730",
+        "end": "1820"
+      },
+      {
+        "name": "Romanticism",
+        "start": "1780",
+        "end": "1810"
+      }
+    ]
+  }
+}

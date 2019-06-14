@@ -1,0 +1,60 @@
+{
+  "literature": {
+    "people": [
+      {
+        "name": "William Shakespeare",
+        "birth": "1564-04-26",
+        "death": "1616-04-23",
+        "url": "https://en.wikipedia.org/wiki/William_Shakespeare"
+      },
+      {
+        "name": "Durante di Alighiero degli Alighieri (Dante)",
+        "birth": "1265-01-01",
+        "death": "1321-01-01",
+        "url": "https://en.wikipedia.org/wiki/Dante_Alighieri"
+      },
+      {
+        "name": "Miguel de Cervantes Saavedra",
+        "birth": "1547-09-29",
+        "death": "1616-04-22",
+        "url": "https://en.wikipedia.org/wiki/Miguel_de_Cervantes"
+      },
+      {
+        "name": "Johann Wolfgang von Goethe",
+        "birth": "1749-08-28",
+        "death": "1832-03-22",
+        "url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe"
+      },
+      {
+        "name": "Johann Christoph Friedrich von Schiller",
+        "birth": "1759-11-10",
+        "death": "1805-05-09",
+        "url": "https://en.wikipedia.org/wiki/Friedrich_Schiller"
+      },
+      {
+        "name": "Charlotte Brontë",
+        "birth": "1816-04-21",
+        "death": "1855-03-31",
+        "url": "https://en.wikipedia.org/wiki/Charlotte_Bront%C3%AB"
+      },
+      {
+        "name": "Mary Wollstonecraft Shelley",
+        "birth": "1797-08-30",
+        "death": "1851-02-01",
+        "url": "https://en.wikipedia.org/wiki/Mary_Shelley"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Sturm und Drang",
+        "start": "1770",
+        "end": "1787"
+      },
+      {
+        "name": "Romanticism",
+        "start": "1800",
+        "end": "1850"
+      }
+    ]
+  }
+}
