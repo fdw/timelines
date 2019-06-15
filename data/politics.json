@@ -66,38 +66,74 @@
         "birth": "1632-08-29",
         "death": "1704-10-28",
         "url": "https://en.wikipedia.org/wiki/John_Locke"
+      },
+      {
+        "name": "Nelson Rolihlahla Mandela",
+        "birth": "1918-07-18",
+        "death": "2013-12-05",
+        "url": "https://en.wikipedia.org/wiki/Nelson_Mandela"
       }
     ],
     "eras": [
       {
+        "name": "Classical Greece",
+        "start": "-0500",
+        "end": "-0323",
+        "url": "https://en.wikipedia.org/wiki/Classical_Greece"
+      },
+      {
         "name": "Roman Republic",
         "start": "-0509",
-        "end": "-0027"
+        "end": "-0027",
+        "url": "https://en.wikipedia.org/wiki/Roman_Republic"
       },
       {
         "name": "Roman Empire",
         "start": "-0027",
-        "end": "0286"
+        "end": "0286",
+        "url": "https://en.wikipedia.org/wiki/Roman_Empire"
       },
       {
         "name": "World War 1",
         "start": "1914-07-28",
-        "end": "1918-11-11"
+        "end": "1918-11-11",
+        "url": "https://en.wikipedia.org/wiki/World_War_I"
       },
       {
         "name": "World War 2",
         "start": "1939-09-01",
-        "end": "1945-09-02"
+        "end": "1945-09-02",
+        "url": "https://en.wikipedia.org/wiki/World_War_II"
       },
       {
         "name": "Cold War",
         "start": "1946",
-        "end": "1991"
+        "end": "1991",
+        "url": "https://en.wikipedia.org/wiki/Cold_War"
       },
       {
         "name": "French Revolution",
         "start": "1789-05-05",
-        "end": "1799-11-09"
+        "end": "1799-11-09",
+        "url": "https://en.wikipedia.org/wiki/French_Revolution"
+      },
+      {
+        "name": "Classic Maya Civilization",
+        "start": "0250",
+        "end": "0900",
+        "url": "https://en.wikipedia.org/wiki/Maya_civilization#Classic_period_(c._250%E2%80%93900_AD)"
+      },
+      {
+        "name": "Aztec Empire",
+        "start": "1428",
+        "end": "1521",
+        "url": "https://en.wikipedia.org/wiki/Aztec_Empire"
+      },
+      {
+        "name": "Qin Dynasty in Imperial China",
+        "start": "-0221",
+        "end": "-0203",
+        "url": "https://en.wikipedia.org/wiki/Qin_dynasty"
       }
     ],
     "events": [
@@ -150,6 +186,16 @@
         "name": "English Bill of Rights",
         "date": "1689-12-16",
         "url": "https://en.wikipedia.org/wiki/Bill_of_Rights_1689"
+      },
+      {
+        "name": "Fall of the last Maya city, Nojpetén",
+        "date": "1697",
+        "url": "https://en.wikipedia.org/wiki/Maya_civilization"
+      },
+      {
+        "name": "United States Declaration of Independence",
+        "date": "1776-07-04",
+        "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"
       }
     ]
   }

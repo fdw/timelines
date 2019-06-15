@@ -42,6 +42,24 @@
         "birth": "1797-08-30",
         "death": "1851-02-01",
         "url": "https://en.wikipedia.org/wiki/Mary_Shelley"
+      },
+      {
+        "name": "Charles John Huffam Dickens",
+        "birth": "1812-02-07",
+        "death": "1870-06-09",
+        "url": "https://en.wikipedia.org/wiki/Charles_Dickens"
+      },
+      {
+        "name": "Oscar Fingal O'Flahertie Wills Wilde",
+        "birth": "1854-10-16",
+        "death": "1900-11-30",
+        "url": "https://en.wikipedia.org/wiki/Oscar_Wilde"
+      },
+      {
+        "name": "Marcus Valerius Martialis (Martial)",
+        "birth": "0040",
+        "death": "103",
+        "url": "https://en.wikipedia.org/wiki/Martial"
       }
     ],
     "eras": [
