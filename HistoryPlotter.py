@@ -155,9 +155,9 @@ class HistoryPlotter(object):
                 top=offset + width,
                 fill_alpha=0.1,
                 fill_color=color.lighten(0.2),
-                line_width=1,
-                line_alpha=0.2,
-                line_color=color.lighten(0.2),
+                line_width=2,
+                line_alpha=0.3,
+                line_color=color.lighten(0.1),
                 name=era.name,
                 hatch_pattern='right_diagonal_line',
                 hatch_scale=10,
@@ -169,7 +169,7 @@ class HistoryPlotter(object):
                 end=[era.end]
             ))
 
-            self._plot.add_glyph(source, glyph)
+            self._plot.add_glyph(source, glyph, level='underlay')
 
     def finish(self):
         show(self._plot)

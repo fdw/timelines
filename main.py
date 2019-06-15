@@ -1,6 +1,6 @@
 import glob
 
-from bokeh.io import show, output_file
+from bokeh.io import output_file
 
 from History import parse_json, History
 from HistoryPlotter import HistoryPlotter
