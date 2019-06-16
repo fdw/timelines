@@ -13,7 +13,7 @@ from Lanes import Lanes
 
 
 class HistoryPlotter(object):
-    LANE_PADDING = 2
+    LANE_PADDING = 1
     LANE_HEIGHT = 2
 
     def __init__(self):
@@ -156,7 +156,7 @@ class HistoryPlotter(object):
         lanes.occupy(lane, event.date)
 
     def _calculate_lane_offset(self, lane: int):
-        return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_HEIGHT
+        return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_PADDING
 
     def plot_eras(self, eras: List['Era'], offset: int, width: int, color: Color):
         for era in eras:
