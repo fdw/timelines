@@ -89,6 +89,25 @@
         "death": "1943-03-28",
         "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff",
         "short_name": "Sergei Rachmaninoff"
+      },
+      {
+        "name":"Frédéric Chopin",
+        "birth":"1810-03-01",
+        "death":"1849-10-17",
+        "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin"
+      },
+      {
+        "name": "Claude Debussy",
+        "birth": "1862-08-22",
+        "death": "1918-03-25",
+        "url": "https://en.wikipedia.org/wiki/Claude_Debussy"
+      },
+      {
+        "name": "Frances Ethel Gumm",
+        "birth": "1922-06-10",
+        "death": "1969-06-22",
+        "url": "https://en.wikipedia.org/wiki/Judy_Garland",
+        "short_name": "Judy Garland"
       }
     ],
     "events": [

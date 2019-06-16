@@ -77,6 +77,45 @@
         "death": "2013-12-05",
         "url": "https://en.wikipedia.org/wiki/Nelson_Mandela",
         "short_name": "Nelson Mandela"
+      },
+      {
+        "name": "Adam Smith",
+        "birth": "1703-06-16",
+        "death": "1790-07-17",
+        "url": "https://en.wikipedia.org/wiki/Adam_Smith"
+      },
+      {
+        "name": "François-Marie Arouet",
+        "birth": "1694-11-21",
+        "death": "1778-05-30",
+        "url": "https://en.wikipedia.org/wiki/Voltaire",
+        "short_name": "Voltaire"
+      },
+      {
+        "name": "Louis XIV of France",
+        "birth": "1638-09-05",
+        "death": "1715-09-01",
+        "url": "https://en.wikipedia.org/wiki/Louis_XIV_of_France",
+        "short_name": "Louis XIV"
+      },
+      {
+        "name": "Queen Victoria",
+        "birth": "1819-05-24",
+        "death": "1901-01-22",
+        "url": "https://en.wikipedia.org/wiki/Queen_Victoria"
+      },
+      {
+        "name": "Lorenzo de' Medici",
+        "birth": "1449-01-01",
+        "death": "1492-04-08",
+        "url": "https://en.wikipedia.org/wiki/Lorenzo_de%27_Medici"
+      },
+      {
+        "name": "Niccolò di Bernardo dei Machiavelli",
+        "birth": "1469-05-03",
+        "death": "1527-06-21",
+        "url": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli",
+        "short_name": "Niccolò Machiavelli"
       }
     ],
     "eras": [
@@ -139,6 +178,12 @@
         "start": "-0221",
         "end": "-0203",
         "url": "https://en.wikipedia.org/wiki/Qin_dynasty"
+      },
+      {
+        "name": "Enlightenment",
+        "start": "1700",
+        "end": "1899",
+        "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
       }
     ],
     "events": [

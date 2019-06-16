@@ -11,7 +11,14 @@
         "name": "Isaac Newton",
         "birth": "1643-01-04",
         "death": "1727-03-31",
-        "url": "https://de.wikipedia.org/wiki/Isaac_Newton"
+        "url": "https://de.wikipedia.org/wiki/Isaac_Newton",
+        "events": [
+          {
+            "name": "Philosophiæ Naturalis Principia Mathematica",
+            "date": "1687-07-05",
+            "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica"
+          }
+        ]
       },
       {
         "name": "Albert Einstein",
@@ -149,6 +156,18 @@
             "url": "https://en.wikipedia.org/wiki/Incandescent_light_bulb"
           }
         ]
+      },
+      {
+        "name": "Francis Bacon",
+        "birth": "1561-01-22",
+        "death": "1626-04-09",
+        "url": "https://en.wikipedia.org/wiki/Francis_Bacon"
+      },
+      {
+        "name": "René Descartes",
+        "birth": "1596-03-31",
+        "death": "1650-02-11",
+        "url":"https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
       }
     ],
     "events": [
@@ -176,6 +195,20 @@
         "name": "First heavier-than-air, powered, manned flight",
         "date": "1903-12-17",
         "url": "https://en.wikipedia.org/wiki/History_of_aviation"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Scientific Revolution",
+        "start": "1543",
+        "end": "1687",
+        "url": "https://en.wikipedia.org/wiki/Scientific_Revolution"
+      },
+      {
+        "name": "Enlightenment",
+        "start": "1700",
+        "end": "1899",
+        "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
       }
     ]
   }
