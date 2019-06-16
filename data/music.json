@@ -5,7 +5,8 @@
         "name": "Wolfgang Amadeus Mozart",
         "birth": "1756-01-27",
         "death": "1791-12-05",
-        "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+        "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+        "short_name": "Mozart"
       },
       {
         "name": "Johann Sebastian Bach",
@@ -53,7 +54,8 @@
         "name": "Franz Schubert",
         "birth": "1797-01-31",
         "death": "1828-11-19",
-        "url": "https://en.wikipedia.org/wiki/Franz_Schubert"
+        "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
+        "short_name": "Schubert"
       },
       {
         "name": "The Beach Boys",
@@ -65,13 +67,15 @@
         "name": "The Beatles",
         "birth": "1960",
         "death": "1970",
-        "url": "https://en.wikipedia.org/wiki/The_Beatles"
+        "url": "https://en.wikipedia.org/wiki/The_Beatles",
+        "short_name": "Beatles"
       },
       {
-        "name": "Karl Martin Sandberg (Max Martin)",
+        "name": "Karl Martin Sandberg",
         "birth": "1971-02-26",
         "death": "now",
-        "url": "https://en.wikipedia.org/wiki/Max_Martin"
+        "url": "https://en.wikipedia.org/wiki/Max_Martin",
+        "short_name": "Max Martin"
       },
       {
         "name": "Niccolò Paganini",
@@ -83,7 +87,8 @@
         "name": "Sergei Vasilyevich Rachmaninoff",
         "birth": "1873-04-01",
         "death": "1943-03-28",
-        "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff"
+        "url": "https://en.wikipedia.org/wiki/Sergei_Rachmaninoff",
+        "short_name": "Sergei Rachmaninoff"
       }
     ],
     "events": [

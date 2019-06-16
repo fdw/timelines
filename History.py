@@ -3,7 +3,8 @@ from typing import List, Dict, Union
 
 import bokeh
 import numpy as numpy
-from bokeh.colors import RGB, Color
+
+from ColorHelpers import to_color
 
 
 class History(object):
@@ -79,14 +80,17 @@ class Person(object):
             name: str,
             birth: numpy.datetime64,
             death: numpy.datetime64,
-            events: List['Event'],
-            url: str = None
+            url: str,
+            events: List['Event'] = None,
+            short_name: str = None
+
     ):
         self.name = name
         self.birth = birth
         self.death = death
-        self.events = events
         self.url = url
+        self.events = events if events is not None else []
+        self.short_name = short_name if short_name is not None else name
 
     @staticmethod
     def from_dict(data: Dict[str, Union[str, Dict[str, str]]]) -> 'Person':
@@ -94,8 +98,9 @@ class Person(object):
             data['name'],
             numpy.datetime64(data['birth'], 'D'),
             numpy.datetime64(data['death'], 'D'),
-            list(map(Event.from_dict, data['events'])) if 'events' in data else [],
-            data['url'] if 'url' in data else None
+            data['url'],
+            list(map(Event.from_dict, data['events'])) if 'events' in data else None,
+            data['short_name'] if 'short_name' in data else None
         )
 
 
@@ -148,5 +153,3 @@ def parse_json(filename: str) -> 'History':
         return History.from_dict(data)
 
 
-def to_color(string: str) -> Color:
-    return RGB(int(string[1:3], 16), int(string[3:5], 16), int(string[5:7], 16))

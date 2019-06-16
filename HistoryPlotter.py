@@ -4,9 +4,10 @@ import numpy as numpy
 from bokeh.colors import Color
 from bokeh.io import show
 from bokeh.models import WheelPanTool, BoxZoomTool, WheelZoomTool, ZoomInTool, ZoomOutTool, \
-    HoverTool, PanTool, Quad, Hex, ColumnDataSource, TapTool, OpenURL
+    HoverTool, PanTool, Quad, Hex, ColumnDataSource, TapTool, OpenURL, Label
 from bokeh.plotting import figure
 
+from ColorHelpers import text_color
 from History import Person, Era, Facet, Event
 from Lanes import Lanes
 
@@ -101,6 +102,17 @@ class HistoryPlotter(object):
 
         self._plot.add_glyph(source, glyph)
         lanes.occupy(lane, person.death)
+
+        label = Label(
+            text=person.short_name,
+            x=(person.death - person.birth) / 2 + person.birth,
+            y=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT / 2,
+            text_color=text_color(color),
+            text_align='center',
+            text_baseline='middle',
+            text_font_size='1em'
+        )
+        self._plot.add_layout(label)
 
         for event in person.events:
             self.plot_persons_event(event, lane, offset, color)

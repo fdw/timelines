@@ -17,19 +17,22 @@
         "name": "Gaius Julius Caesar",
         "birth": "-0100-07-12",
         "death": "-0044-03-15",
-        "url": "https://en.wikipedia.org/wiki/Julius_Caesar"
+        "url": "https://en.wikipedia.org/wiki/Julius_Caesar",
+        "short_name": "Julius Caesar"
       },
       {
         "name": "Cleopatra VII Philopator",
         "birth": "-0069-01-01",
         "death": "-0030-08-11",
-        "url": "https://en.wikipedia.org/wiki/Cleopatra"
+        "url": "https://en.wikipedia.org/wiki/Cleopatra",
+        "short_name": "Cleopatra"
       },
       {
         "name": "Alexander III of Macedon",
         "birth": "-0356-07-20",
         "death": "-0323-06-10",
-        "url": "https://en.wikipedia.org/wiki/Alexander_the_Great"
+        "url": "https://en.wikipedia.org/wiki/Alexander_the_Great",
+        "short_name": "Alexander the Great"
       },
       {
         "name": "Nebuchadnezzar II",
@@ -41,7 +44,8 @@
         "name": "Martin Luther King Jr.",
         "birth": "1929-01-15",
         "death": "1968-04-04",
-        "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr."
+        "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.",
+        "short_name": "Martin Luther King Jr"
       },
       {
         "name": "Mary Wollstonecraft",
@@ -71,7 +75,8 @@
         "name": "Nelson Rolihlahla Mandela",
         "birth": "1918-07-18",
         "death": "2013-12-05",
-        "url": "https://en.wikipedia.org/wiki/Nelson_Mandela"
+        "url": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+        "short_name": "Nelson Mandela"
       }
     ],
     "eras": [
@@ -196,6 +201,11 @@
         "name": "United States Declaration of Independence",
         "date": "1776-07-04",
         "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"
+      },
+      {
+        "name": "The world's first same-sex marraige bill goes into effect in the Netherlands",
+        "date": "2001-04-01",
+        "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands"
       }
     ]
   }

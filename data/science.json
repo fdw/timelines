@@ -29,13 +29,15 @@
         "name": "Niels Henrik David Bohr",
         "birth": "1885-10-07",
         "death": "1962-11-18",
-        "url": "https://en.wikipedia.org/wiki/Niels_Bohr"
+        "url": "https://en.wikipedia.org/wiki/Niels_Bohr",
+        "short_name": "Niels Bohr"
       },
       {
         "name": "Charles Robert Darwin",
         "birth": "1809-02-12",
         "death": "1882-04-19",
-        "url": "https://en.wikipedia.org/wiki/Charles_Darwin"
+        "url": "https://en.wikipedia.org/wiki/Charles_Darwin",
+        "short_name": "Charles Darwin"
       },
       {
         "name": "Stephen Hawking",
@@ -47,7 +49,8 @@
         "name": "Claude Elwood Shannon",
         "birth": "1916-04-30",
         "death": "2001-02-24",
-        "url": "https://en.wikipedia.org/wiki/Claude_Shannon"
+        "url": "https://en.wikipedia.org/wiki/Claude_Shannon",
+        "short_name": "Claude Shannon"
       },
       {
         "name": "Johannes Kepler",
@@ -65,7 +68,8 @@
         "name": "Marie Skłodowska Curie",
         "birth": "1867-11-07",
         "death": "1934-07-04",
-        "url": "https://en.wikipedia.org/wiki/Marie_Curie"
+        "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+        "short_name": "Marie Curie"
       },
       {
         "name": "Louis Pasteur",
@@ -102,6 +106,7 @@
         "birth": "1400-01-01",
         "death": "1468-02-03",
         "url": "https://en.wikipedia.org/wiki/Johannes_Gutenberg",
+        "short_name": "Johannes Gutenberg",
         "events": [
           {
             "name": "First movable type printing in Europe",
@@ -126,6 +131,24 @@
         "birth": "1881-08-06",
         "death": "1955-03-11",
         "url": "https://en.wikipedia.org/wiki/Alexander_Fleming"
+      },
+      {
+        "name": "Thomas Alva Edison",
+        "birth": "1847-02-11",
+        "death": "1931-10-18",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Edison",
+        "events": [
+          {
+            "name": "Phonograph",
+            "date": "1877",
+            "url": "https://en.wikipedia.org/wiki/Phonograph"
+          },
+          {
+            "name": "Incandescent Light Bulb",
+            "date": "1879-10-22",
+            "url": "https://en.wikipedia.org/wiki/Incandescent_light_bulb"
+          }
+        ]
       }
     ],
     "events": [

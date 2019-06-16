@@ -8,16 +8,18 @@
         "url": "https://en.wikipedia.org/wiki/William_Shakespeare"
       },
       {
-        "name": "Durante di Alighiero degli Alighieri (Dante)",
+        "name": "Durante di Alighiero degli Alighieri",
         "birth": "1265-01-01",
         "death": "1321-01-01",
-        "url": "https://en.wikipedia.org/wiki/Dante_Alighieri"
+        "url": "https://en.wikipedia.org/wiki/Dante_Alighieri",
+        "short_name": "Dante"
       },
       {
         "name": "Miguel de Cervantes Saavedra",
         "birth": "1547-09-29",
         "death": "1616-04-22",
-        "url": "https://en.wikipedia.org/wiki/Miguel_de_Cervantes"
+        "url": "https://en.wikipedia.org/wiki/Miguel_de_Cervantes",
+        "short_name": "Miguel de Cervantes"
       },
       {
         "name": "Johann Wolfgang von Goethe",
@@ -29,7 +31,8 @@
         "name": "Johann Christoph Friedrich von Schiller",
         "birth": "1759-11-10",
         "death": "1805-05-09",
-        "url": "https://en.wikipedia.org/wiki/Friedrich_Schiller"
+        "url": "https://en.wikipedia.org/wiki/Friedrich_Schiller",
+        "short_name": "Friedrich Schiller"
       },
       {
         "name": "Charlotte Brontë",
@@ -41,25 +44,29 @@
         "name": "Mary Wollstonecraft Shelley",
         "birth": "1797-08-30",
         "death": "1851-02-01",
-        "url": "https://en.wikipedia.org/wiki/Mary_Shelley"
+        "url": "https://en.wikipedia.org/wiki/Mary_Shelley",
+        "short_name": "Mary Shelley"
       },
       {
         "name": "Charles John Huffam Dickens",
         "birth": "1812-02-07",
         "death": "1870-06-09",
-        "url": "https://en.wikipedia.org/wiki/Charles_Dickens"
+        "url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+        "short_name": "Charles Dickens"
       },
       {
         "name": "Oscar Fingal O'Flahertie Wills Wilde",
         "birth": "1854-10-16",
         "death": "1900-11-30",
-        "url": "https://en.wikipedia.org/wiki/Oscar_Wilde"
+        "url": "https://en.wikipedia.org/wiki/Oscar_Wilde",
+        "short_name": "Oscar Wilde"
       },
       {
-        "name": "Marcus Valerius Martialis (Martial)",
+        "name": "Marcus Valerius Martialis",
         "birth": "0040",
         "death": "103",
-        "url": "https://en.wikipedia.org/wiki/Martial"
+        "url": "https://en.wikipedia.org/wiki/Martial",
+        "short_name": "Martial"
       }
     ],
     "eras": [
