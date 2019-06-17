@@ -40,7 +40,7 @@ class HistoryPlotter(object):
                     }
                 ),
                 TapTool(
-                    callback=OpenURL(url="@url")
+                    callback=OpenURL(url="@url{safe}")
                 )
             ],
             active_scroll=wheel_pan_tool,
