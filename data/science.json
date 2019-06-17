@@ -195,6 +195,16 @@
         "name": "First heavier-than-air, powered, manned flight",
         "date": "1903-12-17",
         "url": "https://en.wikipedia.org/wiki/History_of_aviation"
+      },
+      {
+        "name": "First production car",
+        "date": "1886-07-03",
+        "url": "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen"
+      },
+      {
+        "name": "First commercial, public film screening",
+        "date": "1895-12-28",
+        "url": "https://en.wikipedia.org/wiki/Cinematograph"
       }
     ],
     "eras": [
