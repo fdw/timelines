@@ -12,18 +12,6 @@ class History(object):
         self.facets = facets if facets else {}
         self.__calculate_colors()
 
-    @property
-    def people(self) -> List['Person']:
-        return [person for facet in self.facets.values() for person in facet.people]
-
-    @property
-    def events(self) -> List['Event']:
-        return [event for facet in self.facets.values() for event in facet.events]
-
-    @property
-    def eras(self) -> List['Era']:
-        return [era for facet in self.facets.values() for era in facet.eras]
-
     def append(self, other: 'History') -> 'History':
         for facet in other.facets:
             if facet in self.facets:
