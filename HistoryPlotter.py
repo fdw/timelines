@@ -55,19 +55,15 @@ class HistoryPlotter(object):
         offset = 0
         for facet_name in data:
             facet = data[facet_name]
-            lanes = self.plot_lanes(facet.people, facet.events, offset, facet.color)
+            lanes = self.calculate_lanes(facet.people, facet.events)
             self.plot_eras(facet.eras, offset, self._calculate_facet_offset(lanes), facet.color)
+            self.plot_lanes(lanes, offset, facet.color)
             offset = offset + self._calculate_facet_offset(lanes)
 
-    def _calculate_facet_offset(self, lanes: Lanes):
-        return lanes.size() * (self.LANE_PADDING + self.LANE_HEIGHT)
-
-    def plot_lanes(
+    def calculate_lanes(
             self,
             persons: List[Person],
-            events: List[Event],
-            offset: int,
-            color: Color
+            events: List[Event]
     ) -> Lanes:
         lanes = Lanes()
         data = sorted(
@@ -75,21 +71,34 @@ class HistoryPlotter(object):
             key=lambda elem: elem.birth if isinstance(elem, Person) else elem.date
         )
         for element in data:
-            if isinstance(element, Person):
-                self.plot_person(element, lanes, offset, color)
-            else:
-                self.plot_event(element, lanes, offset, color)
+            lanes.add_object(element)
 
         return lanes
 
-    def plot_person(self, person: Person, lanes: Lanes, offset: int, color: Color):
-        lane = lanes.find_lane_ending_before(person.birth)
+    def _calculate_facet_offset(self, lanes: Lanes):
+        return lanes.size() * (self.LANE_PADDING + self.LANE_HEIGHT)
 
+    def plot_lanes(
+            self,
+            lanes: Lanes,
+            offset: int,
+            color: Color
+    ) -> None:
+        lane_index = 0
+        for lane in lanes.lanes():
+            for object in lane:
+                if isinstance(object, Person):
+                    self.plot_person(object, lane_index, offset, color)
+                else:
+                    self.plot_event(object, lane_index, offset, color)
+            lane_index = lane_index + 1
+
+    def plot_person(self, person: Person, lane_index: int, offset: int, color: Color):
         glyph = Quad(
             left="birth",
             right="death",
-            bottom=offset + self._calculate_lane_offset(lane),
-            top=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT,
+            bottom=offset + self._calculate_lane_offset(lane_index),
+            top=offset + self._calculate_lane_offset(lane_index) + self.LANE_HEIGHT,
             fill_color=color,
             line_color=color
         )
@@ -101,12 +110,11 @@ class HistoryPlotter(object):
         ))
 
         self._plot.add_glyph(source, glyph)
-        lanes.occupy(lane, person.death)
 
         label = Label(
             text=person.short_name,
             x=(person.death - person.birth) / 2 + person.birth,
-            y=offset + self._calculate_lane_offset(lane) + self.LANE_HEIGHT / 2,
+            y=offset + self._calculate_lane_offset(lane_index) + self.LANE_HEIGHT / 2,
             text_color=text_color(color),
             text_align='center',
             text_baseline='middle',
@@ -115,12 +123,12 @@ class HistoryPlotter(object):
         self._plot.add_layout(label)
 
         for event in person.events:
-            self.plot_persons_event(event, lane, offset, color)
+            self.plot_persons_event(event, lane_index, offset, color)
 
-    def plot_persons_event(self, event: Event, lane: int, offset: int, color: Color):
+    def plot_persons_event(self, event: Event, lane_index: int, offset: int, color: Color):
         glyph = Hex(
             x=event.date,
-            y=offset + self._calculate_lane_offset(lane) + 0.5 * self.LANE_HEIGHT,
+            y=offset + self._calculate_lane_offset(lane_index) + 0.5 * self.LANE_HEIGHT,
             fill_color=color.darken(0.2),
             line_color=color.darken(0.2),
             fill_alpha=0.1,
@@ -135,12 +143,11 @@ class HistoryPlotter(object):
 
         return self._plot.add_glyph(source, glyph)
 
-    def plot_event(self, event: Event, lanes: Lanes, offset: int, color: Color):
-        lane = lanes.find_lane_ending_before(event.date)
+    def plot_event(self, event: Event, lane_index: int, offset: int, color: Color):
 
         glyph = Hex(
             x=event.date,
-            y=offset + self._calculate_lane_offset(lane) + 0.5 * self.LANE_HEIGHT,
+            y=offset + self._calculate_lane_offset(lane_index) + 0.5 * self.LANE_HEIGHT,
             fill_color=color,
             line_color=color,
             size=20,
@@ -153,7 +160,6 @@ class HistoryPlotter(object):
         ))
 
         self._plot.add_glyph(source, glyph)
-        lanes.occupy(lane, event.date)
 
     def _calculate_lane_offset(self, lane: int):
         return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_PADDING
