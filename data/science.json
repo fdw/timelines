@@ -210,6 +210,11 @@
         "name": "Estimated completion of Stonehenge",
         "date": "-2000",
         "url": "https://en.wikipedia.org/wiki/Stonehenge"
+      },
+      {
+          "name": "Establishment of the first University",
+          "date": "859",
+          "url": "https://en.wikipedia.org/wiki/University_of_Al_Quaraouiyine"
       }
     ],
     "eras": [
