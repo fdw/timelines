@@ -164,13 +164,13 @@ class HistoryPlotter(object):
     def _calculate_lane_offset(self, lane: int):
         return lane * (self.LANE_HEIGHT + self.LANE_PADDING) + 0.5 * self.LANE_PADDING
 
-    def plot_eras(self, eras: List['Era'], offset: int, width: int, color: Color):
+    def plot_eras(self, eras: List['Era'], offset: int, height: int, color: Color):
         for era in eras:
             glyph = Quad(
                 left=era.start,
                 right=era.end,
                 bottom=offset,
-                top=offset + width,
+                top=offset + height,
                 fill_alpha=0.1,
                 fill_color=color.lighten(0.2),
                 line_width=2,
