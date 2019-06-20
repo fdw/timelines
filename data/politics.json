@@ -116,6 +116,19 @@
         "death": "1527-06-21",
         "url": "https://en.wikipedia.org/wiki/Niccol%C3%B2_Machiavelli",
         "short_name": "Niccolò Machiavelli"
+      },
+      {
+        "name": "Napoléon Bonaparte",
+        "birth": "1769-08-15",
+        "death": "1821-05-05",
+        "url": "https://en.wikipedia.org/wiki/Napoleon",
+        "short_name": "Napoleon"
+      },
+      {
+        "name": "Genghis Khan",
+        "birth": "1162",
+        "death": "1227-08-18",
+        "url": "https://en.wikipedia.org/wiki/Genghis_Khan"
       }
     ],
     "eras": [
@@ -184,6 +197,12 @@
         "start": "1700",
         "end": "1899",
         "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
+      },
+      {
+        "name": "First Dynasty of Egypt",
+        "start": "-3100",
+        "end": "-2890",
+        "url": "https://en.wikipedia.org/wiki/First_Dynasty_of_Egypt"
       }
     ],
     "events": [
@@ -251,6 +270,11 @@
         "name": "The world's first same-sex marraige bill goes into effect in the Netherlands",
         "date": "2001-04-01",
         "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands"
+      },
+      {
+        "name": "Completion of the Great Pyramid of Gizeh",
+        "date": "-2560",
+        "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza"
       }
     ]
   }
