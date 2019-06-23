@@ -129,6 +129,19 @@
         "birth": "1162",
         "death": "1227-08-18",
         "url": "https://en.wikipedia.org/wiki/Genghis_Khan"
+      },
+      {
+        "name": "Jeanne d'Arc",
+        "birth": "1412",
+        "death": "1431-05-30",
+        "url": "https://en.wikipedia.org/wiki/Joan_of_Arc"
+      },
+      {
+        "name": "Yekaterina Alekseyevna",
+        "birth": "1729-05-02",
+        "death": "1796-11-17",
+        "url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
+        "short_name": "Catherine the Great"
       }
     ],
     "eras": [

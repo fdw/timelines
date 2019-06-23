@@ -80,6 +80,13 @@
         "start": "1800",
         "end": "1850"
       }
+    ],
+    "events": [
+      {
+        "name": "Dracula",
+        "date": "1897-05-26",
+        "url": "https://en.wikipedia.org/wiki/Dracula"
+      }
     ]
   }
 }
