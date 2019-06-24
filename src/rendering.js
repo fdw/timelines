@@ -132,7 +132,7 @@ export class HistoryRenderer {
       era.name,
       {
         left: left + width / 2,
-        width: isWideEnough ? width : height,
+        width: isWideEnough ? 500 : height,
         top: offset + height / 2,
         originX: 'center',
         originY: 'center',
@@ -205,8 +205,8 @@ export class HistoryRenderer {
     })
   }
 
-  buildPersonTooltip(person) {
-    const events = person.events.length > 0 ? "\n" + person.events.map(it => it.name + " (" + it.date.format('YYYY') + ")").join(', ') : ""
+  buildPersonTooltip (person) {
+    const events = person.events.length > 0 ? '\n' + person.events.map(it => it.name + ' (' + it.date.format('YYYY') + ')').join(', ') : ''
     return `${person.name}\n${person.birth.format('YYYY')} - ${person.death.format('YYYY')}${events}`
   }
 
