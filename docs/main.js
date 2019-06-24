@@ -52807,21 +52807,8 @@ var _data_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_r
 
 
 
-function initializeWorkaroundsForFabric () {
-  fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Canvas.prototype.getItem = function (id) {
-    for (let i = 0, len = this.size(); i < len; i++) {
-      if (this.getObjects()[i].id && this.getObjects()[i].id === id) {
-        return this.getObjects()[i]
-      }
-    }
-  }
-}
-
-
 const parser = new _parser__WEBPACK_IMPORTED_MODULE_3__[/* Parser */ "a"]()
 const facets = parser.parseData(_data_json__WEBPACK_IMPORTED_MODULE_4__)
-
-initializeWorkaroundsForFabric()
 
 const renderer = new _rendering__WEBPACK_IMPORTED_MODULE_2__[/* HistoryRenderer */ "a"]()
 const interactions = new _interaction__WEBPACK_IMPORTED_MODULE_1__[/* Interactions */ "a"](renderer)
@@ -52949,6 +52936,10 @@ class Interactions {
             strokeWidth: 0,
             fill: 'black',
             width: 190,
+            left: p.x,
+            top: p.y - 7,
+            originX: 'center',
+            originY: 'bottom',
           }
         )
 
@@ -52957,14 +52948,14 @@ class Interactions {
           stroke: chroma_js__WEBPACK_IMPORTED_MODULE_2__(e.target.color).hex(),
           strokeWidth: 1,
           width: tooltipText.width ,
-          height: tooltipText.height +4
-        })
-
-        const tooltip = new fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Group([tooltipBackground, tooltipText], {
+          height: tooltipText.height + 2,
           left: p.x,
           top: p.y - 5,
           originX: 'center',
           originY: 'bottom',
+        })
+
+        const tooltip = new fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Group([tooltipBackground, tooltipText], {
           id: 'tooltip'
         })
 
@@ -53078,6 +53069,14 @@ class HistoryRenderer {
     fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Textbox.prototype.editable = false
     fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Textbox.prototype.fontFamily = 'sans'
 
+    fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Canvas.prototype.getItem = function (id) {
+      for (let i = 0, len = this.size(); i < len; i++) {
+        if (this.getObjects()[i].id && this.getObjects()[i].id === id) {
+          return this.getObjects()[i]
+        }
+      }
+    }
+
     this._ticks = []
 
     this.initializeCanvas()
@@ -53096,7 +53095,6 @@ class HistoryRenderer {
   renderGrid () {
     this.canvas.remove(...this._ticks)
 
-    console.log(this.canvas.height)
     for (let currentTick = _constants__WEBPACK_IMPORTED_MODULE_1__[/* FIRST_TICK */ "e"].clone(); currentTick.isBefore(_constants__WEBPACK_IMPORTED_MODULE_1__[/* LAST_TICK */ "i"]); currentTick.add(this._periodBetweenTicks(), 'Y')) {
       const x = HistoryRenderer.calculateAbsoluteX(currentTick)
       const line = new fabric__WEBPACK_IMPORTED_MODULE_0__["fabric"].Line(

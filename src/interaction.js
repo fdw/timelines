@@ -81,7 +81,7 @@ export class Interactions {
       const mouseLine = new fabric.Group([line, label], {id: lineId})
 
       renderer.canvas.add(mouseLine)
-      mouseLine.moveTo(renderer.tickCount()+1)
+      mouseLine.moveTo(renderer.tickCount() + 1)
       renderer.canvas.requestRenderAll()
     })
   }
@@ -100,6 +100,10 @@ export class Interactions {
             strokeWidth: 0,
             fill: 'black',
             width: 190,
+            left: p.x,
+            top: p.y - 7,
+            originX: 'center',
+            originY: 'bottom',
           }
         )
 
@@ -107,17 +111,15 @@ export class Interactions {
           fill: chroma(e.target.color).brighten(3).hex(),
           stroke: chroma(e.target.color).hex(),
           strokeWidth: 1,
-          width: tooltipText.width ,
-          height: tooltipText.height +4
-        })
-
-        const tooltip = new fabric.Group([tooltipBackground, tooltipText], {
+          width: tooltipText.width,
+          height: tooltipText.height + 2,
           left: p.x,
           top: p.y - 5,
           originX: 'center',
           originY: 'bottom',
-          id: 'tooltip'
         })
+
+        const tooltip = new fabric.Group([tooltipBackground, tooltipText], {id: 'tooltip'})
 
         canvas.add(tooltip)
       }
