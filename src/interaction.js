@@ -4,8 +4,8 @@ import * as chroma from 'chroma-js'
 
 export class Interactions {
 
-  constructor (canvas) {
-    this._canvas = canvas
+  constructor (renderer) {
+    this._renderer = renderer
   }
 
   addAll () {
@@ -17,22 +17,22 @@ export class Interactions {
   }
 
   supportResizing () {
-    const canvas = this._canvas
+    const renderer = this._renderer
     window.onresize = function () {
-      canvas.setDimensions({width: window.innerWidth - 20, height: 2000})
+      renderer.canvas.setDimensions({width: window.innerWidth - 20, height: window.innerHeight})
     }
   }
 
   addWheel () {
-    const canvas = this._canvas
-    this._canvas.on('mouse:wheel', function (opt) {
+    const renderer = this._renderer
+    this._renderer.canvas.on('mouse:wheel', function (opt) {
       if (opt.e.ctrlKey) {
         const delta = opt.e.deltaY
-        let zoom = canvas.getZoom()
+        let zoom = renderer.canvas.getZoom()
         zoom = Math.min(Math.max(zoom + delta / 500, 0.2), 2)
-        canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
+        renderer.canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
       } else {
-        canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
+        renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
       }
       opt.e.preventDefault()
       opt.e.stopPropagation()
@@ -40,20 +40,20 @@ export class Interactions {
   }
 
   addHover () {
-    const canvas = this._canvas
+    const renderer = this._renderer
     const lineId = 'mouseline'
 
-    this._canvas.on('mouse:move', function (options) {
-      canvas.remove(canvas.getItem(lineId))
+    this._renderer.canvas.on('mouse:move', function (options) {
+      renderer.canvas.remove(renderer.canvas.getItem(lineId))
 
-      const p = canvas.getPointer(options.e)
+      const p = renderer.canvas.getPointer(options.e)
 
       const line = new fabric.Line(
         [
           p.x,
           0,
           p.x,
-          canvas.height
+          renderer.canvas.height
         ],
         {
           stroke: GRID_COLOR.hex(),
@@ -77,14 +77,14 @@ export class Interactions {
 
       const mouseLine = new fabric.Group([line, label], {id: lineId})
 
-      canvas.add(mouseLine)
-      mouseLine.moveTo(251)
+      renderer.canvas.add(mouseLine)
+      mouseLine.moveTo(renderer.tickCount()+1)
     })
   }
 
   addTooltips () {
-    const canvas = this._canvas
-    this._canvas.on('mouse:over', function (e) {
+    const canvas = this._renderer.canvas
+    this._renderer.canvas.on('mouse:over', function (e) {
 
       if (e.target && e.target.tooltipText) {
         const p = canvas.getPointer(e)
@@ -103,8 +103,8 @@ export class Interactions {
           fill: chroma(e.target.color).brighten(3).hex(),
           stroke: chroma(e.target.color).hex(),
           strokeWidth: 1,
-          width: tooltipText.width,
-          height: tooltipText.height
+          width: tooltipText.width ,
+          height: tooltipText.height +4
         })
 
         const tooltip = new fabric.Group([tooltipBackground, tooltipText], {
@@ -117,17 +117,17 @@ export class Interactions {
 
         canvas.add(tooltip)
       }
-      canvas.renderAll()
+      canvas.requestRenderAll()
     })
 
-    this._canvas.on('mouse:out', function (e) {
+    this._renderer.canvas.on('mouse:out', function (e) {
       canvas.remove(canvas.getItem('tooltip'))
-      canvas.renderAll()
+      canvas.requestRenderAll()
     })
   }
 
   addWikipediaLinks () {
-    this._canvas.on('mouse:down', function (event) {
+    this._renderer.canvas.on('mouse:down', function (event) {
       if (event.target && event.target.url) {
         window.open(event.target.url)
       }

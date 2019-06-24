@@ -14,14 +14,13 @@ function initializeWorkaroundsForFabric () {
   }
 }
 
-
 const parser = new Parser()
 const facets = parser.parseData(data)
 
 initializeWorkaroundsForFabric()
 
 const renderer = new HistoryRenderer()
-const interactions = new Interactions(renderer.canvas)
+const interactions = new Interactions(renderer)
 interactions.addAll()
 
 renderer.renderData(facets)
