@@ -8,12 +8,6 @@
         "url": "https://en.wikipedia.org/wiki/East_India_Company"
       },
       {
-        "name": "Great Leap Forward",
-        "birth": "1958",
-        "death": "1962",
-        "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
-      },
-      {
         "name": "Gaius Julius Caesar",
         "birth": "-0100-07-12",
         "death": "-0044-03-15",
@@ -142,6 +136,12 @@
         "death": "1796-11-17",
         "url": "https://en.wikipedia.org/wiki/Catherine_the_Great",
         "short_name": "Catherine the Great"
+      },
+      {
+        "name": "Hatshepsut",
+        "birth": "-1478",
+        "death": "-1458",
+        "url": "https://en.wikipedia.org/wiki/Hatshepsut"
       }
     ],
     "eras": [
@@ -222,6 +222,12 @@
         "start": "1096",
         "end": "1099",
         "url": "https://en.wikipedia.org/wiki/First_Crusade"
+      },
+      {
+        "name": "Great Leap Forward",
+        "start": "1958",
+        "end": "1962",
+        "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
       }
     ],
     "events": [
@@ -299,6 +305,11 @@
         "name": "Fall of Constantinople",
         "date": "1453-05-29",
         "url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople"
+      },
+      {
+        "name": "Founding of the first city, Eridu",
+        "date": "-5400",
+        "url": "https://en.wikipedia.org/wiki/Eridu"
       }
     ]
   }
