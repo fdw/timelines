@@ -4,9 +4,11 @@ import {
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
   DATE_SCALE_UNIT,
+  FIRST_TICK,
   GRID_COLOR,
   LANE_HEIGHT,
-  LANE_PADDING
+  LANE_PADDING,
+  LAST_TICK
 } from './constants'
 import * as chroma from 'chroma-js'
 import moment from 'moment'
@@ -17,6 +19,8 @@ export class HistoryRenderer {
     fabric.Object.prototype.selectable = false
     fabric.Textbox.prototype.editable = false
     fabric.Textbox.prototype.fontFamily = 'sans'
+
+    this._ticks = []
 
     this.initializeCanvas()
     this.renderGrid()
@@ -31,9 +35,10 @@ export class HistoryRenderer {
   }
 
   renderGrid () {
-    for (let i = -160; i <= 90; i++) {
-      const date = moment(i * 25, 'Y')
-      const x = HistoryRenderer.calculateAbsoluteX(date)
+    this.canvas.remove(...this._ticks)
+
+    for (let currentTick = FIRST_TICK.clone(); currentTick.isBefore(LAST_TICK); currentTick.add(this._periodBetweenTicks(), 'Y')) {
+      const x = HistoryRenderer.calculateAbsoluteX(currentTick)
       const line = new fabric.Line(
         [
           x,
@@ -47,7 +52,7 @@ export class HistoryRenderer {
         })
 
       const label = new fabric.Textbox(
-        date.format('YYYY'),
+        currentTick.format('YYYY'),
         {
           left: x,
           top: window.innerHeight - LANE_HEIGHT,
@@ -62,9 +67,18 @@ export class HistoryRenderer {
       )
 
       const gridline = new fabric.Group([line, label])
-
-      this.canvas.add(gridline)
+      this.canvas.insertAt(gridline, 1, false)
+      this._ticks.push(gridline)
     }
+    this.canvas.requestRenderAll()
+  }
+
+  _periodBetweenTicks () {
+    return 25 * this.canvas.getZoom()
+  }
+
+  tickCount () {
+    return this._ticks.length - 1
   }
 
   renderData (facets) {
