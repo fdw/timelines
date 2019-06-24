@@ -20,6 +20,7 @@ export class Interactions {
     const renderer = this._renderer
     window.onresize = function () {
       renderer.canvas.setDimensions({width: window.innerWidth - 20, height: window.innerHeight})
+      renderer.renderGrid()
     }
   }
 
@@ -31,8 +32,10 @@ export class Interactions {
         let zoom = renderer.canvas.getZoom()
         zoom = Math.min(Math.max(zoom + delta / 500, 0.2), 2)
         renderer.canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
+        renderer.renderGrid()
       } else {
         renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
+        renderer.canvas.requestRenderAll()
       }
       opt.e.preventDefault()
       opt.e.stopPropagation()
@@ -79,6 +82,7 @@ export class Interactions {
 
       renderer.canvas.add(mouseLine)
       mouseLine.moveTo(renderer.tickCount()+1)
+      renderer.canvas.requestRenderAll()
     })
   }
 

@@ -32,6 +32,7 @@ export class HistoryRenderer {
     this.canvas.hoverCursor = 'default'
     this.canvas.selection = false
     this.canvas.absolutePan({x: HistoryRenderer.calculateAbsoluteX(moment('1500-01-01', 'Y-MM-DD')), y: 0})
+    this.canvas.renderOnAddRemove = false
   }
 
   renderGrid () {
