@@ -39,8 +39,15 @@ export class Interactions {
       if (opt.e.ctrlKey) {
         const delta = opt.e.deltaY
         let zoom = renderer.canvas.getZoom()
-        zoom = Math.min(Math.max(zoom + delta / 500, 0.2), 2)
+        zoom = Math.min(Math.max(zoom + delta/20, 0.5), 3)
         renderer.canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
+
+        let original_viewportTransform = this.viewportTransform
+        if (original_viewportTransform[5] >= 0) {
+          this.viewportTransform[5] = 0
+        } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(renderer.canvas.getHeight() - canvasHeight() * zoom)) {
+          this.viewportTransform[5] = renderer.canvas.getHeight() - canvasHeight() * zoom
+        }
         renderer.renderGrid()
       } else {
         renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
