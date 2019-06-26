@@ -49,6 +49,7 @@ export class HistoryRenderer {
 
   renderGrid () {
     this.canvas.remove(...this._ticks)
+    this._ticks.length = 0
 
     for (let currentTick = FIRST_TICK.clone(); currentTick.isBefore(LAST_TICK); currentTick.add(this._periodBetweenTicks(), 'Y')) {
       const x = HistoryRenderer.calculateAbsoluteX(currentTick)
