@@ -35,6 +35,7 @@ export class HistoryRenderer {
 
     this.initializeCanvas()
     this.renderGrid()
+    this.canvas.requestRenderAll()
   }
 
   initializeCanvas () {

@@ -30,6 +30,7 @@ export class Interactions {
     window.onresize = function () {
       renderer.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
       renderer.renderGrid()
+      renderer.canvas.requestRenderAll()
     }
   }
 
@@ -51,8 +52,8 @@ export class Interactions {
         renderer.renderGrid()
       } else {
         renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
-        renderer.canvas.requestRenderAll()
       }
+      renderer.canvas.requestRenderAll()
       opt.e.preventDefault()
       opt.e.stopPropagation()
     })
