@@ -49,6 +49,7 @@ export class Interactions {
         } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(renderer.canvas.getHeight() - canvasHeight() * zoom)) {
           this.viewportTransform[5] = renderer.canvas.getHeight() - canvasHeight() * zoom
         }
+
         renderer.renderGrid()
       } else {
         renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
