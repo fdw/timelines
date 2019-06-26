@@ -1,5 +1,14 @@
 import { fabric } from 'fabric'
-import { BACKGROUND_COLOR, DATE_ORIGIN, DATE_SCALE_FACTOR, DATE_SCALE_UNIT, GRID_COLOR, LANE_HEIGHT } from './constants'
+import {
+  BACKGROUND_COLOR,
+  canvasHeight,
+  DATE_ORIGIN,
+  DATE_SCALE_FACTOR,
+  DATE_SCALE_UNIT,
+  GRID_COLOR,
+  LANE_HEIGHT,
+  viewWidth,
+} from './constants'
 import * as chroma from 'chroma-js'
 
 export class Interactions {
@@ -19,7 +28,7 @@ export class Interactions {
   supportResizing () {
     const renderer = this._renderer
     window.onresize = function () {
-      renderer.canvas.setDimensions({width: window.innerWidth - 20, height: window.innerHeight})
+      renderer.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
       renderer.renderGrid()
     }
   }

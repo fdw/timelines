@@ -1,4 +1,3 @@
-import { fabric } from 'fabric'
 import { Interactions } from './interaction'
 import { HistoryRenderer } from './rendering'
 import { Parser } from './parser'

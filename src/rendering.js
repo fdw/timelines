@@ -1,6 +1,7 @@
 import { fabric } from 'fabric'
 import {
   BACKGROUND_COLOR,
+  canvasHeight,
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
   DATE_SCALE_UNIT,
@@ -8,7 +9,9 @@ import {
   GRID_COLOR,
   LANE_HEIGHT,
   LANE_PADDING,
-  LAST_TICK
+  LAST_TICK,
+  viewHeight,
+  viewWidth
 } from './constants'
 import * as chroma from 'chroma-js'
 import moment from 'moment'
@@ -36,7 +39,7 @@ export class HistoryRenderer {
 
   initializeCanvas () {
     this.canvas = new fabric.Canvas('canvas')
-    this.canvas.setDimensions({width: window.innerWidth - 20, height: window.innerHeight})
+    this.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
     this.canvas.hoverCursor = 'default'
     this.canvas.selection = false
     this.canvas.absolutePan({x: HistoryRenderer.calculateAbsoluteX(moment('1500-01-01', 'Y-MM-DD')), y: 0})
@@ -53,7 +56,7 @@ export class HistoryRenderer {
           x,
           0,
           x,
-          this.canvas.height
+          canvasHeight()
         ],
         {
           stroke: GRID_COLOR.hex(),
@@ -64,7 +67,7 @@ export class HistoryRenderer {
         currentTick.format('YYYY'),
         {
           left: x,
-          top: window.innerHeight - LANE_HEIGHT,
+          top: (-this.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / this.canvas.getZoom(),
           originX: 'center',
           originY: 'center',
           fontSize: LANE_HEIGHT - 4,
@@ -79,11 +82,10 @@ export class HistoryRenderer {
       this.canvas.insertAt(gridline, 1, false)
       this._ticks.push(gridline)
     }
-    this.canvas.requestRenderAll()
   }
 
   _periodBetweenTicks () {
-    return 25 * this.canvas.getZoom()
+    return 25 / this.canvas.getZoom()
   }
 
   tickCount () {

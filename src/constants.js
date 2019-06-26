@@ -10,3 +10,15 @@ export const DATE_SCALE_UNIT = 'M'
 export const DATE_ORIGIN = moment('0000-01-01')
 export const FIRST_TICK = moment('-7000', 'Y')
 export const LAST_TICK = moment()
+
+export function viewHeight() {
+  return window.innerHeight
+}
+
+export function canvasHeight() {
+  return viewHeight() * 2
+}
+
+export function viewWidth() {
+  return window.innerWidth - 20
+}
