@@ -16,7 +16,7 @@ export function viewHeight() {
 }
 
 export function canvasHeight() {
-  return viewHeight() * 2
+  return viewHeight()
 }
 
 export function viewWidth() {

@@ -56,9 +56,9 @@ export class HistoryRenderer {
       const line = new fabric.Line(
         [
           x,
-          0,
+          -this.canvas.viewportTransform[5] / this.canvas.getZoom(),
           x,
-          canvasHeight()
+          (-this.canvas.viewportTransform[5] + viewHeight()) / this.canvas.getZoom()
         ],
         {
           stroke: GRID_COLOR.hex(),
@@ -72,7 +72,7 @@ export class HistoryRenderer {
           top: (-this.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / this.canvas.getZoom(),
           originX: 'center',
           originY: 'center',
-          fontSize: LANE_HEIGHT - 4,
+          fontSize: (LANE_HEIGHT - 4) / this.canvas.getZoom(),
           textAlign: 'center',
           strokeWidth: 0,
           fill: GRID_COLOR.hex(),

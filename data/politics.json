@@ -142,6 +142,12 @@
         "birth": "-1478",
         "death": "-1458",
         "url": "https://en.wikipedia.org/wiki/Hatshepsut"
+      },
+      {
+        "name": "Charlemagne",
+        "birth": "0742-04-02",
+        "death": "0814-01-28",
+        "url": "https://en.wikipedia.org/wiki/Charlemagne"
       }
     ],
     "eras": [
