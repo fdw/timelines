@@ -28,7 +28,13 @@ export class Parser {
           )
       )
 
-      const eras = (data[facetName].eras || []).map(it => new Era(it))
+      const eras = (data[facetName].eras || [])
+        .map(it => new Era(it))
+        .sort(function (one, two) {
+          return one.start.isBefore(two.start) ? -1
+            : one.start.isAfter(two.start) ? 1
+              : 0
+        })
 
       return new RenderableFacet(facetName, lanes, eras)
     })

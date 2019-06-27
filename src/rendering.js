@@ -138,13 +138,13 @@ export class HistoryRenderer {
       height: height
     })
 
-    const min_era_width_for_horizontal = HistoryRenderer.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00026-01-01', 'Y-MM-DD'))
+    const min_era_width_for_horizontal = HistoryRenderer.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00031-01-01', 'Y-MM-DD'))
     const isWideEnough = width > min_era_width_for_horizontal
     const label = new fabric.Textbox(
       era.name,
       {
         left: left + width / 2,
-        width: isWideEnough ? 500 : height,
+        width: isWideEnough ? Math.min(rect.width, 300) : height,
         top: offset + height / 2,
         originX: 'center',
         originY: 'center',
@@ -156,7 +156,28 @@ export class HistoryRenderer {
       }
     )
 
-    const eraGlyph = new fabric.Group([rect, label])
+    const eraGlyph = new fabric.Group(
+      [rect, label],
+      {
+        tooltipText: `${era.name}\n${era.start.format('YYYY')} - ${era.end.format('YYYY')}`,
+        color: color.hex()
+      }
+    )
+
+    const canvas = this.canvas
+    eraGlyph.on('mouseover', function () {
+      rect.setOptions({
+        stroke: chroma('grey').hex(),
+      })
+      canvas.requestRenderAll()
+    })
+
+    eraGlyph.on('mouseout', function () {
+      rect.setOptions({
+        stroke: color.brighten(0.1).alpha(0.3).hex(),
+      })
+      canvas.requestRenderAll()
+    })
 
     this.canvas.add(eraGlyph)
   }
