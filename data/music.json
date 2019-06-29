@@ -108,6 +108,12 @@
         "death": "1969-06-22",
         "url": "https://en.wikipedia.org/wiki/Judy_Garland",
         "short_name": "Judy Garland"
+      },
+      {
+        "name": "Wilhelm Richard Wagner",
+        "birth": "1813-05-22",
+        "death": "1883-02-13",
+        "url": "https://en.wikipedia.org/wiki/Richard_Wagner"
       }
     ],
     "events": [

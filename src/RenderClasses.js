@@ -30,7 +30,7 @@ export class Lanes {
 
   findLaneEndingBefore (date) {
     for (let lane in this._lanes) {
-      if (this.laneEnd(lane).add(4, 'Y').isBefore(date)) {
+      if (this.laneEnd(lane).add(3, 'Y').isBefore(date)) {
         return lane
       }
     }

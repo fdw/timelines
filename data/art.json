@@ -169,6 +169,18 @@
         "birth": "1928-08-06",
         "death": "1987-02-22",
         "url": "https://en.wikipedia.org/wiki/Andy_Warhol"
+      },
+      {
+        "name": "Artemisia Gentileschi",
+        "birth": "1593-07-08",
+        "death": "1656",
+        "url": "https://en.wikipedia.org/wiki/Artemisia_Gentileschi"
+      },
+      {
+        "name": "Peter Paul Rubens",
+        "birth": "1577-06-28",
+        "death": "1640-05-30",
+        "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
       }
     ],
     "eras": [
