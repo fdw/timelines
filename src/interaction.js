@@ -40,7 +40,7 @@ export class Interactions {
       if (opt.e.ctrlKey) {
         const delta = opt.e.deltaY
         let zoom = renderer.canvas.getZoom()
-        zoom = Math.min(Math.max(zoom + delta/20, 0.5), 3)
+        zoom = Math.min(Math.max(zoom + delta / 20, 0.5), 3)
         renderer.canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
 
         let original_viewportTransform = this.viewportTransform
@@ -110,6 +110,7 @@ export class Interactions {
 
       if (e.target && e.target.tooltipText) {
         const p = canvas.getPointer(e)
+
         const tooltipText = new fabric.Textbox(
           e.target.tooltipText,
           {
@@ -136,6 +137,19 @@ export class Interactions {
           originX: 'center',
           originY: 'bottom',
         })
+
+        if (p.y < tooltipText.height + 10) {
+          tooltipText.setOptions(
+            {
+              originY: 'top',
+              top: p.y + 15
+            })
+          tooltipBackground.setOptions(
+            {
+              originY: 'top',
+              top: p.y + 13
+            })
+        }
 
         const tooltip = new fabric.Group([tooltipBackground, tooltipText], {id: 'tooltip'})
 
