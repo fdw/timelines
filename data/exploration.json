@@ -1,0 +1,58 @@
+{
+  "exploration": {
+    "people": [
+      {
+        "name": "Roald Engelbregt Gravning Amundsen",
+        "birth": "1872-07-16",
+        "death": "1928-06-18",
+        "url": "https://en.wikipedia.org/wiki/Roald_Amundsen",
+        "short_name": "Roald Amundsen"
+      },
+      {
+        "name": "Fernão de Magalhães",
+        "birth": "1480",
+        "death": "1521-04-27",
+        "url": "https://en.wikipedia.org/wiki/Ferdinand_Magellan"
+      },
+      {
+        "name": "Leif Erikson",
+        "birth": "970",
+        "death": "1020",
+        "url": "https://en.wikipedia.org/wiki/Leif_Erikson"
+      },
+      {
+        "name": "Vasco da Gama",
+        "birth": "1460",
+        "death": "1524-12-24",
+        "url": "https://en.wikipedia.org/wiki/Vasco_da_Gama"
+      },
+      {
+        "name": "David Livingstone",
+        "birth": "1803-03-19",
+        "death": "1873-05-01",
+        "url": "https://en.wikipedia.org/wiki/David_Livingstone"
+      },
+      {
+        "name": "Christopher Columbus",
+        "birth": "1451-10-31",
+        "death": "1506-05-20",
+        "url": "https://en.wikipedia.org/wiki/Christopher_Columbus",
+        "short_name": "",
+        "events": [
+          {
+              "name": "European discovery of America",
+              "date": "1492-10-12",
+              "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus#European_discovery_and_exploration"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "name": "Moon landing",
+        "date": "1969-07-20",
+        "url": "https://en.wikipedia.org/wiki/Apollo_11"
+      }
+    ]
+  }
+}

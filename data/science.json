@@ -167,15 +167,10 @@
         "name": "René Descartes",
         "birth": "1596-03-31",
         "death": "1650-02-11",
-        "url":"https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
+        "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
       }
     ],
     "events": [
-      {
-        "name": "Moon landing",
-        "date": "1969-07-20",
-        "url": "https://en.wikipedia.org/wiki/Apollo_11"
-      },
       {
         "name": "First peer-reviewed journal",
         "date": "1665-03-11",
@@ -212,9 +207,9 @@
         "url": "https://en.wikipedia.org/wiki/Stonehenge"
       },
       {
-          "name": "Establishment of the first University",
-          "date": "859",
-          "url": "https://en.wikipedia.org/wiki/University_of_Al_Quaraouiyine"
+        "name": "Establishment of the first University",
+        "date": "859",
+        "url": "https://en.wikipedia.org/wiki/University_of_Al_Quaraouiyine"
       }
     ],
     "eras": [
