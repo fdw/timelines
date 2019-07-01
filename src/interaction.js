@@ -23,6 +23,7 @@ export class Interactions {
     this.addHover()
     this.addTooltips()
     this.addWikipediaLinks()
+    this.addKeyboardControl()
   }
 
   supportResizing () {
@@ -35,29 +36,44 @@ export class Interactions {
   }
 
   addWheel () {
-    const renderer = this._renderer
+    const that = this
     this._renderer.canvas.on('mouse:wheel', function (opt) {
       if (opt.e.ctrlKey) {
-        const delta = opt.e.deltaY
-        let zoom = renderer.canvas.getZoom()
-        zoom = Math.min(Math.max(zoom + delta / 20, 0.5), 3)
-        renderer.canvas.zoomToPoint({x: opt.e.offsetX, y: opt.e.offsetY}, zoom)
-
-        let original_viewportTransform = this.viewportTransform
-        if (original_viewportTransform[5] >= 0) {
-          this.viewportTransform[5] = 0
-        } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(renderer.canvas.getHeight() - canvasHeight() * zoom)) {
-          this.viewportTransform[5] = renderer.canvas.getHeight() - canvasHeight() * zoom
-        }
-
-        renderer.renderGrid()
+        that._relativeZoom(opt.e.deltaY / 20, {x: opt.e.offsetX, y: opt.e.offsetY})
       } else {
-        renderer.canvas.relativePan({x: opt.e.deltaY * 5, y: 0})
+        that._pan(opt.e.deltaY * 5)
       }
-      renderer.canvas.requestRenderAll()
       opt.e.preventDefault()
       opt.e.stopPropagation()
     })
+  }
+
+  _pan (amount) {
+    this._renderer.canvas.relativePan({x: -amount, y: 0})
+    this._renderer.canvas.requestRenderAll()
+  }
+
+  _relativeZoom (delta, point) {
+    this._absoluteZoom(this._calculateAbsoluteZoom(delta), point)
+  }
+
+  _calculateAbsoluteZoom (delta) {
+    let zoom = this._renderer.canvas.getZoom()
+    return Math.min(Math.max(zoom + delta, 0.5), 3)
+  }
+
+  _absoluteZoom (absoluteZoom, point) {
+    this._renderer.canvas.zoomToPoint(point, absoluteZoom)
+
+    let original_viewportTransform = this._renderer.canvas.viewportTransform
+    if (original_viewportTransform[5] >= 0) {
+      this._renderer.canvas.viewportTransform[5] = 0
+    } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this._renderer.canvas.getHeight() - canvasHeight() * absoluteZoom)) {
+      this._renderer.canvas.viewportTransform[5] = this._renderer.canvas.getHeight() - canvasHeight() * absoluteZoom
+    }
+
+    this._renderer.renderGrid()
+    this._renderer.canvas.requestRenderAll()
   }
 
   addHover () {
@@ -170,5 +186,34 @@ export class Interactions {
         window.open(event.target.url)
       }
     })
+  }
+
+  addKeyboardControl () {
+    const that = this
+    document.onkeydown = function (e) {
+      switch (e.keyCode) {
+        case 37:  // Left arrow
+          that._pan(-30)
+          break
+        case 39:  // Right arrow
+          that._pan(30)
+          break
+        case 38:  // Up arrow
+          break
+        case 40:  // Down arrow
+          break
+        case 107: // Plus
+        case 171:
+          that._relativeZoom(0.25, {x: 0, y: 0})
+          break
+        case 109: // Minus
+        case 173:
+          that._relativeZoom(-0.25, {x: 0, y: 0})
+          break
+        case 48:
+        case 96:
+          that._absoluteZoom(1, {x: 0, y: 0})
+      }
+    }
   }
 }
