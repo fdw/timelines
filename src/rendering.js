@@ -13,7 +13,7 @@ import {
   viewHeight,
   viewWidth
 } from './constants'
-import * as chroma from 'chroma-js'
+import chroma from 'chroma-js'
 import moment from 'moment'
 import { Person } from './HistoryClasses'
 

@@ -1,4 +1,4 @@
-import * as chroma from 'chroma-js'
+import chroma from 'chroma-js'
 import { Lanes, RenderableFacet } from './RenderClasses'
 import { Era, Event, Person } from './HistoryClasses'
 

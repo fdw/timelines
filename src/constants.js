@@ -1,4 +1,4 @@
-import * as chroma from 'chroma-js'
+import chroma from 'chroma-js'
 import moment from 'moment'
 
 export const LANE_HEIGHT = 20

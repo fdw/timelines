@@ -9,7 +9,7 @@ import {
   LANE_HEIGHT,
   viewWidth,
 } from './constants'
-import * as chroma from 'chroma-js'
+import chroma from 'chroma-js'
 
 export class Interactions {
 
