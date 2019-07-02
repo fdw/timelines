@@ -2,17 +2,18 @@
   "name": "timeline",
   "version": "2.0.0",
   "description": "An overview over what's happened when in the world",
+  "homepage": "https://github.com/fdw/timelines/",
   "private": true,
   "scripts": {
     "test": "webpack --mode=development",
     "build": "webpack"
   },
   "sideEffects": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/fdw/timelines/"
+  "author": {
+    "name": "Fabian Winter",
+    "url": "https://github.com/fdw/"
   },
-  "author": "fdw",
+  "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/fabric": "^2.6.17",
