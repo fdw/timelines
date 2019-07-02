@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path')
 const MergeJsonWebpackPlugin = require('merge-jsons-webpack-plugin')
 
@@ -21,6 +22,7 @@ module.exports = {
           }
         ]
       }
-    })
+    }),
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /a^/)
   ]
 }

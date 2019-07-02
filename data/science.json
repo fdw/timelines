@@ -104,13 +104,13 @@
       },
       {
         "name": "Aristotélēs",
-        "birth": "-0384-01-01",
-        "death": "-0322-01-01",
+        "birth": "-0384",
+        "death": "-0322",
         "url": "https://en.wikipedia.org/wiki/Aristotle"
       },
       {
         "name": "Johannes Gensfleisch zur Laden zum Gutenberg",
-        "birth": "1400-01-01",
+        "birth": "1400",
         "death": "1468-02-03",
         "url": "https://en.wikipedia.org/wiki/Johannes_Gutenberg",
         "short_name": "Johannes Gutenberg",
@@ -123,8 +123,8 @@
       },
       {
         "name": "Bì Shēng",
-        "birth": "990-01-01",
-        "death": "1051-01-01",
+        "birth": "990",
+        "death": "1051",
         "url": "https://en.wikipedia.org/wiki/Bi_Sheng",
         "events": [
           {

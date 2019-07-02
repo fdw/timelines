@@ -1,0 +1,20 @@
+{
+  "economics": {
+    "people": [
+      {
+        "name": "East India Company",
+        "birth": "1600-12-31",
+        "death": "1874-06-01",
+        "url": "https://en.wikipedia.org/wiki/East_India_Company"
+      }
+    ],
+    "eras": [
+      {
+          "name": "First industrial revolution",
+          "start": "1760",
+          "end": "1840",
+          "url": "https://en.wikipedia.org/wiki/Industrial_Revolution"
+      }
+    ]
+  }
+}

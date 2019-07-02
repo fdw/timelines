@@ -52,6 +52,11 @@
         "name": "Moon landing",
         "date": "1969-07-20",
         "url": "https://en.wikipedia.org/wiki/Apollo_11"
+      },
+      {
+          "name": "First European landing in Australia",
+          "date": "1606-02-26",
+          "url": "https://en.wikipedia.org/wiki/European_exploration_of_Australia"
       }
     ]
   }

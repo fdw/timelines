@@ -1,14 +1,18 @@
-# Timeline
+# Timelines
+## The Link
+[https://fdw.github.io/timelines/timelines.html](https://fdw.github.io/timelines/timelines.html)
 
-This is an attempt to visualize some parts of the world's history - namely, what happend at around the same time in different fields. What was music like while Goethe was alive? When exactly did Goya live?
+## Vision
+A lot has happened in humanity's history. And while it's easy to pin a date to each singular event, or even put related events into a shared context, it's not easy to see everything in relation to everything else. What music was popular while Napoleon waged wars? (Definitely Bach, maybe already Mozart) How much preceded Leonard da Vinci Christopher Columbus? (Not at all, Columbus is one year older).
 
-## Accuracy
-Obviously, we don't have accurate data. Since the visualization needs an exact date, I always used the next best thing, for example the birthing date. If only a year was available, it's always mapped to the first of January. If there's not even a single year, I used one in the middle. I took all data from Wikipedia.
-If you have better dates (with sources), open a PR!
+This project wants to visualize these different facets of our history and how they may have influenced each other, how they relate, how - ultimately - nothing is independent.
 
 ## Selection
-I chose the selected people more or less arbitrarily. As the whole project is done to satisfy my curiosity, I feel this okay 😉.
-If you have other suggestion, open a PR!
+Of course, it's impossible to show everything, then it's just crowded. Instead, I tried to pick representative events and people so that the overall view is complete while a lot of details are not. This curation is of course completely arbitrary. If you have anything to add or to correct, please open a PR! There's lots of stuff I haven't even heard about that should be on here.
 
-## Features
-There's a lot of things I'd like to try and itegrate. Some will maybe work, some not. We'll see. If you have any ideas, tell me or open a PR!
+I must also admit that my view is very western-centric and as much as I try, there's still not a lot of other things on here.
+
+## Accuracy
+Obviously, the data is not, and cannot, be accurate. Some things just don't have a singular beginning, or maybe they do and we just don't know it. Therefore, the data is a best effort, usually based on Wikipedia.
+
+If you have better data (and the sources to prove it), you are welcome to open a PR!

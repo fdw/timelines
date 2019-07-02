@@ -2,12 +2,6 @@
   "politics": {
     "people": [
       {
-        "name": "East India Company",
-        "birth": "1600-12-31",
-        "death": "1874-06-01",
-        "url": "https://en.wikipedia.org/wiki/East_India_Company"
-      },
-      {
         "name": "Gaius Julius Caesar",
         "birth": "-0100-07-12",
         "death": "-0044-03-15",
@@ -16,7 +10,7 @@
       },
       {
         "name": "Cleopatra VII Philopator",
-        "birth": "-0069-01-01",
+        "birth": "-0069",
         "death": "-0030-08-11",
         "url": "https://en.wikipedia.org/wiki/Cleopatra",
         "short_name": "Cleopatra"
@@ -30,8 +24,8 @@
       },
       {
         "name": "Nebuchadnezzar II",
-        "birth": "-0605-01-01",
-        "death": "-0562-01-01",
+        "birth": "-0605",
+        "death": "-0562",
         "url": "https://en.wikipedia.org/wiki/Nebuchadnezzar_II"
       },
       {

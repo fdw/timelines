@@ -23,7 +23,7 @@
       },
       {
         "name": "Tiziano Vecelli",
-        "birth": "1488-01-01",
+        "birth": "1488",
         "death": "1576-08-27",
         "url": "https://en.wikipedia.org/wiki/Titian",
         "short_name": "Titian"
@@ -42,7 +42,7 @@
       },
       {
         "name": "Jan van Eyck",
-        "birth": "1390-01-01",
+        "birth": "1390",
         "death": "1441-07-09",
         "url": "https://en.wikipedia.org/wiki/Jan_van_Eyck"
       },
@@ -61,7 +61,7 @@
       },
       {
         "name": "Alessandro di Mariano di Vanni Filipepi",
-        "birth": "1445-01-01",
+        "birth": "1445",
         "death": "1510-05-17",
         "url": "https://en.wikipedia.org/wiki/Sandro_Botticelli",
         "short_name": "Sandro Botticelli"
@@ -101,19 +101,19 @@
       },
       {
         "name": "Rogier van der Weyden",
-        "birth": "1399-01-01",
+        "birth": "1399",
         "death": "1464-06-18",
         "url": "https://en.wikipedia.org/wiki/Rogier_van_der_Weyden"
       },
       {
         "name": "Piero della Francesca",
-        "birth": "1415-01-01",
+        "birth": "1415",
         "death": "1492-10-12",
         "url": "https://en.wikipedia.org/wiki/Piero_della_Francesca"
       },
       {
         "name": "Pieter Bruegel the Elder",
-        "birth": "1525-01-01",
+        "birth": "1525",
         "death": "1569-09-09",
         "url": "https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder"
       },
@@ -160,7 +160,7 @@
       },
       {
         "name": "Filippo Brunelleschi",
-        "birth": "1377-01-01",
+        "birth": "1377",
         "death": "1446-04-15",
         "url": "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
       },
