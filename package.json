@@ -17,12 +17,12 @@
   "devDependencies": {
     "@types/fabric": "^2.6.17",
     "merge-jsons-webpack-plugin": "^1.0.19",
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.4"
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
   },
   "dependencies": {
     "chroma-js": "^2.0.4",
-    "fabric": "^3.1.0",
+    "fabric": "^3.2.0",
     "moment": "^2.24.0"
   }
 }
