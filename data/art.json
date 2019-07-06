@@ -213,6 +213,12 @@
         "name": "Expressionism",
         "start": "1905",
         "end": "1930"
+      },
+      {
+        "name": "Rococo",
+        "start": "1725",
+        "end": "1760",
+        "url": "https://en.wikipedia.org/wiki/Rococo#Painting"
       }
     ]
   }

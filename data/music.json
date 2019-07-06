@@ -91,9 +91,9 @@
         "short_name": "Sergei Rachmaninoff"
       },
       {
-        "name":"Frédéric Chopin",
-        "birth":"1810-03-01",
-        "death":"1849-10-17",
+        "name": "Frédéric Chopin",
+        "birth": "1810-03-01",
+        "death": "1849-10-17",
         "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin"
       },
       {
@@ -127,22 +127,32 @@
       {
         "name": "Renaissance",
         "start": "1400",
-        "end": "1600"
+        "end": "1600",
+        "url": "https://en.wikipedia.org/wiki/Renaissance_music"
       },
       {
         "name": "Baroque",
         "start": "1600",
-        "end": "1760"
+        "end": "1760",
+        "url": "https://en.wikipedia.org/wiki/Baroque_music"
       },
       {
         "name": "Classical",
         "start": "1730",
-        "end": "1820"
+        "end": "1820",
+        "url": "https://en.wikipedia.org/wiki/Classical_period_(music)"
       },
       {
         "name": "Romanticism",
         "start": "1780",
-        "end": "1810"
+        "end": "1810",
+        "url": "https://en.wikipedia.org/wiki/Romantic_music"
+      },
+      {
+        "name": "Rococo",
+        "start": "1725",
+        "end": "1760",
+        "url": "https://en.wikipedia.org/wiki/Rococo#Music"
       }
     ]
   }
