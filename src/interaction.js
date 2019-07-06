@@ -5,7 +5,7 @@ import {
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
   DATE_SCALE_UNIT,
-  GRID_COLOR,
+  HOVER_COLOR,
   LANE_HEIGHT,
   viewWidth,
 } from './constants'
@@ -63,7 +63,7 @@ export class Interactions {
   }
 
   _absoluteZoom (absoluteZoom, point) {
-    this._renderer.canvas.zoomToPoint(point, absoluteZoom)
+   this._renderer.canvas.zoomToPoint(point, absoluteZoom)
 
     let original_viewportTransform = this._renderer.canvas.viewportTransform
     if (original_viewportTransform[5] >= 0) {
@@ -93,7 +93,7 @@ export class Interactions {
           renderer.canvas.height
         ],
         {
-          stroke: GRID_COLOR.hex(),
+          stroke: HOVER_COLOR,
           strokeWidth: 1
         })
 
@@ -107,7 +107,7 @@ export class Interactions {
           fontSize: LANE_HEIGHT - 4,
           textAlign: 'center',
           strokeWidth: 0,
-          fill: GRID_COLOR.hex(),
+          fill: HOVER_COLOR,
           textBackgroundColor: BACKGROUND_COLOR.hex()
         }
       )

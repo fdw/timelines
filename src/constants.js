@@ -4,6 +4,7 @@ import moment from 'moment'
 export const LANE_HEIGHT = 20
 export const LANE_PADDING = 8
 export const GRID_COLOR = chroma('lightgrey')
+export const HOVER_COLOR = chroma('darkgrey')
 export const BACKGROUND_COLOR = chroma('white')
 export const DATE_SCALE_FACTOR = 3
 export const DATE_SCALE_UNIT = 'M'

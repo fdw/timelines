@@ -56,9 +56,9 @@ export class HistoryRenderer {
       const line = new fabric.Line(
         [
           x,
-          -this.canvas.viewportTransform[5] / this.canvas.getZoom(),
+          -this.canvas.viewportTransform[5] / this.canvas.viewportTransform[3],
           x,
-          (-this.canvas.viewportTransform[5] + viewHeight()) / this.canvas.getZoom()
+          (-this.canvas.viewportTransform[5] + viewHeight()) / this.canvas.viewportTransform[3]
         ],
         {
           stroke: GRID_COLOR.hex(),
@@ -69,10 +69,10 @@ export class HistoryRenderer {
         currentTick.format('YYYY'),
         {
           left: x,
-          top: (-this.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / this.canvas.getZoom(),
+          top: (-this.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / this.canvas.viewportTransform[3],
           originX: 'center',
           originY: 'center',
-          fontSize: (LANE_HEIGHT - 4) / this.canvas.getZoom(),
+          fontSize: (LANE_HEIGHT - 4) / this.canvas.viewportTransform[3],
           textAlign: 'center',
           strokeWidth: 0,
           fill: GRID_COLOR.hex(),
