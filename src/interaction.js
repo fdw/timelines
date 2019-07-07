@@ -7,6 +7,7 @@ import {
   DATE_SCALE_UNIT,
   HOVER_COLOR,
   LANE_HEIGHT,
+  viewHeight,
   viewWidth,
 } from './constants'
 import chroma from 'chroma-js'
@@ -14,7 +15,7 @@ import chroma from 'chroma-js'
 export class Interactions {
 
   constructor (renderer) {
-    this._renderer = renderer
+    this.renderer = renderer
   }
 
   addAll () {
@@ -27,7 +28,7 @@ export class Interactions {
   }
 
   supportResizing () {
-    const renderer = this._renderer
+    const renderer = this.renderer
     window.onresize = function () {
       renderer.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
       renderer.renderGrid()
@@ -37,7 +38,7 @@ export class Interactions {
 
   addWheel () {
     const that = this
-    this._renderer.canvas.on('mouse:wheel', function (opt) {
+    this.renderer.canvas.on('mouse:wheel', function (opt) {
       if (opt.e.ctrlKey) {
         that._relativeZoom(opt.e.deltaY / 20, {x: opt.e.offsetX, y: opt.e.offsetY})
       } else {
@@ -49,8 +50,8 @@ export class Interactions {
   }
 
   _pan (amount) {
-    this._renderer.canvas.relativePan({x: -amount, y: 0})
-    this._renderer.canvas.requestRenderAll()
+    this.renderer.canvas.relativePan({x: -amount, y: 0})
+    this.renderer.canvas.requestRenderAll()
   }
 
   _relativeZoom (delta, point) {
@@ -58,39 +59,39 @@ export class Interactions {
   }
 
   _calculateAbsoluteZoom (delta) {
-    let zoom = this._renderer.canvas.getZoom()
+    let zoom = this.renderer.canvas.getZoom()
     return Math.min(Math.max(zoom + delta, 0.5), 3)
   }
 
   _absoluteZoom (absoluteZoom, point) {
-   this._renderer.canvas.zoomToPoint(point, absoluteZoom)
+   this.renderer.canvas.zoomToPoint(point, absoluteZoom)
 
-    let original_viewportTransform = this._renderer.canvas.viewportTransform
+    let original_viewportTransform = this.renderer.canvas.viewportTransform
     if (original_viewportTransform[5] >= 0) {
-      this._renderer.canvas.viewportTransform[5] = 0
-    } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this._renderer.canvas.getHeight() - canvasHeight() * absoluteZoom)) {
-      this._renderer.canvas.viewportTransform[5] = this._renderer.canvas.getHeight() - canvasHeight() * absoluteZoom
+      this.renderer.canvas.viewportTransform[5] = 0
+    } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this.renderer.canvas.getHeight() - canvasHeight() * absoluteZoom)) {
+      this.renderer.canvas.viewportTransform[5] = this.renderer.canvas.getHeight() - canvasHeight() * absoluteZoom
     }
 
-    this._renderer.renderGrid()
-    this._renderer.canvas.requestRenderAll()
+    this.renderer.renderGrid()
+    this.renderer.canvas.requestRenderAll()
   }
 
   addHover () {
-    const renderer = this._renderer
+    const that = this
     const lineId = 'mouseline'
 
-    this._renderer.canvas.on('mouse:move', function (options) {
-      renderer.canvas.remove(renderer.canvas.getItem(lineId))
+    this.renderer.canvas.on('mouse:move', function (options) {
+      that.renderer.canvas.remove(that.renderer.canvas.getItem(lineId))
 
-      const p = renderer.canvas.getPointer(options.e)
+      const p = that.renderer.canvas.getPointer(options.e)
 
       const line = new fabric.Line(
         [
           p.x,
-          0,
+          -that.renderer.canvas.viewportTransform[5] / that.renderer.canvas.viewportTransform[3],
           p.x,
-          renderer.canvas.height
+          (-that.renderer.canvas.viewportTransform[5] + viewHeight()) / that.renderer.canvas.viewportTransform[3]
         ],
         {
           stroke: HOVER_COLOR,
@@ -101,10 +102,10 @@ export class Interactions {
         DATE_ORIGIN.clone().add(p.x * DATE_SCALE_FACTOR, DATE_SCALE_UNIT).format('YYYY'),
         {
           left: p.x,
-          top: window.innerHeight - LANE_HEIGHT,
+          top: (-that.renderer.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / that.renderer.canvas.viewportTransform[3],
           originX: 'center',
           originY: 'center',
-          fontSize: LANE_HEIGHT - 4,
+          fontSize: (LANE_HEIGHT - 4) / that.renderer.canvas.viewportTransform[3],
           textAlign: 'center',
           strokeWidth: 0,
           fill: HOVER_COLOR,
@@ -114,15 +115,15 @@ export class Interactions {
 
       const mouseLine = new fabric.Group([line, label], {id: lineId})
 
-      renderer.canvas.add(mouseLine)
-      mouseLine.moveTo(renderer.tickCount() + 1)
-      renderer.canvas.requestRenderAll()
+      that.renderer.canvas.add(mouseLine)
+      mouseLine.moveTo(that.renderer.tickCount() + 1)
+      that.renderer.canvas.requestRenderAll()
     })
   }
 
   addTooltips () {
-    const canvas = this._renderer.canvas
-    this._renderer.canvas.on('mouse:over', function (e) {
+    const canvas = this.renderer.canvas
+    this.renderer.canvas.on('mouse:over', function (e) {
 
       if (e.target && e.target.tooltipText) {
         const p = canvas.getPointer(e)
@@ -174,14 +175,14 @@ export class Interactions {
       canvas.requestRenderAll()
     })
 
-    this._renderer.canvas.on('mouse:out', function (e) {
+    this.renderer.canvas.on('mouse:out', function (e) {
       canvas.remove(canvas.getItem('tooltip'))
       canvas.requestRenderAll()
     })
   }
 
   addWikipediaLinks () {
-    this._renderer.canvas.on('mouse:down', function (event) {
+    this.renderer.canvas.on('mouse:down', function (event) {
       if (event.target && event.target.url) {
         window.open(event.target.url)
       }

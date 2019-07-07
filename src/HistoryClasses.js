@@ -71,7 +71,7 @@ export class Era {
                  name,
                  start,
                  end,
-                 url = '',
+                 url = ''
                }) {
     this.name = name
     this.start = moment(start, 'Y-MM-DD')
