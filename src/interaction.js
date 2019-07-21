@@ -4,13 +4,15 @@ import {
   canvasHeight,
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
-  DATE_SCALE_UNIT,
+  DATE_SCALE_UNIT, FIRST_TICK,
   HOVER_COLOR,
-  LANE_HEIGHT,
+  LANE_HEIGHT, LAST_TICK,
   viewHeight,
   viewWidth,
 } from './constants'
 import chroma from 'chroma-js'
+import { HistoryRenderer } from './rendering'
+import { clamp } from './Utils'
 
 export class Interactions {
 
@@ -42,15 +44,24 @@ export class Interactions {
       if (opt.e.ctrlKey) {
         that._relativeZoom(opt.e.deltaY / 20, {x: opt.e.offsetX, y: opt.e.offsetY})
       } else {
-        that._pan(opt.e.deltaY * 5)
+        that._pan(opt.e.deltaY * 5, 0)
       }
       opt.e.preventDefault()
       opt.e.stopPropagation()
     })
   }
 
-  _pan (amount) {
-    this.renderer.canvas.relativePan({x: -amount, y: 0})
+  _pan (amountHorizontal, amountVertical) {
+    const newX = clamp(HistoryRenderer.calculateAbsoluteX(FIRST_TICK), +amountHorizontal - this.renderer.canvas.viewportTransform[4], HistoryRenderer.calculateAbsoluteX(LAST_TICK))
+    const newY = clamp(0, +amountVertical - this.renderer.canvas.viewportTransform[5], 2* canvasHeight())
+
+    this.renderer.canvas.absolutePan({
+      x: newX,
+      y: newY
+    })
+    if(newY > 0) {
+      this.renderer.renderGrid()
+    }
     this.renderer.canvas.requestRenderAll()
   }
 
@@ -60,7 +71,7 @@ export class Interactions {
 
   _calculateAbsoluteZoom (delta) {
     let zoom = this.renderer.canvas.getZoom()
-    return Math.min(Math.max(zoom + delta, 0.5), 3)
+    return clamp(0.5, zoom + delta, 3)
   }
 
   _absoluteZoom (absoluteZoom, point) {
@@ -194,14 +205,16 @@ export class Interactions {
     document.onkeydown = function (e) {
       switch (e.keyCode) {
         case 37:  // Left arrow
-          that._pan(-30)
+          that._pan(-30, 0)
           break
         case 39:  // Right arrow
-          that._pan(30)
+          that._pan(30, 0)
           break
         case 38:  // Up arrow
+          that._pan(0, -30)
           break
         case 40:  // Down arrow
+          that._pan(0, 30)
           break
         case 107: // Plus
         case 171:
