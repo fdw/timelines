@@ -79,6 +79,12 @@
         "name": "Romanticism",
         "start": "1800",
         "end": "1850"
+      },
+      {
+        "name": "Baroque",
+        "start": "1600",
+        "end": "1720",
+        "url": "https://en.wikipedia.org/wiki/Baroque"
       }
     ],
     "events": [

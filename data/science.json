@@ -168,6 +168,12 @@
         "birth": "1596-03-31",
         "death": "1650-02-11",
         "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes"
+      },
+      {
+        "name": "Karl Popper",
+        "birth": "1902-07-28",
+        "death": "1994-09-17",
+        "url": "https://en.wikipedia.org/wiki/Karl_Popper"
       }
     ],
     "events": [
@@ -210,6 +216,11 @@
         "name": "Establishment of the first University",
         "date": "859",
         "url": "https://en.wikipedia.org/wiki/University_of_Al_Quaraouiyine"
+      },
+      {
+          "name": "Birth of the first in vitro fertilized baby",
+          "date": "1978-07-25",
+          "url": "https://en.wikipedia.org/wiki/Louise_Brown"
       }
     ],
     "eras": [

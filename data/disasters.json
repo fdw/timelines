@@ -1,0 +1,47 @@
+{
+  "disasters": {
+    "eras": [
+      {
+        "name": "Black Death",
+        "start": "1347",
+        "end": "1351",
+        "url": "https://en.wikipedia.org/wiki/Black_Death"
+      },
+      {
+          "name": "Spanish Flu",
+          "start": "1918-01",
+          "end": "1920-12",
+          "url": "https://en.wikipedia.org/wiki/Spanish_flu"
+      },
+      {
+          "name": "Third Plague Pandemic",
+          "start": "1855",
+          "end": "1960",
+          "url": "https://en.wikipedia.org/wiki/Third_plague_pandemic"
+      },
+      {
+          "name": "First Cholera Pandemic",
+          "start": "1817",
+          "end": "1824",
+          "url": "https://en.wikipedia.org/wiki/1817%E2%80%931824_cholera_pandemic"
+      }
+    ],
+    "events": [
+      {
+          "name": "Eruption of Mount Vesuvius",
+          "date": "0079",
+          "url": "https://en.wikipedia.org/wiki/Eruption_of_Mount_Vesuvius_in_79"
+      },
+      {
+          "name": "Bhopal disaster",
+          "date": "1984-12-02",
+          "url": "https://en.wikipedia.org/wiki/Bhopal_disaster"
+      },
+      {
+          "name": "Chernobyl disaster",
+          "date": "1986-04-26",
+          "url": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
+      }
+    ]
+  }
+}

@@ -181,6 +181,19 @@
         "birth": "1577-06-28",
         "death": "1640-05-30",
         "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens"
+      },
+      {
+        "name": "Alfons Maria Mucha",
+        "birth": "1860-07-24",
+        "death": "1939-07-04",
+        "short_name": "Alphonse Mucha",
+        "url": "https://en.wikipedia.org/wiki/Alphonse_Mucha"
+      },
+      {
+        "name": "Gustav Klimt",
+        "birth": "1862-07-14",
+        "death": "1918-02-06",
+        "url": "https://en.wikipedia.org/wiki/Gustav_Klimt"
       }
     ],
     "eras": [

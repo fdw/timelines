@@ -142,6 +142,13 @@
         "birth": "0742-04-02",
         "death": "0814-01-28",
         "url": "https://en.wikipedia.org/wiki/Charlemagne"
+      },
+      {
+        "name": "Mohandas Karamchand Gandhi",
+        "birth": "1869-10-02",
+        "death": "1948-01-30",
+        "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+        "short_name": "Mahatma Gandhi"
       }
     ],
     "eras": [
@@ -228,6 +235,12 @@
         "start": "1958",
         "end": "1962",
         "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward"
+      },
+      {
+        "name": "Caliphate of Córdoba",
+        "start": "929",
+        "end": "1031",
+        "url": "https://en.wikipedia.org/wiki/Caliphate_of_Córdoba"
       }
     ],
     "events": [
@@ -292,7 +305,7 @@
         "url": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"
       },
       {
-        "name": "The world's first same-sex marraige bill goes into effect in the Netherlands",
+        "name": "The world's first same-sex marriage bill goes into effect in the Netherlands",
         "date": "2001-04-01",
         "url": "https://en.wikipedia.org/wiki/Same-sex_marriage_in_the_Netherlands"
       },

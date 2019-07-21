@@ -6,6 +6,12 @@
         "birth": "1600-12-31",
         "death": "1874-06-01",
         "url": "https://en.wikipedia.org/wiki/East_India_Company"
+      },
+      {
+        "name": "Hanseatic League",
+        "birth": "1159",
+        "death": "1669",
+        "url": "https://en.wikipedia.org/wiki/Hanseatic_League"
       }
     ],
     "eras": [
