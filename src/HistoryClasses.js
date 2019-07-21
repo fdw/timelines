@@ -1,4 +1,5 @@
-import moment from 'moment'
+import { Parser } from './parser'
+import { FIRST_TICK } from './constants'
 
 export class Facet {
   constructor (
@@ -24,11 +25,11 @@ export class Person {
                  short_name = '',
                }) {
     this.name = name
-    this.birth = moment(birth, 'Y-MM-DD')
-    this.death = moment(death, 'Y-MM-DD')
+    this.birth = Parser.parseDate(birth)
+    this.death = Parser.parseDate(death)
     this.url = url
     this.events = events
-      .map(it => {return it instanceof Event ? it : new Event(it)})
+      .map(it => { return it instanceof Event ? it : new Event(it) })
       .sort(function (one, two) {
         return one.start().isBefore(two.start()) ? -1
           : one.start().isAfter(two.start()) ? 1
@@ -53,7 +54,7 @@ export class Event {
                  url,
                }) {
     this.name = name
-    this.date = moment(date, 'Y-MM-DD')
+    this.date = Parser.parseDate(date)
     this.url = url
   }
 
@@ -74,8 +75,9 @@ export class Era {
                  url = ''
                }) {
     this.name = name
-    this.start = moment(start, 'Y-MM-DD')
-    this.end = moment(end, 'Y-MM-DD')
+    this.start = Parser.parseDate(start)
+    this.end = Parser.parseDate(end)
+
     this.url = url
   }
 }

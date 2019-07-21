@@ -1,6 +1,7 @@
 import chroma from 'chroma-js'
 import { Lanes, RenderableFacet } from './RenderClasses'
 import { Era, Event, Person } from './HistoryClasses'
+import moment from 'moment'
 
 export class Parser {
 
@@ -41,5 +42,14 @@ export class Parser {
 
     this._setColors(facets)
     return facets
+  }
+
+  static parseDate (string) {
+    if (string === null) {
+      return null
+    } else if (string === 'now') {
+      return moment()
+    }
+    return moment(string, 'Y-MM-DD')
   }
 }
