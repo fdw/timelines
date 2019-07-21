@@ -16,14 +16,14 @@
   "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/fabric": "^2.6.17",
+    "@types/fabric": "^2.6.18",
     "merge-jsons-webpack-plugin": "^1.0.19",
-    "webpack": "^4.35.2",
-    "webpack-cli": "^3.3.5"
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   },
   "dependencies": {
     "chroma-js": "^2.0.4",
-    "fabric": "^3.2.0",
+    "fabric": "^3.3.2",
     "moment": "^2.24.0"
   }
 }
