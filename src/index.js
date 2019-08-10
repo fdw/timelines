@@ -1,6 +1,6 @@
 import { Interactions } from './interaction'
-import { HistoryRenderer } from './rendering'
 import { Parser } from './parser'
+import { HistoryRenderer } from './renderers/HistoryRenderer'
 
 import(/* webpackChunkName: "data" */ './data.json').then(data => {
   const parser = new Parser()
@@ -10,5 +10,5 @@ import(/* webpackChunkName: "data" */ './data.json').then(data => {
   const interactions = new Interactions(renderer)
   interactions.addAll()
 
-  renderer.renderData(facets)
+  renderer.render(facets)
 })

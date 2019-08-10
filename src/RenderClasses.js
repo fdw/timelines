@@ -25,7 +25,7 @@ export class Lanes {
   }
 
   laneEnd (index) {
-    return this._lanes[index][this._lanes[index].length-1].end()
+    return this._lanes[index][this._lanes[index].length-1].right()
   }
 
   findLaneEndingBefore (date) {
@@ -38,7 +38,7 @@ export class Lanes {
   }
 
   addObject (object) {
-    const laneIndex = this.findLaneEndingBefore(object.start())
+    const laneIndex = this.findLaneEndingBefore(object.left())
     this._lanes[laneIndex].push(object)
   }
 

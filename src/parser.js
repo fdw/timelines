@@ -1,7 +1,9 @@
 import chroma from 'chroma-js'
 import { Lanes, RenderableFacet } from './RenderClasses'
-import { Era, Event, Person } from './HistoryClasses'
 import moment from 'moment'
+import { Person } from './models/Person'
+import { Era } from './models/Era'
+import { Event } from './models/Event'
 
 export class Parser {
 
@@ -22,8 +24,8 @@ export class Parser {
           .concat((data[facetName].events || [])
             .map(it => new Event(it)))
           .sort(function (one, two) {
-              return one.start().isBefore(two.start()) ? -1
-                : one.start().isAfter(two.start()) ? 1
+              return one.left().isBefore(two.left()) ? -1
+                : one.left().isAfter(two.left()) ? 1
                   : 0
             }
           )

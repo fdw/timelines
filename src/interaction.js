@@ -11,8 +11,8 @@ import {
   viewWidth,
 } from './constants'
 import chroma from 'chroma-js'
-import { HistoryRenderer } from './rendering'
 import { clamp } from './Utils'
+import { HistoryRenderer } from './renderers/HistoryRenderer'
 
 export class Interactions {
 
