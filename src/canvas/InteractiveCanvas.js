@@ -1,26 +1,22 @@
 import { fabric } from 'fabric'
+import chroma from 'chroma-js'
+import { HistoryCanvas } from './HistoryCanvas'
 import {
   BACKGROUND_COLOR,
-  canvasHeight,
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
-  DATE_SCALE_UNIT, FIRST_TICK,
+  DATE_SCALE_UNIT,
+  FIRST_TICK,
   HOVER_COLOR,
-  LANE_HEIGHT, LAST_TICK,
-  viewHeight,
-  viewWidth,
-} from './constants'
-import chroma from 'chroma-js'
-import { clamp } from './Utils'
-import { HistoryRenderer } from './renderers/HistoryRenderer'
+  LANE_HEIGHT,
+  LAST_TICK
+} from './Properties'
 
-export class Interactions {
+export class InteractiveCanvas extends HistoryCanvas {
 
-  constructor (renderer) {
-    this.renderer = renderer
-  }
+  constructor () {
+    super()
 
-  addAll () {
     this.supportResizing()
     this.addWheel()
     this.addHover()
@@ -30,9 +26,9 @@ export class Interactions {
   }
 
   supportResizing () {
-    const renderer = this.renderer
+    const renderer = this
     window.onresize = function () {
-      renderer.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
+      renderer.canvas.setDimensions({width: window.innerWidth, height: window.innerHeight})
       renderer.renderGrid()
       renderer.canvas.requestRenderAll()
     }
@@ -40,7 +36,7 @@ export class Interactions {
 
   addWheel () {
     const that = this
-    this.renderer.canvas.on('mouse:wheel', function (opt) {
+    this.canvas.on('mouse:wheel', function (opt) {
       if (opt.e.ctrlKey) {
         that._relativeZoom(opt.e.deltaY / 20, {x: opt.e.offsetX, y: opt.e.offsetY})
       } else {
@@ -52,17 +48,17 @@ export class Interactions {
   }
 
   _pan (amountHorizontal, amountVertical) {
-    const newX = clamp(HistoryRenderer.calculateAbsoluteX(FIRST_TICK), +amountHorizontal - this.renderer.canvas.viewportTransform[4], HistoryRenderer.calculateAbsoluteX(LAST_TICK))
-    const newY = clamp(0, +amountVertical - this.renderer.canvas.viewportTransform[5], 2* canvasHeight())
+    const newX = InteractiveCanvas.clamp(HistoryCanvas.calculateAbsoluteX(FIRST_TICK), amountHorizontal - this.canvas.viewportTransform[4], HistoryCanvas.calculateAbsoluteX(LAST_TICK))
+    const newY = InteractiveCanvas.clamp(0, amountVertical - this.canvas.viewportTransform[5], 2 * window.innerHeight)
 
-    this.renderer.canvas.absolutePan({
+    this.canvas.absolutePan({
       x: newX,
       y: newY
     })
-    if(newY > 0) {
-      this.renderer.renderGrid()
+    if (newY > 0) {
+      this.renderGrid()
     }
-    this.renderer.canvas.requestRenderAll()
+    this.canvas.requestRenderAll()
   }
 
   _relativeZoom (delta, point) {
@@ -70,39 +66,39 @@ export class Interactions {
   }
 
   _calculateAbsoluteZoom (delta) {
-    let zoom = this.renderer.canvas.getZoom()
-    return clamp(0.5, zoom + delta, 3)
+    let zoom = this.canvas.getZoom()
+    return InteractiveCanvas.clamp(0.5, zoom + delta, 3)
   }
 
   _absoluteZoom (absoluteZoom, point) {
-   this.renderer.canvas.zoomToPoint(point, absoluteZoom)
+    this.canvas.zoomToPoint(point, absoluteZoom)
 
-    let original_viewportTransform = this.renderer.canvas.viewportTransform
+    let original_viewportTransform = this.canvas.viewportTransform
     if (original_viewportTransform[5] >= 0) {
-      this.renderer.canvas.viewportTransform[5] = 0
-    } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this.renderer.canvas.getHeight() - canvasHeight() * absoluteZoom)) {
-      this.renderer.canvas.viewportTransform[5] = this.renderer.canvas.getHeight() - canvasHeight() * absoluteZoom
+      this.canvas.viewportTransform[5] = 0
+    } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this.canvas.getHeight() - window.innerHeight * absoluteZoom)) {
+      this.canvas.viewportTransform[5] = this.canvas.getHeight() - window.innerHeight * absoluteZoom
     }
 
-    this.renderer.renderGrid()
-    this.renderer.canvas.requestRenderAll()
+    this.renderGrid()
+    this.canvas.requestRenderAll()
   }
 
   addHover () {
     const that = this
     const lineId = 'mouseline'
 
-    this.renderer.canvas.on('mouse:move', function (options) {
-      that.renderer.canvas.remove(that.renderer.canvas.getItem(lineId))
+    this.canvas.on('mouse:move', function (options) {
+      that.canvas.remove(that.canvas.getItem(lineId))
 
-      const p = that.renderer.canvas.getPointer(options.e)
+      const p = that.canvas.getPointer(options.e)
 
       const line = new fabric.Line(
         [
           p.x,
-          -that.renderer.canvas.viewportTransform[5] / that.renderer.canvas.viewportTransform[3],
+          -that.canvas.viewportTransform[5] / that.canvas.viewportTransform[3],
           p.x,
-          (-that.renderer.canvas.viewportTransform[5] + viewHeight()) / that.renderer.canvas.viewportTransform[3]
+          (-that.canvas.viewportTransform[5] + window.innerHeight) / that.canvas.viewportTransform[3]
         ],
         {
           stroke: HOVER_COLOR,
@@ -113,10 +109,10 @@ export class Interactions {
         DATE_ORIGIN.clone().add(p.x * DATE_SCALE_FACTOR, DATE_SCALE_UNIT).format('YYYY'),
         {
           left: p.x,
-          top: (-that.renderer.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / that.renderer.canvas.viewportTransform[3],
+          top: (-that.canvas.viewportTransform[5] + window.innerHeight - LANE_HEIGHT) / that.canvas.viewportTransform[3],
           originX: 'center',
           originY: 'center',
-          fontSize: (LANE_HEIGHT - 4) / that.renderer.canvas.viewportTransform[3],
+          fontSize: (LANE_HEIGHT - 4) / that.canvas.viewportTransform[3],
           textAlign: 'center',
           strokeWidth: 0,
           fill: HOVER_COLOR,
@@ -126,15 +122,15 @@ export class Interactions {
 
       const mouseLine = new fabric.Group([line, label], {id: lineId})
 
-      that.renderer.canvas.add(mouseLine)
-      mouseLine.moveTo(that.renderer.tickCount() + 1)
-      that.renderer.canvas.requestRenderAll()
+      that.canvas.add(mouseLine)
+      mouseLine.moveTo(that.tickCount() + 1)
+      that.canvas.requestRenderAll()
     })
   }
 
   addTooltips () {
-    const canvas = this.renderer.canvas
-    this.renderer.canvas.on('mouse:over', function (e) {
+    const canvas = this.canvas
+    this.canvas.on('mouse:over', function (e) {
 
       if (e.target && e.target.tooltipText) {
         const p = canvas.getPointer(e)
@@ -186,14 +182,14 @@ export class Interactions {
       canvas.requestRenderAll()
     })
 
-    this.renderer.canvas.on('mouse:out', function (e) {
+    this.canvas.on('mouse:out', function () {
       canvas.remove(canvas.getItem('tooltip'))
       canvas.requestRenderAll()
     })
   }
 
   addWikipediaLinks () {
-    this.renderer.canvas.on('mouse:down', function (event) {
+    this.canvas.on('mouse:down', function (event) {
       if (event.target && event.target.url) {
         window.open(event.target.url)
       }
@@ -203,31 +199,33 @@ export class Interactions {
   addKeyboardControl () {
     const that = this
     document.onkeydown = function (e) {
-      switch (e.keyCode) {
-        case 37:  // Left arrow
+      switch (e.key) {
+        case 'ArrowLeft':
           that._pan(-30, 0)
           break
-        case 39:  // Right arrow
+        case 'ArrowRight':
           that._pan(30, 0)
           break
-        case 38:  // Up arrow
+        case 'ArrowUp':
           that._pan(0, -30)
           break
-        case 40:  // Down arrow
+        case 'ArrowDown':
           that._pan(0, 30)
           break
-        case 107: // Plus
-        case 171:
+        case '+':
           that._relativeZoom(0.25, {x: 0, y: 0})
           break
-        case 109: // Minus
-        case 173:
+        case '-':
           that._relativeZoom(-0.25, {x: 0, y: 0})
           break
-        case 48:
-        case 96:
+        case '0':
           that._absoluteZoom(1, {x: 0, y: 0})
       }
     }
   }
+
+  static clamp (min, value, max) {
+    return Math.max(min, Math.min(max, value))
+  }
+
 }

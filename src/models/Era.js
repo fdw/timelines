@@ -1,16 +1,24 @@
-import { Parser } from '../parser'
+import { Orderable } from './Orderable'
 
-export class Era {
-  constructor ({
-                 name,
-                 start,
-                 end,
-                 url = ''
-               }) {
+export class Era extends Orderable {
+  constructor (
+    name,
+    start,
+    end,
+    url = ''
+  ) {
+    super()
     this.name = name
-    this.start = Parser.parseDate(start)
-    this.end = Parser.parseDate(end)
-
+    this.start = start
+    this.end = end
     this.url = url
+  }
+
+  left () {
+    return this.start.clone()
+  }
+
+  right () {
+    return this.end.clone()
   }
 }

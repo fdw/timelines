@@ -1,15 +1,3 @@
-import chroma from 'chroma-js'
-
-export class RenderableFacet {
-  constructor(name, lanes, eras ){
-    this.name = name
-    this.lanes = lanes
-    this.eras = eras
-    this.basecolor = chroma('#005f69')
-  }
-}
-
-
 export class Lanes {
   constructor () {
     this._lanes = {}
@@ -25,11 +13,11 @@ export class Lanes {
   }
 
   laneEnd (index) {
-    return this._lanes[index][this._lanes[index].length-1].right()
+    return this._lanes[index][this._lanes[index].length - 1].right()
   }
 
   findLaneEndingBefore (date) {
-    for (let lane in this._lanes) {
+    for (let lane in Object.keys(this._lanes)) {
       if (this.laneEnd(lane).add(3, 'Y').isBefore(date)) {
         return lane
       }
@@ -42,16 +30,12 @@ export class Lanes {
     this._lanes[laneIndex].push(object)
   }
 
-  addObjects(objects) {
+  addObjects (objects) {
     objects.forEach(it => this.addObject(it))
   }
 
   getLanes () {
     return Object.values(this._lanes)
-  }
-
-  getLane(index) {
-    return this._lanes[index]
   }
 }
 

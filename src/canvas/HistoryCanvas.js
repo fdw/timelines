@@ -1,21 +1,18 @@
 import { fabric } from 'fabric'
 import {
   BACKGROUND_COLOR,
-  canvasHeight,
   DATE_ORIGIN,
   DATE_SCALE_FACTOR,
   DATE_SCALE_UNIT,
   FIRST_TICK,
   GRID_COLOR,
   LANE_HEIGHT,
-  LAST_TICK,
-  viewHeight,
-  viewWidth
-} from '../constants'
+  LAST_TICK
+} from './Properties'
 import moment from 'moment'
-import { FacetRenderer } from './FacetRenderer'
+import { RenderableFacet } from '../renderers/RenderableFacet'
 
-export class HistoryRenderer {
+export class HistoryCanvas {
   constructor () {
     fabric.Object.prototype.selectable = false
     fabric.Textbox.prototype.editable = false
@@ -34,33 +31,33 @@ export class HistoryRenderer {
     this._initializeCanvas()
   }
 
-  render(facets) {
+  _initializeCanvas () {
+    this.canvas = new fabric.Canvas('canvas')
+    this.canvas.setDimensions({width: window.innerWidth, height: window.innerHeight})
+    this.canvas.hoverCursor = 'default'
+    this.canvas.selection = false
+    this.canvas.absolutePan({x: HistoryCanvas.calculateAbsoluteX(moment('1500-01-01', 'Y-MM-DD')), y: 0})
+    this.canvas.renderOnAddRemove = false
+  }
+
+  render (facets) {
     this.renderGrid()
     this._renderData(facets)
     this.canvas.requestRenderAll()
-  }
-
-  _initializeCanvas () {
-    this.canvas = new fabric.Canvas('canvas')
-    this.canvas.setDimensions({width: viewWidth(), height: canvasHeight()})
-    this.canvas.hoverCursor = 'default'
-    this.canvas.selection = false
-    this.canvas.absolutePan({x: HistoryRenderer.calculateAbsoluteX(moment('1500-01-01', 'Y-MM-DD')), y: 0})
-    this.canvas.renderOnAddRemove = false
   }
 
   renderGrid () {
     this.canvas.remove(...this._ticks)
     this._ticks.length = 0
 
-    for (let currentTick = FIRST_TICK.clone(); currentTick.isBefore(LAST_TICK); currentTick.add(this._periodBetweenTicks(), 'Y')) {
-      const x = HistoryRenderer.calculateAbsoluteX(currentTick)
+    for (let currentTick = FIRST_TICK.clone(); currentTick.isBefore(LAST_TICK); currentTick.add(this._periodBetweenTicks())) {
+      const x = HistoryCanvas.calculateAbsoluteX(currentTick)
       const line = new fabric.Line(
         [
           x,
           -this.canvas.viewportTransform[5] / this.canvas.viewportTransform[3],
           x,
-          (-this.canvas.viewportTransform[5] + viewHeight()) / this.canvas.viewportTransform[3]
+          (-this.canvas.viewportTransform[5] + window.innerHeight) / this.canvas.viewportTransform[3]
         ],
         {
           stroke: GRID_COLOR.hex(),
@@ -71,7 +68,7 @@ export class HistoryRenderer {
         currentTick.format('YYYY'),
         {
           left: x,
-          top: (-this.canvas.viewportTransform[5] + viewHeight() - LANE_HEIGHT) / this.canvas.viewportTransform[3],
+          top: (-this.canvas.viewportTransform[5] + window.innerHeight - LANE_HEIGHT) / this.canvas.viewportTransform[3],
           originX: 'center',
           originY: 'center',
           fontSize: (LANE_HEIGHT - 4) / this.canvas.viewportTransform[3],
@@ -89,7 +86,7 @@ export class HistoryRenderer {
   }
 
   _periodBetweenTicks () {
-    return 25 / this.canvas.getZoom()
+    return moment.duration(25 / this.canvas.getZoom(), 'y')
   }
 
   tickCount () {
@@ -97,17 +94,13 @@ export class HistoryRenderer {
   }
 
   _renderData (facets) {
-    let offset = 0
-    for (let facetName in facets) {
-      const facet = facets[facetName]
-      offset = new FacetRenderer(this.canvas).render(facet, offset)
-    }
+    facets.reduce((offset, facet) => new RenderableFacet(this.canvas, facet).render(offset), 0)
 
     this.canvas.renderAll()
   }
 
   static calculateAbsoluteX (date) {
-    return HistoryRenderer.calculateRelativeX(DATE_ORIGIN.clone(), date)
+    return HistoryCanvas.calculateRelativeX(DATE_ORIGIN.clone(), date)
   }
 
   static calculateRelativeX (start, end) {

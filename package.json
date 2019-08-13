@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "test": "webpack --mode=development",
-    "build": "webpack"
+    "build": "webpack --mode=production"
   },
   "sideEffects": false,
   "author": {
@@ -16,7 +16,6 @@
   "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/fabric": "^2.6.18",
     "merge-jsons-webpack-plugin": "^1.0.19",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6"

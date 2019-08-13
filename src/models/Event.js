@@ -1,15 +1,14 @@
-import { Parser } from '../parser'
-import { Renderable } from './Renderable'
+import { Orderable } from './Orderable'
 
-export class Event extends Renderable {
-  constructor ({
-                 name,
-                 date,
-                 url,
-               }) {
+export class Event extends Orderable {
+  constructor (
+    name,
+    date,
+    url,
+  ) {
     super()
     this.name = name
-    this.date = Parser.parseDate(date)
+    this.date = date
     this.url = url
   }
 

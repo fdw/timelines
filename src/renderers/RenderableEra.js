@@ -1,41 +1,45 @@
 import { Renderer } from './Renderer'
 import { fabric } from 'fabric'
 import moment from 'moment'
-import { LANE_HEIGHT } from '../constants'
 import chroma from 'chroma-js'
-import { HistoryRenderer } from './HistoryRenderer'
+import { HistoryCanvas } from '../canvas/HistoryCanvas'
 
-export class EraRenderer extends Renderer {
-  constructor (canvas) {
+export class RenderableEra extends Renderer {
+
+  constructor (canvas, era) {
     super(canvas)
+    this.min_era_width_for_horizontal = HistoryCanvas.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00031-01-01', 'Y-MM-DD'))
+
+    this.name = era.name
+    this.start = era.start
+    this.end = era.end
+
+    this.left = HistoryCanvas.calculateAbsoluteX(era.start)
+    this.width = HistoryCanvas.calculateRelativeX(era.start, era.end)
   }
 
-  render (era, offset, height, color) {
-    const left = HistoryRenderer.calculateAbsoluteX(era.start)
-    const width = HistoryRenderer.calculateRelativeX(era.start, era.end)
-
+  render (offset, height, color) {
     const rect = new fabric.Rect({
       fill: color.brighten(0.2).alpha(0.1).hex(),
       stroke: color.brighten(0.1).alpha(0.3).hex(),
       strokeWidth: 2,
-      left: left,
-      width: width,
+      left: this.left,
+      width: this.width,
       top: offset,
       height: height
     })
 
-    const min_era_width_for_horizontal = HistoryRenderer.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00031-01-01', 'Y-MM-DD'))
-    const isWideEnough = width > min_era_width_for_horizontal
+    const isWideEnough = this.width > this.min_era_width_for_horizontal
     const label = new fabric.Textbox(
-      era.name,
+      this.name,
       {
-        left: left + width / 2,
+        left: this.left + this.width / 2,
         width: isWideEnough ? Math.min(rect.width, 300) : height,
         top: offset + height / 2,
         originX: 'center',
         originY: 'center',
         angle: isWideEnough ? 0 : 270,
-        fontSize: LANE_HEIGHT,
+        fontSize: this.LANE_HEIGHT,
         textAlign: 'center',
         strokeWidth: 0,
         fill: chroma('darkgray').hex()
@@ -45,7 +49,7 @@ export class EraRenderer extends Renderer {
     const eraGlyph = new fabric.Group(
       [rect, label],
       {
-        tooltipText: `${era.name}\n${era.start.format('YYYY')} - ${era.end.format('YYYY')}`,
+        tooltipText: `${this.name}\n${this.start.format('YYYY')} - ${this.end.format('YYYY')}`,
         color: color.hex()
       }
     )
