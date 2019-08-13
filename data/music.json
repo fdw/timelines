@@ -114,6 +114,19 @@
         "birth": "1813-05-22",
         "death": "1883-02-13",
         "url": "https://en.wikipedia.org/wiki/Richard_Wagner"
+      },
+      {
+        "name": "Giuseppe Fortunino Francesco Verdi",
+        "birth": "1813-10-09",
+        "death": "1901-01-27",
+        "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi",
+        "short_name": "Giuseppe Verdi"
+      },
+      {
+        "name": "Georg Philipp Telemann",
+        "birth": "1681-03-24",
+        "death": "1767-06-25",
+        "url": "https://en.wikipedia.org/wiki/Georg_Philipp_Telemann"
       }
     ],
     "events": [
