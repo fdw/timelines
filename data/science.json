@@ -174,6 +174,12 @@
         "birth": "1902-07-28",
         "death": "1994-09-17",
         "url": "https://en.wikipedia.org/wiki/Karl_Popper"
+      },
+      {
+        "name": "Nikola Tesla",
+        "birth": "1856-07-10",
+        "death": "1943-01-07",
+        "url": "https://en.wikipedia.org/wiki/Nikola_Tesla"
       }
     ],
     "events": [
@@ -221,6 +227,16 @@
           "name": "Birth of the first in vitro fertilized baby",
           "date": "1978-07-25",
           "url": "https://en.wikipedia.org/wiki/Louise_Brown"
+      },
+      {
+          "name": "First commerical audio CD",
+          "date": "1982-08-17",
+          "url": "https://en.wikipedia.org/wiki/Compact_disc"
+      },
+      {
+          "name": "Opening of the Suez Canal",
+          "date": "1869-11-17",
+          "url": "https://en.wikipedia.org/wiki/Suez_Canal"
       }
     ],
     "eras": [
