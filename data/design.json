@@ -1,0 +1,31 @@
+{
+  "design": {
+    "people": [
+      {
+        "name": "Dieter Rams",
+        "birth": "1932-05-20",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/Dieter_Rams"
+      },
+      {
+        "name": "Bauhaus",
+        "birth": "1919-04-12",
+        "death": "1933-04",
+        "url": "https://en.wikipedia.org/wiki/Bauhaus"
+      },
+      {
+        "name": "Charles-Édouard Jeanneret",
+        "birth": "1887-10-06",
+        "death": "1965-08-27",
+        "url": "https://en.wikipedia.org/wiki/Le_Corbusier",
+        "short_name": "Le Corbusier"
+      },
+      {
+        "name": "Frank Lloyd Wright",
+        "birth": "1867-06-08",
+        "death": "1959-04-09",
+        "url": "https://en.wikipedia.org/wiki/Frank_Lloyd_Wright"
+      }
+    ]
+  }
+}
