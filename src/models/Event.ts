@@ -1,22 +1,20 @@
 import { Orderable } from './Orderable'
+import {Moment} from "moment";
 
 export class Event extends Orderable {
   constructor (
-    name,
-    date,
-    url,
+    public readonly name: string,
+    public readonly date: Moment,
+    public readonly url: string,
   ) {
     super()
-    this.name = name
-    this.date = date
-    this.url = url
   }
 
-  left () {
+  left (): Moment {
     return this.date.clone()
   }
 
-  right () {
+  right (): Moment {
     return this.date.clone()
   }
 }

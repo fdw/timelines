@@ -16,7 +16,12 @@
   "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/chroma-js": "^1.4.1",
+    "@types/fabric": "^3.0.1",
+    "awesome-typescript-loader": "^5.2.1",
     "merge-jsons-webpack-plugin": "^1.0.19",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.6.2",
     "webpack": "^4.36.1",
     "webpack-cli": "^3.3.6"
   },
