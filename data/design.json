@@ -8,12 +8,6 @@
         "url": "https://en.wikipedia.org/wiki/Dieter_Rams"
       },
       {
-        "name": "Bauhaus",
-        "birth": "1919-04-12",
-        "death": "1933-04",
-        "url": "https://en.wikipedia.org/wiki/Bauhaus"
-      },
-      {
         "name": "Charles-Édouard Jeanneret",
         "birth": "1887-10-06",
         "death": "1965-08-27",
@@ -25,6 +19,54 @@
         "birth": "1867-06-08",
         "death": "1959-04-09",
         "url": "https://en.wikipedia.org/wiki/Frank_Lloyd_Wright"
+      },
+      {
+        "name": "Frank Owen Gehry",
+        "birth": "1929-02-28",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/Frank_Gehry"
+      },
+      {
+        "name": "Antoni Gaudí i Cornet",
+        "birth": "1852-06-25",
+        "death": "1926-06-10",
+        "url": "https://en.wikipedia.org/wiki/Antoni_Gaud%C3%AD",
+        "short_name": "Antoni Gaudí",
+        "events": [
+          {
+              "name": "Start of the construction of the Sagrada Família",
+              "date": "1882-03-19",
+              "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia"
+          }
+        ]
+      },
+      {
+        "name": "Maria Ludwig Michael Mies",
+        "birth": "1886-03-27",
+        "death": "1969-08-17",
+        "url": "https://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe",
+        "short_name": "Ludwig Mies van der Rohe"
+      },
+      {
+        "name": "زها حديد",
+        "birth": "1950-10-31",
+        "death": "2016-03-31",
+        "url": "https://en.wikipedia.org/wiki/Zaha_Hadid",
+        "short_name": "Zaha Hadid"
+      },
+      {
+        "name": "Walter Adolph Georg Gropius",
+        "birth": "1883-05-18",
+        "death": "1969-07-05",
+        "url": "https://en.wikipedia.org/wiki/Walter_Gropius"
+      }
+    ],
+    "eras": [
+      {
+        "name": "Bauhaus",
+        "start": "1919-04-12",
+        "end": "1933-04",
+        "url": "https://en.wikipedia.org/wiki/Bauhaus"
       }
     ]
   }

@@ -91,10 +91,11 @@
         "url": "https://en.wikipedia.org/wiki/Gregor_Mendel"
       },
       {
-        "name": "Hanaoka Seishū",
+        "name": "華岡 青洲",
         "birth": "1760-10-23",
         "death": "1835-11-21",
-        "url": "https://en.wikipedia.org/wiki/Hanaoka_Seish%C5%AB"
+        "url": "https://en.wikipedia.org/wiki/Hanaoka_Seish%C5%AB",
+        "short_name": "Hanaoka Seishū"
       },
       {
         "name": "Sigmund Freud",
