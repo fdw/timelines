@@ -243,16 +243,16 @@
         "url": "https://en.wikipedia.org/wiki/Caliphate_of_Córdoba"
       },
       {
-          "name": "Iranian Revolution",
-          "start": "1978-01-07",
-          "end": "1979-02-11",
-          "url": "https://en.wikipedia.org/wiki/Iranian_Revolution"
+        "name": "Iranian Revolution",
+        "start": "1978-01-07",
+        "end": "1979-02-11",
+        "url": "https://en.wikipedia.org/wiki/Iranian_Revolution"
       },
       {
-          "name": "Arab Spring",
-          "start": "2010-12-17",
-          "end": "now",
-          "url": "https://en.wikipedia.org/wiki/Arab_Spring"
+        "name": "Arab Spring",
+        "start": "2010-12-17",
+        "end": "now",
+        "url": "https://en.wikipedia.org/wiki/Arab_Spring"
       }
     ],
     "events": [
@@ -337,9 +337,14 @@
         "url": "https://en.wikipedia.org/wiki/Eridu"
       },
       {
-          "name": "Declaration of the Establishment of the State of Israel",
-          "date": "1948-05-14",
-          "url": "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence"
+        "name": "Declaration of the Establishment of the State of Israel",
+        "date": "1948-05-14",
+        "url": "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence"
+      },
+      {
+        "name": "Good Friday Agreement",
+        "date": "1998-04-10",
+        "url": "https://en.wikipedia.org/wiki/Good_Friday_Agreement"
       }
     ]
   }

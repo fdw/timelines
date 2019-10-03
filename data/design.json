@@ -59,6 +59,12 @@
         "birth": "1883-05-18",
         "death": "1969-07-05",
         "url": "https://en.wikipedia.org/wiki/Walter_Gropius"
+      },
+      {
+        "name": "Filippo Brunelleschi",
+        "birth": "1377",
+        "death": "1446-04-15",
+        "url": "https://en.wikipedia.org/wiki/Filippo_Brunelleschi"
       }
     ],
     "eras": [
