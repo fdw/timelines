@@ -16,18 +16,18 @@
   "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/chroma-js": "^1.4.1",
-    "@types/fabric": "^3.0.1",
+    "@types/chroma-js": "^1.4.3",
+    "@types/fabric": "^3.5.0",
     "awesome-typescript-loader": "^5.2.1",
-    "merge-jsons-webpack-plugin": "^1.0.19",
+    "merge-jsons-webpack-plugin": "^1.0.20",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.6.2",
-    "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6"
+    "typescript": "^3.7.3",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
-    "chroma-js": "^2.0.4",
-    "fabric": "^3.3.2",
+    "chroma-js": "^2.1.0",
+    "fabric": "^3.5.1",
     "moment": "^2.24.0"
   }
 }
