@@ -127,6 +127,18 @@
         "birth": "1681-03-24",
         "death": "1767-06-25",
         "url": "https://en.wikipedia.org/wiki/Georg_Philipp_Telemann"
+      },
+      {
+        "name": "Clara Schumann",
+        "birth": "1819-09-13",
+        "death": "1896-05-20",
+        "url": "https://en.wikipedia.org/wiki/Clara_Schumann"
+      },
+      {
+        "name": "Edvard Hagerup Grieg",
+        "birth": "1843-06-15",
+        "death": "1907-09-04",
+        "url": "https://en.wikipedia.org/wiki/Edvard_Grieg"
       }
     ],
     "events": [
