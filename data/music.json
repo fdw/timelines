@@ -139,6 +139,12 @@
         "birth": "1843-06-15",
         "death": "1907-09-04",
         "url": "https://en.wikipedia.org/wiki/Edvard_Grieg"
+      },
+      {
+        "name": "Jean-Baptiste Lully",
+        "birth": "1632-11-28",
+        "death": "1687-03-22",
+        "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully"
       }
     ],
     "events": [
