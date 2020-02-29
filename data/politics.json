@@ -298,10 +298,10 @@
         "url": "https://en.wikipedia.org/wiki/Watts_riots"
       },
       {
-          "name": "Rodney King Riots",
-          "start": "1992-04-29",
-          "end": "1992-05-04",
-          "url": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
+        "name": "Rodney King Riots",
+        "start": "1992-04-29",
+        "end": "1992-05-04",
+        "url": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
       }
     ],
     "events": [

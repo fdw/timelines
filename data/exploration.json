@@ -40,9 +40,9 @@
         "short_name": "",
         "events": [
           {
-              "name": "European discovery of America",
-              "date": "1492-10-12",
-              "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus#European_discovery_and_exploration"
+            "name": "European discovery of America",
+            "date": "1492-10-12",
+            "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus#European_discovery_and_exploration"
           }
         ]
       }
@@ -54,9 +54,9 @@
         "url": "https://en.wikipedia.org/wiki/Apollo_11"
       },
       {
-          "name": "First European landing in Australia",
-          "date": "1606-02-26",
-          "url": "https://en.wikipedia.org/wiki/European_exploration_of_Australia"
+        "name": "First European landing in Australia",
+        "date": "1606-02-26",
+        "url": "https://en.wikipedia.org/wiki/European_exploration_of_Australia"
       }
     ]
   }

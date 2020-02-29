@@ -16,10 +16,10 @@
     ],
     "eras": [
       {
-          "name": "First industrial revolution",
-          "start": "1760",
-          "end": "1840",
-          "url": "https://en.wikipedia.org/wiki/Industrial_Revolution"
+        "name": "First industrial revolution",
+        "start": "1760",
+        "end": "1840",
+        "url": "https://en.wikipedia.org/wiki/Industrial_Revolution"
       }
     ]
   }
