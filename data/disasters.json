@@ -24,6 +24,12 @@
           "start": "1817",
           "end": "1824",
           "url": "https://en.wikipedia.org/wiki/1817%E2%80%931824_cholera_pandemic"
+      },
+      {
+          "name": "COVID-19 outbreak",
+          "start": "2019-12-01",
+          "end": "now",
+          "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_outbreak"
       }
     ],
     "events": [

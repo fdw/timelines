@@ -149,6 +149,13 @@
         "death": "1948-01-30",
         "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
         "short_name": "Mahatma Gandhi"
+      },
+      {
+        "name": "Friedrich Wilhelm Viktor Albert",
+        "birth": "1859-01-27",
+        "death": "1941-06-04",
+        "url": "https://en.wikipedia.org/wiki/Wilhelm_II,_German_Emperor",
+        "short_name": "Wilhelm II"
       }
     ],
     "eras": [
@@ -283,6 +290,18 @@
         "start": "1994-04-07",
         "end": "1994-07-15",
         "url": "https://en.wikipedia.org/wiki/Rwandan_genocide"
+      },
+      {
+        "name": "Watts Rebellion",
+        "start": "1965-08-11",
+        "end": "1965-08-16",
+        "url": "https://en.wikipedia.org/wiki/Watts_riots"
+      },
+      {
+          "name": "Rodney King Riots",
+          "start": "1992-04-29",
+          "end": "1992-05-04",
+          "url": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
       }
     ],
     "events": [

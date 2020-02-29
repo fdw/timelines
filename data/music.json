@@ -145,6 +145,19 @@
         "birth": "1632-11-28",
         "death": "1687-03-22",
         "url": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lully"
+      },
+      {
+        "name": "Johannes Brahms",
+        "birth": "1833-05-07",
+        "death": "1897-04-03",
+        "url": "https://en.wikipedia.org/wiki/Johannes_Brahms"
+      },
+      {
+        "name": "Antonín Leopold Dvořák",
+        "birth": "1841-09-08",
+        "death": "1904-05-01",
+        "url": "https://en.wikipedia.org/wiki/Anton%C3%ADn_Dvo%C5%99%C3%A1k",
+        "short_name": "Antonín Dvořák"
       }
     ],
     "events": [
