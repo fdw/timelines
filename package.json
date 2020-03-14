@@ -17,12 +17,12 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/chroma-js": "^1.4.3",
-    "@types/fabric": "^3.6.1",
-    "awesome-typescript-loader": "^5.2.1",
+    "@types/fabric": "^3.6.2",
     "merge-jsons-webpack-plugin": "^1.0.20",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.7.5",
-    "webpack": "^4.41.6",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
