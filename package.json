@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/chroma-js": "^1.4.3",
     "@types/fabric": "^3.6.2",
+    "html-webpack-plugin": "^3.2.0",
     "merge-jsons-webpack-plugin": "^1.0.20",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
