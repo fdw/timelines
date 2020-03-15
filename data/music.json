@@ -158,6 +158,13 @@
         "death": "1904-05-01",
         "url": "https://en.wikipedia.org/wiki/Anton%C3%ADn_Dvo%C5%99%C3%A1k",
         "short_name": "Antonín Dvořák"
+      },
+      {
+        "name": "Серге́й Серге́евич Проко́фьев",
+        "birth": "1891-04-27",
+        "death": "1953-03-05",
+        "url": "https://en.wikipedia.org/wiki/Sergei_Prokofiev",
+        "short_name": "Sergei Prokovief"
       }
     ],
     "events": [
