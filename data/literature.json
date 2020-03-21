@@ -67,6 +67,24 @@
         "death": "103",
         "url": "https://en.wikipedia.org/wiki/Martial",
         "short_name": "Martial"
+      },
+      {
+        "name": "Umberto Eco",
+        "birth": "1932-01-05",
+        "death": "2016-02-19",
+        "url": "https://en.wikipedia.org/wiki/Umberto_Eco"
+      },
+      {
+        "name": "Edgar Allan Poe",
+        "birth": "1809-01-19",
+        "death": "1849-10-07",
+        "url": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe"
+      },
+      {
+        "name": "Victor Marie Hugo",
+        "birth": "1802-02-26",
+        "death": "1885-05-22",
+        "url": "https://en.wikipedia.org/wiki/Victor_Hugo"
       }
     ],
     "eras": [
