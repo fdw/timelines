@@ -15,10 +15,11 @@
         "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach"
       },
       {
-        "name": "Georg Friedrich Händel",
+        "name": "Georg Friederich Händel",
         "birth": "1685-03-05",
         "death": "1759-04-14",
-        "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel"
+        "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+        "short_name": "George Frideric Handel"
       },
       {
         "name": "Franz Joseph Haydn",
@@ -165,6 +166,34 @@
         "death": "1953-03-05",
         "url": "https://en.wikipedia.org/wiki/Sergei_Prokofiev",
         "short_name": "Sergei Prokovief"
+      },
+      {
+        "name": "Jakob Ludwig Felix Mendelssohn Bartholdy",
+        "birth": "1809-02-03",
+        "death": "1847-11-04",
+        "url": "https://en.wikipedia.org/wiki/Felix_Mendelssohn",
+        "short_name": "Felix Mendelssohn"
+      },
+      {
+        "name": "Liszt Ferencz",
+        "birth": "1811-10-22",
+        "death": "1886-07-31",
+        "url": "https://en.wikipedia.org/wiki/Franz_Liszt",
+        "short_name": "Franz Liszt"
+      },
+      {
+        "name": "Marshall Bruce Mathers III",
+        "birth": "1972-10-17",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/Eminem",
+        "short_name": "Eminem"
+      },
+      {
+        "name": "Michael Joseph Jackson",
+        "birth": "1958-08-29",
+        "death": "2009-06-25",
+        "url": "https://en.wikipedia.org/wiki/Michael_Jackson",
+        "short_name": "Michael Jackson"
       }
     ],
     "events": [

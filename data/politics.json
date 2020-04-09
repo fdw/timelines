@@ -67,12 +67,6 @@
         "short_name": "Nelson Mandela"
       },
       {
-        "name": "Adam Smith",
-        "birth": "1703-06-16",
-        "death": "1790-07-17",
-        "url": "https://en.wikipedia.org/wiki/Adam_Smith"
-      },
-      {
         "name": "François-Marie Arouet",
         "birth": "1694-11-21",
         "death": "1778-05-30",
@@ -156,6 +150,26 @@
         "death": "1941-06-04",
         "url": "https://en.wikipedia.org/wiki/Wilhelm_II,_German_Emperor",
         "short_name": "Wilhelm II"
+      },
+      {
+        "name": "Flavius Valerius Aurelius Constantinus Augustus",
+        "birth": "272-02-27",
+        "death": "337-05-22",
+        "url": "https://en.wikipedia.org/wiki/Constantine_the_Great",
+        "short_name": "Constantine the Great"
+      },
+      {
+        "name": "Simone Lucie Ernestine Marie Bertrand de Beauvoir",
+        "birth": "1908-01-09",
+        "death": "1986-04-14",
+        "url": "https://en.wikipedia.org/wiki/Simone_de_Beauvoir",
+        "short_name": "Simone de Beauvoir"
+      },
+      {
+        "name": "Mary I",
+        "birth": "1516-02-18",
+        "death": "1558-11-17",
+        "url": "https://en.wikipedia.org/wiki/Mary_I_of_England"
       }
     ],
     "eras": [
@@ -302,6 +316,12 @@
         "start": "1992-04-29",
         "end": "1992-05-04",
         "url": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
+      },
+      {
+          "name": "Haitian Revolution",
+          "start": "1791-08-22",
+          "end": "1804-01-01",
+          "url": "https://en.wikipedia.org/wiki/Haitian_Revolution"
       }
     ],
     "events": [

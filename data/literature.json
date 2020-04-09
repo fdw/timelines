@@ -69,6 +69,39 @@
         "short_name": "Martial"
       },
       {
+        "name": "Philip Kindred Dick",
+        "birth": "1928-12-16",
+        "death": "1982-03-02",
+        "url": "https://en.wikipedia.org/wiki/Philip_K._Dick",
+        "short_name": "Philip K. Dick"
+      },
+      {
+        "name": "Stanisław Lem",
+        "birth": "1921-09-12",
+        "death": "2006-03-27",
+        "url": "https://en.wikipedia.org/wiki/Stanis%C5%82aw_Lem"
+      },
+      {
+        "name": "Robert Ansom Heinlein",
+        "birth": "1907-07-07",
+        "death": "1988-05-08",
+        "url": "https://en.wikipedia.org/wiki/Robert_A._Heinlein",
+        "short_name": "Robert A. Heinlein"
+      },
+      {
+        "name": "Isaac Asimov",
+        "birth": "1920-01-02",
+        "death": "1992-04-06",
+        "url": "https://en.wikipedia.org/wiki/Isaac_Asimov"
+      },
+      {
+        "name": "Sir Terence David John Pratchett",
+        "birth": "1948-04-28",
+        "death": "2015-03-15",
+        "url": "https://en.wikipedia.org/wiki/Terry_Pratchett",
+        "short_name": "Terry Pratchett"
+      },
+      {
         "name": "Umberto Eco",
         "birth": "1932-01-05",
         "death": "2016-02-19",

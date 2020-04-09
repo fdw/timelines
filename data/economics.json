@@ -2,7 +2,7 @@
   "economics": {
     "people": [
       {
-        "name": "East India Company",
+        "name": "British East India Company",
         "birth": "1600-12-31",
         "death": "1874-06-01",
         "url": "https://en.wikipedia.org/wiki/East_India_Company"
@@ -12,6 +12,44 @@
         "birth": "1159",
         "death": "1669",
         "url": "https://en.wikipedia.org/wiki/Hanseatic_League"
+      },
+      {
+        "name": "Vereenigde Oostindische Compagnie",
+        "birth": "1602-03-20",
+        "death": "1799-12-31",
+        "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company",
+        "short_name": "Dutch East India Company"
+      },
+      {
+        "name": "Adam Smith",
+        "birth": "1703-06-16",
+        "death": "1790-07-17",
+        "url": "https://en.wikipedia.org/wiki/Adam_Smith"
+      },
+      {
+        "name": "Henry Ford",
+        "birth": "1863-07-30",
+        "death": "1947-04-07",
+        "url": "https://en.wikipedia.org/wiki/Henry_Ford",
+        "events": [
+          {
+              "name": "Introduction of Ford Model T",
+              "date": "1908-10-01",
+              "url": "https://en.wikipedia.org/wiki/Ford_Model_T"
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+          "name": "Mississippi Bubble",
+          "date": "1720",
+          "url": "https://en.wikipedia.org/wiki/Mississippi_Company"
+      },
+      {
+          "name": "Black Tuesday",
+          "date": "1929-10-29",
+          "url": "https://en.wikipedia.org/wiki/Wall_Street_Crash_of_1929"
       }
     ],
     "eras": [

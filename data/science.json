@@ -193,6 +193,26 @@
         "birth": "1736-01-19",
         "death": "1819-08-25",
         "url": "https://en.wikipedia.org/wiki/James_Watt"
+      },
+      {
+        "name": "John von Neumann",
+        "birth": "1903-12-28",
+        "death": "1957-02-08",
+        "url": "https://en.wikipedia.org/wiki/John_von_Neumann"
+      },
+      {
+        "name": "Alan Mathison Turing",
+        "birth": "1912-06-23",
+        "death": "1954-06-07",
+        "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+        "short_name": "Alan Turing",
+        "events": [
+          {
+            "name": "First bombe installed",
+            "date": "1940-03-18",
+            "url": "https://en.wikipedia.org/wiki/Bombe"
+          }
+        ]
       }
     ],
     "events": [
@@ -250,6 +270,11 @@
         "name": "Opening of the Suez Canal",
         "date": "1869-11-17",
         "url": "https://en.wikipedia.org/wiki/Suez_Canal"
+      },
+      {
+          "name": "First steam-powered railway journey",
+          "date": "1804-02-21",
+          "url": "https://en.wikipedia.org/wiki/Rail_transport"
       }
     ],
     "eras": [
