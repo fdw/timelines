@@ -21,7 +21,7 @@ export class FacetRenderer extends Renderer {
         super(canvas);
 
         this.name = facet.name;
-        this.eras = facet.eras.sort((one, two) => one.orderByStart(two));
+        this.eras = facet.eras;
 
         this.lanes = new Lanes();
         const objects = (facet.people as Orderable[])

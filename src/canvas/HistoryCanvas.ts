@@ -46,7 +46,7 @@ export class HistoryCanvas extends fabric.Canvas {
 
     render(facets: Facet[]) {
         this.renderGrid();
-        this.renderData(facets);
+        this.renderData(facets.sort((one, two) => one.orderByStart(two)));
         this.requestRenderAll();
     }
 
