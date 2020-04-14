@@ -170,6 +170,12 @@
         "birth": "1516-02-18",
         "death": "1558-11-17",
         "url": "https://en.wikipedia.org/wiki/Mary_I_of_England"
+      },
+      {
+        "name": "Karl Heinrich Marx",
+        "birth": "1818-05-05",
+        "death": "1883-03-14",
+        "url": "https://en.wikipedia.org/wiki/Karl_Marx"
       }
     ],
     "eras": [
@@ -318,10 +324,10 @@
         "url": "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"
       },
       {
-          "name": "Haitian Revolution",
-          "start": "1791-08-22",
-          "end": "1804-01-01",
-          "url": "https://en.wikipedia.org/wiki/Haitian_Revolution"
+        "name": "Haitian Revolution",
+        "start": "1791-08-22",
+        "end": "1804-01-01",
+        "url": "https://en.wikipedia.org/wiki/Haitian_Revolution"
       }
     ],
     "events": [
@@ -419,6 +425,11 @@
         "name": "Tiananmen Square Massacre",
         "date": "1989-06-04",
         "url": "https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests"
+      },
+      {
+        "name": "October Revolution",
+        "date": "1917-11-07",
+        "url": "https://en.wikipedia.org/wiki/October_Revolution"
       }
     ]
   }
