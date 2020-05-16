@@ -201,6 +201,31 @@
         "name": "Eight-Track Recorder",
         "date": "1957",
         "url": "https://en.wikipedia.org/wiki/History_of_multitrack_recording"
+      },
+      {
+          "name": "Definition of Concert Pitch",
+          "date": "1939-05-01",
+          "url": "https://en.wikipedia.org/wiki/Concert_pitch"
+      },
+      {
+          "name": "Debut of the Moog Synthesizer",
+          "date": "1964",
+          "url": "https://en.wikipedia.org/wiki/Moog_synthesizer"
+      },
+      {
+          "name": "Emergence of the violin",
+          "date": "1530",
+          "url": "https://en.wikipedia.org/wiki/Violin"
+      },
+      {
+          "name": "Invention of the piano",
+          "date": "1700",
+          "url": "https://en.wikipedia.org/wiki/Piano"
+      },
+      {
+          "name": "Exact calculation of twelve-tone equal temperament",
+          "date": "1584",
+          "url": "https://en.wikipedia.org/wiki/Equal_temperament"
       }
     ],
     "eras": [
