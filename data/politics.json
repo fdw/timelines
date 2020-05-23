@@ -430,6 +430,11 @@
         "name": "October Revolution",
         "date": "1917-11-07",
         "url": "https://en.wikipedia.org/wiki/October_Revolution"
+      },
+      {
+          "name": "Peace of Westphalia",
+          "date": "1648-10-24",
+          "url": "https://en.wikipedia.org/wiki/Peace_of_Westphalia"
       }
     ]
   }
