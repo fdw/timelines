@@ -18,7 +18,7 @@ export class Lanes {
     }
 
     private findLaneEndingBefore(date: Moment): number|string {
-        for (let lane in Object.keys(this.lanes)) {
+        for (const lane in Object.keys(this.lanes)) {
             if (this.laneEnd(lane).add(3, 'y').isBefore(date)) {
                 return lane
             }
@@ -26,12 +26,12 @@ export class Lanes {
         return this.addLane()
     }
 
-    addObject(object: Orderable) {
+    addObject(object: Orderable): void {
         const laneIndex = this.findLaneEndingBefore(object.left());
         this.lanes[laneIndex].push(object)
     }
 
-    addObjects(objects: Orderable[]) {
+    addObjects(objects: Orderable[]): void {
         objects.forEach(it => this.addObject(it))
     }
 

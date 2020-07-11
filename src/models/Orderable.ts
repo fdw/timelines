@@ -5,13 +5,13 @@ export abstract class Orderable {
 
     abstract right(): Moment
 
-    orderByStart(other): number {
+    orderByStart(other: Orderable): number {
         return this.left().isBefore(other.left()) ? -1
             : this.left().isAfter(other.left()) ? 1
                 : 0
     }
 
-    orderByEnd(other): number {
+    orderByEnd(other: Orderable): number {
         return this.right().isAfter(other.right()) ? -1
             : this.right().isBefore(other.right()) ? 1
                 : 0

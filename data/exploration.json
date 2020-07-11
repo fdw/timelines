@@ -58,6 +58,14 @@
         "date": "1606-02-26",
         "url": "https://en.wikipedia.org/wiki/European_exploration_of_Australia"
       }
+    ],
+    "eras": [
+      {
+          "name": "Age of Discovery",
+          "start": "1400",
+          "end": "1750",
+          "url": "https://en.wikipedia.org/wiki/Age_of_Discovery"
+      }
     ]
   }
 }

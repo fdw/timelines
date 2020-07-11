@@ -4,11 +4,12 @@ import {Person} from './models/Person'
 import {Era} from './models/Era'
 import {Event} from './models/Event'
 import {Facet} from './models/Facet'
+import {HistoryData} from "./models/HistoryData";
 
 export class Parser {
     private readonly DATE_PARSER_FORMAT = 'Y-MM-DD';
 
-    parseData(data): Facet[] {
+    parseData(data: Record<string, HistoryData>): Facet[] {
         const facets = Object.keys(data).map(facetName => {
             return new Facet(
                 facetName,
@@ -23,7 +24,7 @@ export class Parser {
     }
 
     private setColors(facets: Facet[]): void {
-        let colorScale = chroma.scale('Viridis').domain([0, facets.length - 1]);
+        const colorScale = chroma.scale('Viridis').domain([0, facets.length - 1]);
         facets.forEach((it, index) => {
             it.basecolor = colorScale(index)
         })

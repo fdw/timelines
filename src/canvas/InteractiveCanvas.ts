@@ -64,14 +64,14 @@ export class InteractiveCanvas extends HistoryCanvas {
     }
 
     _calculateAbsoluteZoom(delta: number): number {
-        let zoom = this.getZoom();
+        const zoom = this.getZoom();
         return InteractiveCanvas.clamp(0.5, zoom + delta, 3)
     }
 
     _absoluteZoom(absoluteZoom: number, point: fabric.Point): void {
         this.zoomToPoint(point, absoluteZoom);
 
-        let original_viewportTransform = this.viewportTransform;
+        const original_viewportTransform = this.viewportTransform;
         if (original_viewportTransform[5] >= 0) {
             this.viewportTransform[5] = 0
         } else if (Math.ceil(original_viewportTransform[5]) < Math.floor(this.getHeight() - window.innerHeight * absoluteZoom)) {
@@ -188,7 +188,7 @@ export class InteractiveCanvas extends HistoryCanvas {
         })
     }
 
-    addWikipediaLinks() {
+    addWikipediaLinks(): void {
         this.on('mouse:down', function (event) {
             if (event.target && event.target.url) {
                 window.open(event.target.url)
@@ -196,7 +196,7 @@ export class InteractiveCanvas extends HistoryCanvas {
         })
     }
 
-    addKeyboardControl() {
+    addKeyboardControl(): void {
         const that = this;
         document.onkeydown = function (e) {
             switch (e.key) {
@@ -224,7 +224,7 @@ export class InteractiveCanvas extends HistoryCanvas {
         }
     }
 
-    static clamp(min, value, max) {
+    static clamp(min: number, value: number, max: number): number {
         return Math.max(min, Math.min(max, value))
     }
 

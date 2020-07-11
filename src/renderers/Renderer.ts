@@ -5,7 +5,7 @@ export class Renderer {
   public readonly LANE_HEIGHT: number = 20;
   public readonly LANE_PADDING: number = 8;
 
-  constructor (canvas) {
+  constructor (canvas: fabric.Canvas) {
     this.canvas = canvas
   }
 
