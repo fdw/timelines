@@ -18,7 +18,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/chroma-js": "^1.4.3",
-    "@types/fabric": "^3.6.2",
+    "@types/fabric": "^3.6.7",
     "@typescript-eslint/eslint-plugin": "^3.6.0",
     "@typescript-eslint/parser": "^3.6.0",
     "eslint": "^7.4.0",
@@ -26,13 +26,13 @@
     "merge-jsons-webpack-plugin": "^1.0.21",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "chroma-js": "^2.1.0",
     "fabric": "^3.6.3",
-    "moment": "^2.24.0"
+    "moment": "^2.27.0"
   }
 }
