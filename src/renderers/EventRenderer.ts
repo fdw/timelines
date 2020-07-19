@@ -4,6 +4,7 @@ import {HistoryCanvas} from '../canvas/HistoryCanvas'
 import {Moment} from "moment";
 import {Event} from "../models/Event";
 import {Color} from "chroma-js";
+import {ICircleOptions} from "fabric/fabric-impl";
 
 export class EventRenderer extends Renderer {
     public readonly name: string;
@@ -28,11 +29,10 @@ export class EventRenderer extends Renderer {
             top: offset,
             originX: 'center',
             radius: this.LANE_HEIGHT / 2,
-            // @ts-ignore
             tooltipText: `${this.name}\n${this.date.format('YYYY')}`,
             color: color.hex(),
             url: this.url
-        });
+        } as ICircleOptions);
 
         this.canvas.add(circle)
     }

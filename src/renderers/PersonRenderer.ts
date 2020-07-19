@@ -5,6 +5,7 @@ import {HistoryCanvas} from '../canvas/HistoryCanvas'
 import {Moment} from "moment";
 import {Person} from "../models/Person";
 import {Event} from "../models/Event";
+import {IGroupOptions} from "fabric/fabric-impl";
 
 export class PersonRenderer extends Renderer {
     private readonly name: string;
@@ -59,11 +60,10 @@ export class PersonRenderer extends Renderer {
         );
 
         const personGlyph = new fabric.Group([rect, ...renderedEvents, label], {
-            // @ts-ignore
             tooltipText: this.buildPersonTooltip(),
             fill: color.hex(),
             url: this.url
-        });
+        } as IGroupOptions);
 
         this.canvas.add(personGlyph)
     }

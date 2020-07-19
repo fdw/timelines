@@ -11,6 +11,7 @@ import {
     LANE_HEIGHT,
     LAST_TICK
 } from './Properties'
+import {IGroupOptions} from "fabric/fabric-impl";
 
 export class InteractiveCanvas extends HistoryCanvas {
 
@@ -118,8 +119,7 @@ export class InteractiveCanvas extends HistoryCanvas {
                 }
             );
 
-            // @ts-ignore
-            const mouseLine = new fabric.Group([line, label], {id: lineId});
+            const mouseLine = new fabric.Group([line, label], {id: lineId} as IGroupOptions);
 
             that.add(mouseLine);
             mouseLine.moveTo(that.tickCount() + 1);
@@ -174,8 +174,7 @@ export class InteractiveCanvas extends HistoryCanvas {
                         })
                 }
 
-                // @ts-ignore
-                const tooltip = new fabric.Group([tooltipBackground, tooltipText], {id: 'tooltip'});
+                const tooltip = new fabric.Group([tooltipBackground, tooltipText], {id: 'tooltip'} as IGroupOptions);
 
                 that.add(tooltip)
             }

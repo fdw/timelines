@@ -4,6 +4,7 @@ import moment, {Moment} from 'moment'
 import chroma, {Color} from 'chroma-js'
 import {HistoryCanvas} from '../canvas/HistoryCanvas'
 import {Era} from "../models/Era";
+import {IGroupOptions} from "fabric/fabric-impl";
 
 export class EraRenderer extends Renderer {
     private readonly min_era_width_for_horizontal = HistoryCanvas.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00031-01-01', 'Y-MM-DD'));
@@ -55,10 +56,9 @@ export class EraRenderer extends Renderer {
         const eraGlyph = new fabric.Group(
             [rect, label],
             {
-                // @ts-ignore
                 tooltipText: `${this.name}\n${this.start.format('YYYY')} - ${this.end.format('YYYY')}`,
                 fill: color.hex()
-            }
+            } as IGroupOptions
         );
 
         const canvas = this.canvas;
