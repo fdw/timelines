@@ -4,7 +4,7 @@ const MergeJsonWebpackPlugin = require('merge-jsons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/timelines.ts',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'docs'),

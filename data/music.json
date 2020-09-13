@@ -242,8 +242,8 @@
       },
       {
         "name": "Baroque",
-        "start": "1600",
-        "end": "1760",
+        "start": "1580",
+        "end": "1750",
         "url": "https://en.wikipedia.org/wiki/Baroque_music"
       },
       {
@@ -254,8 +254,8 @@
       },
       {
         "name": "Romanticism",
-        "start": "1780",
-        "end": "1810",
+        "start": "1800",
+        "end": "1910",
         "url": "https://en.wikipedia.org/wiki/Romantic_music"
       },
       {
