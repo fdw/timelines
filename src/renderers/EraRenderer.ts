@@ -1,16 +1,16 @@
 import {Renderer} from './Renderer'
 import {fabric} from 'fabric'
-import moment, {Moment} from 'moment'
 import chroma, {Color} from 'chroma-js'
 import {HistoryCanvas} from '../canvas/HistoryCanvas'
 import {Era} from "../models/Era";
 import {IGroupOptions} from "fabric/fabric-impl";
+import {DateTime} from "luxon";
 
 export class EraRenderer extends Renderer {
-    private readonly min_era_width_for_horizontal = HistoryCanvas.calculateRelativeX(moment('0001-01-01', 'Y_MM_DD'), moment('00031-01-01', 'Y-MM-DD'));
+    private readonly min_era_width_for_horizontal = HistoryCanvas.calculateRelativeX(DateTime.fromISO('0001-01-01'), DateTime.fromISO('00031-01-01'));
     private readonly name: string;
-    private start: Moment;
-    private end: Moment;
+    private start: DateTime;
+    private end: DateTime;
     private readonly left: number;
     private readonly width: number;
 
@@ -56,7 +56,7 @@ export class EraRenderer extends Renderer {
         const eraGlyph = new fabric.Group(
             [rect, label],
             {
-                tooltipText: `${this.name}\n${this.start.format('YYYY')} - ${this.end.format('YYYY')}`,
+                tooltipText: `${this.name}\n${this.start.year} - ${this.end.year}`,
                 fill: color.hex()
             } as IGroupOptions
         );

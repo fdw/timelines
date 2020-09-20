@@ -1,14 +1,14 @@
 import {Renderer} from './Renderer'
 import {fabric} from 'fabric'
 import {HistoryCanvas} from '../canvas/HistoryCanvas'
-import {Moment} from "moment";
 import {Event} from "../models/Event";
 import {Color} from "chroma-js";
 import {ICircleOptions} from "fabric/fabric-impl";
+import {DateTime} from "luxon";
 
 export class EventRenderer extends Renderer {
     public readonly name: string;
-    public readonly date: Moment;
+    public readonly date: DateTime;
     private readonly url: string;
     private readonly left: number;
 
@@ -29,7 +29,7 @@ export class EventRenderer extends Renderer {
             top: offset,
             originX: 'center',
             radius: this.LANE_HEIGHT / 2,
-            tooltipText: `${this.name}\n${this.date.format('YYYY')}`,
+            tooltipText: `${this.name}\n${this.date.year}`,
             color: color.hex(),
             url: this.url
         } as ICircleOptions);

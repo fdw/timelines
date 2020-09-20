@@ -1,21 +1,21 @@
 import {Orderable} from './Orderable'
-import {Moment} from "moment";
+import {DateTime} from "luxon";
 
 export class Era extends Orderable {
     constructor(
         public readonly name: string,
-        public readonly start: Moment,
-        public readonly end: Moment,
+        public readonly start: DateTime,
+        public readonly end: DateTime,
         public readonly url: string = ''
     ) {
         super();
     }
 
-    left(): Moment {
-        return this.start.clone()
+    left(): DateTime {
+        return this.start
     }
 
-    right(): Moment {
-        return this.end.clone()
+    right(): DateTime {
+        return this.end
     }
 }

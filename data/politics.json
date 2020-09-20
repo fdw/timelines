@@ -153,8 +153,8 @@
       },
       {
         "name": "Flavius Valerius Aurelius Constantinus Augustus",
-        "birth": "272-02-27",
-        "death": "337-05-22",
+        "birth": "0272-02-27",
+        "death": "0337-05-22",
         "url": "https://en.wikipedia.org/wiki/Constantine_the_Great",
         "short_name": "Constantine the Great"
       },
@@ -265,7 +265,7 @@
       },
       {
         "name": "Caliphate of Córdoba",
-        "start": "929",
+        "start": "0929",
         "end": "1031",
         "url": "https://en.wikipedia.org/wiki/Caliphate_of_Córdoba"
       },
@@ -278,7 +278,7 @@
       {
         "name": "Arab Spring",
         "start": "2010-12-17",
-        "end": "now",
+        "end": "2012-12",
         "url": "https://en.wikipedia.org/wiki/Arab_Spring"
       },
       {

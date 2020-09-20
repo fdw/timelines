@@ -1,14 +1,14 @@
 import {Orderable} from './Orderable'
-import {Moment} from "moment";
 import {Event} from "./Event";
+import {DateTime} from "luxon";
 
 export class Person extends Orderable {
     public readonly shortName: string;
 
     constructor(
         public readonly name: string,
-        public readonly birth: Moment,
-        public readonly death: Moment,
+        public readonly birth: DateTime,
+        public readonly death: DateTime,
         public readonly url: string,
         public readonly events: Event[] = [],
         short_name = ''
@@ -17,11 +17,11 @@ export class Person extends Orderable {
         this.shortName = short_name
     }
 
-    left(): Moment {
-        return this.birth.clone()
+    left(): DateTime {
+        return this.birth
     }
 
-    right(): Moment {
-        return this.death.clone()
+    right(): DateTime {
+        return this.death
     }
 }

@@ -1,19 +1,19 @@
-import {Moment} from "moment";
+import {DateTime} from "luxon";
 
 export abstract class Orderable {
-    abstract left(): Moment
+    abstract left(): DateTime
 
-    abstract right(): Moment
+    abstract right(): DateTime
 
     orderByStart(other: Orderable): number {
-        return this.left().isBefore(other.left()) ? -1
-            : this.left().isAfter(other.left()) ? 1
+        return this.left() < other.left() ? -1
+            : this.left() > other.left() ? 1
                 : 0
     }
 
     orderByEnd(other: Orderable): number {
-        return this.right().isAfter(other.right()) ? -1
-            : this.right().isBefore(other.right()) ? 1
+        return this.right() > other.right() ? -1
+            : this.right() < other.right() ? 1
                 : 0
     }
 }

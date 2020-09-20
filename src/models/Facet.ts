@@ -3,7 +3,7 @@ import {Era} from "./Era";
 import {Person} from "./Person";
 import {Event} from "./Event";
 import {Orderable} from "./Orderable";
-import {Moment} from "moment";
+import {DateTime} from "luxon";
 
 export class Facet extends Orderable {
   public basecolor: Color;
@@ -25,11 +25,11 @@ export class Facet extends Orderable {
     this.events = events.sort((one, two) => one.orderByStart(two));
   }
 
-  left(): Moment {
+  left(): DateTime {
     return [this.eras[0], this.people[0], this.events[0]].sort((one, two) => one.orderByStart(two))[0].left()
   }
 
-  right(): Moment {
+  right(): DateTime {
     return [this.eras, this.people, this.events].flat().sort((one, two) => one.orderByEnd(two))[0].right()
   }
 

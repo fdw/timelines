@@ -105,7 +105,7 @@ export class InteractiveCanvas extends HistoryCanvas {
                 });
 
             const label = new fabric.Textbox(
-                DATE_ORIGIN.clone().add(p.x * DATE_SCALE_FACTOR, DATE_SCALE_UNIT).format('YYYY'),
+                DATE_ORIGIN.plus({months: p.x * DATE_SCALE_FACTOR}).year.toString(),
                 {
                     left: p.x,
                     top: (-that.viewportTransform[5] + window.innerHeight - LANE_HEIGHT) / that.viewportTransform[3],

@@ -2,15 +2,15 @@ import {Renderer} from './Renderer'
 import {fabric} from 'fabric'
 import chroma, {Color} from 'chroma-js'
 import {HistoryCanvas} from '../canvas/HistoryCanvas'
-import {Moment} from "moment";
 import {Person} from "../models/Person";
 import {Event} from "../models/Event";
 import {IGroupOptions} from "fabric/fabric-impl";
+import {DateTime} from "luxon";
 
 export class PersonRenderer extends Renderer {
     private readonly name: string;
-    private readonly birth: Moment;
-    private readonly death: Moment;
+    private readonly birth: DateTime;
+    private readonly death: DateTime;
     private readonly events: Event[];
     private readonly shortName: string;
     private readonly url: string;
@@ -82,8 +82,8 @@ export class PersonRenderer extends Renderer {
     }
 
     private buildPersonTooltip(): string {
-        const events = this.events.length > 0 ? '\n' + this.events.map(it => it.name + ' (' + it.date.format('YYYY') + ')').join(', ') : '';
-        return `${this.name}\n${this.birth.format('YYYY')} - ${this.death.format('YYYY')}${events}`
+        const events = this.events.length > 0 ? '\n' + this.events.map(it => `${it.name} (${it.date.year})`).join(', ') : '';
+        return `${this.name}\n${this.birth.year} - ${this.death.year}${events}`
     }
 
 }

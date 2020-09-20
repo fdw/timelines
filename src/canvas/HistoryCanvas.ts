@@ -9,9 +9,9 @@ import {
     LANE_HEIGHT,
     LAST_TICK
 } from './Properties'
-import moment, {Duration, Moment} from 'moment'
 import {FacetRenderer} from '../renderers/FacetRenderer'
 import {Facet} from "../models/Facet";
+import {DateTime, Duration} from "luxon";
 
 export class HistoryCanvas extends fabric.Canvas {
     private ticks: fabric.Object[];
@@ -29,7 +29,7 @@ export class HistoryCanvas extends fabric.Canvas {
         this.setDimensions({width: window.innerWidth, height: window.innerHeight});
         this.hoverCursor = 'default';
         this.selection = false;
-        this.absolutePan(new fabric.Point(HistoryCanvas.calculateAbsoluteX(moment('1500-01-01', 'Y-MM-DD')), 0));
+        this.absolutePan(new fabric.Point(HistoryCanvas.calculateAbsoluteX(DateTime.fromISO('1500-01-01')), 0));
         this.renderOnAddRemove = false;
 
         this.ticks = []
@@ -54,7 +54,7 @@ export class HistoryCanvas extends fabric.Canvas {
         this.remove(...this.ticks);
         this.ticks.length = 0;
 
-        for (let currentTick = FIRST_TICK.clone(); currentTick.isBefore(LAST_TICK); currentTick.add(this.periodBetweenTicks())) {
+        for (let currentTick = FIRST_TICK; currentTick < LAST_TICK; currentTick = currentTick.plus(this.periodBetweenTicks())) {
             const x = HistoryCanvas.calculateAbsoluteX(currentTick);
             const line = new fabric.Line(
                 [
@@ -69,7 +69,7 @@ export class HistoryCanvas extends fabric.Canvas {
                 });
 
             const label = new fabric.Textbox(
-                currentTick.format('YYYY'),
+                currentTick.year.toString(),
                 {
                     left: x,
                     top: (-this.viewportTransform[5] + window.innerHeight - LANE_HEIGHT) / this.viewportTransform[3],
@@ -90,7 +90,7 @@ export class HistoryCanvas extends fabric.Canvas {
     }
 
     private periodBetweenTicks(): Duration {
-        return moment.duration(25 / this.getZoom(), 'y')
+        return Duration.fromObject({years: 25 / this.getZoom()})
     }
 
     tickCount(): number {
@@ -103,11 +103,11 @@ export class HistoryCanvas extends fabric.Canvas {
         this.renderAll()
     }
 
-    static calculateAbsoluteX(date: Moment): number {
-        return HistoryCanvas.calculateRelativeX(DATE_ORIGIN.clone(), date)
+    static calculateAbsoluteX(date: DateTime): number {
+        return HistoryCanvas.calculateRelativeX(DATE_ORIGIN, date)
     }
 
-    static calculateRelativeX(start: Moment, end: Moment): number {
-        return end.diff(start, DATE_SCALE_UNIT) / DATE_SCALE_FACTOR
+    static calculateRelativeX(start: DateTime, end: DateTime): number {
+        return end.diff(start, DATE_SCALE_UNIT).as(DATE_SCALE_UNIT) / DATE_SCALE_FACTOR
     }
 }

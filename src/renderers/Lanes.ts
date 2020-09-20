@@ -1,5 +1,5 @@
 import {Orderable} from "../models/Orderable";
-import {Moment} from "moment";
+import {DateTime} from "luxon";
 
 export class Lanes {
     private lanes: Orderable[][] = [];
@@ -13,13 +13,13 @@ export class Lanes {
         return this.size() - 1
     }
 
-    private laneEnd(index: number|string): Moment {
+    private laneEnd(index: number|string): DateTime {
         return this.lanes[index][this.lanes[index].length - 1].right()
     }
 
-    private findLaneEndingBefore(date: Moment): number|string {
+    private findLaneEndingBefore(date: DateTime): number|string {
         for (const lane in Object.keys(this.lanes)) {
-            if (this.laneEnd(lane).add(3, 'y').isBefore(date)) {
+            if (this.laneEnd(lane).plus({years: 3}) < date) {
                 return lane
             }
         }

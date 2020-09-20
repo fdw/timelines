@@ -53,7 +53,6 @@ module.exports = {
         ]
       }
     }),
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /a^/),
     new HtmlWebpackPlugin({
       template: "src/timelines.html",
       inject: 'body',
