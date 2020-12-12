@@ -7,8 +7,6 @@ import {HistoryData} from "./models/HistoryData";
 import {DateTime} from "luxon";
 
 export class Parser {
-  private readonly DATE_PARSER_FORMAT = 'Y-MM-DD';
-
   parseData(data: Record<string, HistoryData>): Facet[] {
     const facets = Object.keys(data).map(facetName => {
       return new Facet(
@@ -17,7 +15,7 @@ export class Parser {
           (data[facetName].people || []).map(it => this.parsePerson(it)),
           (data[facetName].events || []).map(it => this.parseEvent(it))
       )
-    });
+    }).sort((one, two) => one.orderByStart(two))
 
     this.setColors(facets);
     return facets
