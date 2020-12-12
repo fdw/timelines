@@ -29,17 +29,7 @@ module.exports = {
     usedExports: true,
     splitChunks: {
       chunks: 'all',
-      minSize: 0,
-      cacheGroups: {
-        data: {
-          test: /\.json$/,
-          filename: '[name].js',
-          name(module) {
-            const filename = module.rawRequest.replace(/^.*[\\/]/, '');
-            return filename.substring(0, filename.lastIndexOf('.'));
-          },
-        }
-      }
+      minSize: 0
     }
   },
   plugins: [
