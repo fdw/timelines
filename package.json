@@ -17,23 +17,23 @@
   "repository": "github:fdw/timelines",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@types/chroma-js": "^2.1.2",
-    "@types/fabric": "^4.2.0",
-    "@types/luxon": "^1.25.0",
-    "@typescript-eslint/eslint-plugin": "^4.9.1",
-    "@typescript-eslint/parser": "^4.9.1",
-    "eslint": "^7.15.0",
-    "html-webpack-plugin": "^4.5.0",
+    "@types/chroma-js": "^2.1.3",
+    "@types/fabric": "^4.2.6",
+    "@types/luxon": "^1.26.5",
+    "@typescript-eslint/eslint-plugin": "^4.25.0",
+    "@typescript-eslint/parser": "^4.25.0",
+    "eslint": "^7.27.0",
+    "html-webpack-plugin": "^4.5.2",
     "merge-jsons-webpack-plugin": "^1.0.21",
-    "source-map-loader": "^1.1.3",
-    "ts-loader": "^8.0.12",
-    "typescript": "^4.1.3",
-    "webpack": "^5.10.1",
-    "webpack-cli": "^4.2.0"
+    "source-map-loader": "^3.0.0",
+    "ts-loader": "^8.3.0",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.0",
+    "webpack-cli": "^4.7.0"
   },
   "dependencies": {
-    "chroma-js": "^2.1.0",
-    "fabric": "^4.2.0",
-    "luxon": "^1.25.0"
+    "chroma-js": "^2.1.2",
+    "fabric": "^4.5.0",
+    "luxon": "^1.27.0"
   }
 }
