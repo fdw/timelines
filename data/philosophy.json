@@ -1,0 +1,94 @@
+{
+  "philosophy": {
+    "people": [
+      {
+        "name": "Friedrich Wilhelm Nietzsche",
+        "birth": "1844-10-15",
+        "death": "1900-08-25",
+        "url": "https://en.wikipedia.org/wiki/Friedrich_Nietzsche"
+      },
+      {
+        "name": "Immanuel Kant",
+        "birth": "1724-04-22",
+        "death": "1804-02-12",
+        "url": "https://en.wikipedia.org/wiki/Immanuel_Kant"
+      },
+      {
+        "name": "Σωκράτης",
+        "birth": "-0470",
+        "death": "-0399",
+        "short_name": "Socrates",
+        "url": "https://en.wikipedia.org/wiki/Socrates"
+      },
+      {
+        "name": "Πλάτων",
+        "birth": "-0428",
+        "death": "-0348",
+        "short_name": "Plato",
+        "url": "https://en.wikipedia.org/wiki/Plato"
+      },
+      {
+        "name": "Δημόκριτος",
+        "birth": "-0460",
+        "death": "-0370",
+        "short_name": "Democritus",
+        "url": "https://en.wikipedia.org/wiki/Democritus"
+      },
+      {
+        "name": "Hannah Arendt",
+        "birth": "1906-10-14",
+        "death": "1975-12-04",
+        "url": "https://en.wikipedia.org/wiki/Hannah_Arendt"
+      },
+      {
+        "name": "Thomas Hobbes",
+        "birth": "1588-04-05",
+        "death": "1679-12-04",
+        "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes"
+      },
+      {
+        "name": "John Locke",
+        "birth": "1632-08-29",
+        "death": "1704-10-28",
+        "url": "https://en.wikipedia.org/wiki/John_Locke"
+      },
+      {
+        "name": "Karl Heinrich Marx",
+        "birth": "1818-05-05",
+        "death": "1883-03-14",
+        "url": "https://en.wikipedia.org/wiki/Karl_Marx"
+      },
+      {
+        "name": "Albert Camus",
+        "birth": "1913-11-07",
+        "death": "1960-01-04",
+        "url": "https://en.wikipedia.org/wiki/Albert_Camus"
+      },
+      {
+        "name": "Theodor Ludwig Wiesengrund",
+        "birth": "1903-09-11",
+        "death": "1969-08-16",
+        "url": "https://en.wikipedia.org/wiki/Theodor_W._Adorno",
+        "short_name": "Theodor W. Adorno"
+      },
+      {
+        "name": "Max Horkheimer",
+        "birth": "1895-02-14",
+        "death": "1973-07-07",
+        "url": "https://en.wikipedia.org/wiki/Max_Horkheimer"
+      },
+      {
+        "name": "Jürgen Habermas",
+        "birth": "1929-06-18",
+        "death": "now",
+        "url": "https://en.wikipedia.org/wiki/J%C3%BCrgen_Habermas"
+      },
+      {
+        "name": "Herbert Marcuse",
+        "birth": "1898-07-19",
+        "death": "1979-07-29",
+        "url": "https://en.wikipedia.org/wiki/Herbert_Marcuse"
+      }
+    ]
+  }
+}

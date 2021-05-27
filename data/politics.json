@@ -48,18 +48,6 @@
         "url": "https://en.wikipedia.org/wiki/David_Hume"
       },
       {
-        "name": "Thomas Hobbes",
-        "birth": "1588-04-05",
-        "death": "1679-12-04",
-        "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes"
-      },
-      {
-        "name": "John Locke",
-        "birth": "1632-08-29",
-        "death": "1704-10-28",
-        "url": "https://en.wikipedia.org/wiki/John_Locke"
-      },
-      {
         "name": "Nelson Rolihlahla Mandela",
         "birth": "1918-07-18",
         "death": "2013-12-05",
@@ -170,12 +158,6 @@
         "birth": "1516-02-18",
         "death": "1558-11-17",
         "url": "https://en.wikipedia.org/wiki/Mary_I_of_England"
-      },
-      {
-        "name": "Karl Heinrich Marx",
-        "birth": "1818-05-05",
-        "death": "1883-03-14",
-        "url": "https://en.wikipedia.org/wiki/Karl_Marx"
       }
     ],
     "eras": [

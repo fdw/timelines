@@ -188,6 +188,13 @@
         "birth": "1862-07-14",
         "death": "1918-02-06",
         "url": "https://en.wikipedia.org/wiki/Gustav_Klimt"
+      },
+      {
+        "name": "Василий Васильевич Кандинский",
+        "birth": "1866-12-16",
+        "death": "1944-12-13",
+        "url": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
+        "short_name": "Vasiliy Kandinskiy"
       }
     ],
     "eras": [
