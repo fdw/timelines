@@ -17,22 +17,29 @@
         "name": "Σωκράτης",
         "birth": "-0470",
         "death": "-0399",
-        "short_name": "Socrates",
+        "short_name": "Sōkrátēs",
         "url": "https://en.wikipedia.org/wiki/Socrates"
       },
       {
         "name": "Πλάτων",
         "birth": "-0428",
         "death": "-0348",
-        "short_name": "Plato",
+        "short_name": "Plátōn",
         "url": "https://en.wikipedia.org/wiki/Plato"
       },
       {
         "name": "Δημόκριτος",
         "birth": "-0460",
         "death": "-0370",
-        "short_name": "Democritus",
+        "short_name": "Dēmókritos",
         "url": "https://en.wikipedia.org/wiki/Democritus"
+      },
+      {
+        "name": "孔夫子",
+        "birth": "-0551",
+        "death": "-0479",
+        "url": "https://en.wikipedia.org/wiki/Confucius",
+        "short_name": "Kǒng Fūzǐ"
       },
       {
         "name": "Hannah Arendt",

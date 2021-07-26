@@ -45,6 +45,18 @@
             "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus#European_discovery_and_exploration"
           }
         ]
+      },
+      {
+        "name": "Second voyage of the HMS Beagle",
+        "birth": "1831-12-27",
+        "death": "1836-10-02",
+        "url": "https://en.wikipedia.org/wiki/Second_voyage_of_HMS_Beagle"
+      },
+      {
+        "name": "James Cook",
+        "birth": "1728-11-07",
+        "death": "1779-02-14",
+        "url": "https://en.wikipedia.org/wiki/James_Cook"
       }
     ],
     "events": [
