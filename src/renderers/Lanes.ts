@@ -19,7 +19,7 @@ export class Lanes {
 
     private findLaneEndingBefore(date: DateTime): number|string {
         for (const lane in Object.keys(this.lanes)) {
-            if (this.laneEnd(lane).plus({years: 3}) < date) {
+            if (this.laneEnd(lane).plus({years: 5}) < date) {
                 return lane
             }
         }
