@@ -194,6 +194,18 @@
         "death": "2009-06-25",
         "url": "https://en.wikipedia.org/wiki/Michael_Jackson",
         "short_name": "Michael Jackson"
+      },
+      {
+        "name": "Miles Davis",
+        "birth": "1926-05-26",
+        "death": "1991-09-28",
+        "url": "https://en.wikipedia.org/wiki/Miles_Davis"
+      },
+      {
+        "name": "Luois Armstrong",
+        "birth": "1901-08-04",
+        "death": "1971-07-06",
+        "url": "https://en.wikipedia.org/wiki/Louis_Armstrong"
       }
     ],
     "events": [

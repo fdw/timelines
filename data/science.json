@@ -213,6 +213,32 @@
             "url": "https://en.wikipedia.org/wiki/Bombe"
           }
         ]
+      },
+      {
+        "name": "Edward Jenner",
+        "birth": "1749-05-17",
+        "death": "1823-01-26",
+        "url": "https://en.wikipedia.org/wiki/Edward_Jenner"
+      },
+      {
+        "name": "Norman Borlaug",
+        "birth": "1914-03-25",
+        "death": "2009-09-12",
+        "url": "https://en.wikipedia.org/wiki/Norman_Borlaug"
+      },
+      {
+        "name": "ابن سینا",
+        "birth": "0980",
+        "death": "1037-06-22",
+        "url": "https://en.wikipedia.org/wiki/Avicenna",
+        "short_name": "Avicenna"
+      },
+      {
+        "name": "Heinrich Hermann Robert Koch",
+        "birth": "1843-12-11",
+        "death": "1910-05-27",
+        "url": "https://en.wikipedia.org/wiki/Robert_Koch",
+        "short_name": "Robert Koch"
       }
     ],
     "events": [
@@ -275,6 +301,11 @@
           "name": "First steam-powered railway journey",
           "date": "1804-02-21",
           "url": "https://en.wikipedia.org/wiki/Rail_transport"
+      },
+      {
+          "name": "Invention of the Point-Contact Transistor",
+          "date": "1947-12-23",
+          "url": "https://en.wikipedia.org/wiki/Transistor"
       }
     ],
     "eras": [

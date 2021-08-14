@@ -95,6 +95,12 @@
         "birth": "1898-07-19",
         "death": "1979-07-29",
         "url": "https://en.wikipedia.org/wiki/Herbert_Marcuse"
+      },
+      {
+        "name": "Gautama Buddha",
+        "birth": "-0563",
+        "death": "-0483",
+        "url": "https://en.wikipedia.org/wiki/Gautama_Buddha"
       }
     ]
   }
