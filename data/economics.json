@@ -33,23 +33,23 @@
         "url": "https://en.wikipedia.org/wiki/Henry_Ford",
         "events": [
           {
-              "name": "Introduction of Ford Model T",
-              "date": "1908-10-01",
-              "url": "https://en.wikipedia.org/wiki/Ford_Model_T"
+            "name": "Introduction of Ford Model T",
+            "date": "1908-10-01",
+            "url": "https://en.wikipedia.org/wiki/Ford_Model_T"
           }
         ]
       }
     ],
     "events": [
       {
-          "name": "Mississippi Bubble",
-          "date": "1720",
-          "url": "https://en.wikipedia.org/wiki/Mississippi_Company"
+        "name": "Mississippi Bubble",
+        "date": "1720",
+        "url": "https://en.wikipedia.org/wiki/Mississippi_Company"
       },
       {
-          "name": "Black Tuesday",
-          "date": "1929-10-29",
-          "url": "https://en.wikipedia.org/wiki/Wall_Street_Crash_of_1929"
+        "name": "Black Tuesday",
+        "date": "1929-10-29",
+        "url": "https://en.wikipedia.org/wiki/Wall_Street_Crash_of_1929"
       }
     ],
     "eras": [

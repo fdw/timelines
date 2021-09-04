@@ -298,14 +298,14 @@
         "url": "https://en.wikipedia.org/wiki/Suez_Canal"
       },
       {
-          "name": "First steam-powered railway journey",
-          "date": "1804-02-21",
-          "url": "https://en.wikipedia.org/wiki/Rail_transport"
+        "name": "First steam-powered railway journey",
+        "date": "1804-02-21",
+        "url": "https://en.wikipedia.org/wiki/Rail_transport"
       },
       {
-          "name": "Invention of the Point-Contact Transistor",
-          "date": "1947-12-23",
-          "url": "https://en.wikipedia.org/wiki/Transistor"
+        "name": "Invention of the Point-Contact Transistor",
+        "date": "1947-12-23",
+        "url": "https://en.wikipedia.org/wiki/Transistor"
       }
     ],
     "eras": [
