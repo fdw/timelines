@@ -118,6 +118,13 @@
         "birth": "1802-02-26",
         "death": "1885-05-22",
         "url": "https://en.wikipedia.org/wiki/Victor_Hugo"
+      },
+      {
+        "name": "Jules Gabriel Verne",
+        "birth": "1828-02-08",
+        "death": "1905-03-24",
+        "url": "https://en.wikipedia.org/wiki/Jules_Verne",
+        "short_name": "Jules Verne"
       }
     ],
     "eras": [

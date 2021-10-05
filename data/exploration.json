@@ -57,6 +57,15 @@
         "birth": "1728-11-07",
         "death": "1779-02-14",
         "url": "https://en.wikipedia.org/wiki/James_Cook"
+      },
+      {
+        "name": "Alexander von Humboldt",
+        "birth": "1769-09-14",
+        "death": "1859-05-06",
+        "url": "https://en.wikipedia.org/wiki/Alexander_von_Humboldt",
+        "short_name": "",
+        "events": [
+        ]
       }
     ],
     "events": [

@@ -306,6 +306,11 @@
         "name": "Invention of the Point-Contact Transistor",
         "date": "1947-12-23",
         "url": "https://en.wikipedia.org/wiki/Transistor"
+      },
+      {
+          "name": "Opening of the Panama Canal",
+          "date": "1914-08-15",
+          "url": "https://en.wikipedia.org/wiki/Panama_Canal"
       }
     ],
     "eras": [
