@@ -47,6 +47,11 @@
         "name": "Chernobyl disaster",
         "date": "1986-04-26",
         "url": "https://en.wikipedia.org/wiki/Chernobyl_disaster"
+      },
+      {
+        "name": "Sinking of the Titanic",
+        "date": "1912-04-15",
+        "url": "https://en.wikipedia.org/wiki/Titanic"
       }
     ]
   }

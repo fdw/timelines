@@ -308,9 +308,19 @@
         "url": "https://en.wikipedia.org/wiki/Transistor"
       },
       {
-          "name": "Opening of the Panama Canal",
-          "date": "1914-08-15",
-          "url": "https://en.wikipedia.org/wiki/Panama_Canal"
+        "name": "Opening of the Panama Canal",
+        "date": "1914-08-15",
+        "url": "https://en.wikipedia.org/wiki/Panama_Canal"
+      },
+      {
+        "name": "First Telephone Transmission",
+        "date": "1876-03-10",
+        "url": "https://en.wikipedia.org/wiki/Telephone"
+      },
+      {
+        "name": "Adoption of the Euclidean Alphabet",
+        "date": "-0402",
+        "url": "https://en.wikipedia.org/wiki/History_of_the_Greek_alphabet"
       }
     ],
     "eras": [
