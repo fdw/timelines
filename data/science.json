@@ -239,6 +239,12 @@
         "death": "1910-05-27",
         "url": "https://en.wikipedia.org/wiki/Robert_Koch",
         "short_name": "Robert Koch"
+      },
+      {
+        "name": "Blaise Pascal",
+        "birth": "1623-06-19",
+        "death": "1662-08-19",
+        "url": "https://en.wikipedia.org/wiki/Blaise_Pascal"
       }
     ],
     "events": [
@@ -335,6 +341,18 @@
         "start": "1700",
         "end": "1899",
         "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment"
+      },
+      {
+        "name": "Bronze Age",
+        "start": "-1200",
+        "end": "-3300",
+        "url": "https://en.wikipedia.org/wiki/Bronze_Age"
+      },
+      {
+        "name": "Iron Age",
+        "start": "-1200",
+        "end": "-550",
+        "url": "https://en.wikipedia.org/wiki/Iron_Age"
       }
     ]
   }

@@ -30,6 +30,12 @@
         "start": "2019-12-01",
         "end": "now",
         "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_outbreak"
+      },
+      {
+        "name": "Late Bronze Age Collapse",
+        "start": "-1200",
+        "end": "-1150",
+        "url": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse"
       }
     ],
     "events": [
