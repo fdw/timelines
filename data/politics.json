@@ -158,6 +158,21 @@
         "birth": "1516-02-18",
         "death": "1558-11-17",
         "url": "https://en.wikipedia.org/wiki/Mary_I_of_England"
+      },
+      {
+        "name": "Mansa Musa",
+        "birth": "1280",
+        "death": "1337",
+        "url": "https://en.wikipedia.org/wiki/Mansa_Musa"
+      },
+      {
+        "name": "Muhammad ibn Abi Bakr al-Turi",
+        "birth": "1538",
+        "death": "1443",
+        "url": "https://en.wikipedia.org/wiki/Askia_Muhammad_I",
+        "short_name": "Askia Muhammad I",
+        "events": [
+        ]
       }
     ],
     "eras": [

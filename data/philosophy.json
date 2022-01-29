@@ -101,6 +101,13 @@
         "birth": "-0563",
         "death": "-0483",
         "url": "https://en.wikipedia.org/wiki/Gautama_Buddha"
+      },
+      {
+        "name": "Baruch Espinosa",
+        "birth": "1632-11-24",
+        "death": "1677-02-21",
+        "url": "https://en.wikipedia.org/wiki/Baruch_Spinoza",
+        "short_name": "Baruch Spinoza"
       }
     ]
   }

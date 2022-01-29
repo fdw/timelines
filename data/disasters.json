@@ -1,41 +1,73 @@
 {
   "disasters": {
-    "eras": [
+    "people": [
+      {
+        "name": "1883 eruption of Krakatoa",
+        "birth": "1883-05-20",
+        "death": "1883-10-21",
+        "url": "https://en.wikipedia.org/wiki/1883_eruption_of_Krakatoa"
+      },
+      {
+        "name": "Year Without a Summer",
+        "birth": "1816-01-01",
+        "death": "1816-12-31",
+        "url": "https://en.wikipedia.org/wiki/Year_Without_a_Summer"
+      },
+      {
+        "name": "1815 eruption of Mount Tambora",
+        "birth": "1815-04-05",
+        "death": "1815-04-15",
+        "url": "https://en.wikipedia.org/wiki/1815_eruption_of_Mount_Tambora"
+      },
       {
         "name": "Black Death",
-        "start": "1347",
-        "end": "1351",
+        "birth": "1347",
+        "death": "1351",
         "url": "https://en.wikipedia.org/wiki/Black_Death"
       },
       {
         "name": "Spanish Flu",
-        "start": "1918-01",
-        "end": "1920-12",
+        "birth": "1918-01",
+        "death": "1920-12",
         "url": "https://en.wikipedia.org/wiki/Spanish_flu"
       },
       {
         "name": "Third Plague Pandemic",
-        "start": "1855",
-        "end": "1960",
+        "birth": "1855",
+        "death": "1960",
         "url": "https://en.wikipedia.org/wiki/Third_plague_pandemic"
       },
       {
         "name": "First Cholera Pandemic",
-        "start": "1817",
-        "end": "1824",
+        "birth": "1817",
+        "death": "1824",
         "url": "https://en.wikipedia.org/wiki/1817%E2%80%931824_cholera_pandemic"
       },
       {
         "name": "COVID-19 outbreak",
-        "start": "2019-12-01",
-        "end": "now",
+        "birth": "2019-12-01",
+        "death": "now",
         "url": "https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_outbreak"
       },
+      {
+        "name": "Great Famine of 1315 - 1317",
+        "birth": "1315",
+        "death": "1317",
+        "url": "https://en.wikipedia.org/wiki/Great_Famine_of_1315%E2%80%931317"
+      }
+    ],
+    "eras": [
       {
         "name": "Late Bronze Age Collapse",
         "start": "-1200",
         "end": "-1150",
         "url": "https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse"
+      },
+      {
+        "name": "Little Ice Age",
+        "start": "1300",
+        "end": "1850",
+        "url": "https://en.wikipedia.org/wiki/Little_Ice_Age"
       }
     ],
     "events": [
@@ -58,6 +90,11 @@
         "name": "Sinking of the Titanic",
         "date": "1912-04-15",
         "url": "https://en.wikipedia.org/wiki/Titanic"
+      },
+      {
+        "name": "Kaharoa eruption",
+        "date": "1315",
+        "url": "https://en.wikipedia.org/wiki/Mount_Tarawera#Circa_1315_eruption"
       }
     ]
   }
