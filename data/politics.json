@@ -36,12 +36,6 @@
         "short_name": "Martin Luther King Jr"
       },
       {
-        "name": "Mary Wollstonecraft",
-        "birth": "1759-04-27",
-        "death": "1797-09-10",
-        "url": "https://en.wikipedia.org/wiki/Mary_Wollstonecraft"
-      },
-      {
         "name": "David Hume",
         "birth": "1711-05-07",
         "death": "1776-08-25",
@@ -325,6 +319,12 @@
         "start": "1791-08-22",
         "end": "1804-01-01",
         "url": "https://en.wikipedia.org/wiki/Haitian_Revolution"
+      },
+      {
+        "name": "Warring States Period",
+        "start": "-0475",
+        "end": "-0221",
+        "url": "https://en.wikipedia.org/wiki/Warring_States_period"
       }
     ],
     "events": [

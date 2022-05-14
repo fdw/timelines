@@ -108,6 +108,18 @@
         "death": "1677-02-21",
         "url": "https://en.wikipedia.org/wiki/Baruch_Spinoza",
         "short_name": "Baruch Spinoza"
+      },
+      {
+        "name": "Georg Wilhelm Friedrich Hegel",
+        "birth": "1770-08-27",
+        "death": "1831-11-14",
+        "url": "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel"
+      },
+      {
+        "name": "Mary Wollstonecraft",
+        "birth": "1759-04-27",
+        "death": "1797-09-10",
+        "url": "https://en.wikipedia.org/wiki/Mary_Wollstonecraft"
       }
     ]
   }

@@ -245,6 +245,13 @@
         "birth": "1623-06-19",
         "death": "1662-08-19",
         "url": "https://en.wikipedia.org/wiki/Blaise_Pascal"
+      },
+      {
+        "name": "أبو علي، الحسن بن الحسن بن الهيثم",
+        "birth": "0965",
+        "death": "1040",
+        "url": "https://en.wikipedia.org/wiki/Ibn_al-Haytham",
+        "short_name": "Ḥasan Ibn al-Haytham"
       }
     ],
     "events": [
@@ -329,9 +336,24 @@
         "url": "https://en.wikipedia.org/wiki/History_of_the_Greek_alphabet"
       },
       {
-          "name": "The musket appears in Europe",
-          "date": "1521",
-          "url": "https://en.wikipedia.org/wiki/Musket"
+        "name": "The musket appears in Europe",
+        "date": "1521",
+        "url": "https://en.wikipedia.org/wiki/Musket"
+      },
+      {
+        "name": "Announcement of Daguerreotype",
+        "date": "1839-01-07",
+        "url": "https://en.wikipedia.org/wiki/History_of_photography"
+      },
+      {
+        "name": "Issue of the Autochrome Lumière Patent",
+        "date": "1903-12-07",
+        "url": "https://en.wikipedia.org/wiki/Autochrome_Lumi%C3%A8re"
+      },
+      {
+        "name": "Announcement of Kodachrome",
+        "date": "1935-04-15",
+        "url": "https://en.wikipedia.org/wiki/Kodachrome"
       }
     ],
     "eras": [

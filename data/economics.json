@@ -50,6 +50,26 @@
         "name": "Black Tuesday",
         "date": "1929-10-29",
         "url": "https://en.wikipedia.org/wiki/Wall_Street_Crash_of_1929"
+      },
+      {
+        "name": "Bretton Woods Agreement",
+        "date": "1944-07-22",
+        "url": "https://en.wikipedia.org/wiki/Bretton_Woods_system"
+      },
+      {
+        "name": "Nixon Shock",
+        "date": "1971-08-15",
+        "url": "https://en.wikipedia.org/wiki/Nixon_shock"
+      },
+      {
+        "name": "Introduction of the Euro",
+        "date": "1999-01-01",
+        "url": "https://en.wikipedia.org/wiki/Euro"
+      },
+      {
+        "name": "Publication of Bitcoin white paper",
+        "date": "2008-10-31",
+        "url": "https://en.wikipedia.org/wiki/Bitcoin"
       }
     ],
     "eras": [
