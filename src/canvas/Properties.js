@@ -1,5 +1,5 @@
 import chroma from 'chroma-js'
-import DateTime from 'luxon/src/datetime'
+import {DateTime} from "luxon";
 
 export const LANE_HEIGHT = 20
 export const GRID_COLOR = chroma('lightgrey')
