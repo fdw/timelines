@@ -195,6 +195,12 @@
         "death": "1944-12-13",
         "url": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
         "short_name": "Vasiliy Kandinskiy"
+      },
+      {
+        "name": "Jean-Antoine Watteau",
+        "birth": "1684-10-10",
+        "death": "1721-07-18",
+        "url": "https://en.wikipedia.org/wiki/Antoine_Watteau"
       }
     ],
     "eras": [
