@@ -1,43 +1,46 @@
 import {Person} from './models'
 import {calculateAbsoluteX, calculateRelativeX} from "./timeUtil.ts";
 import React from "react";
-import {DateTime} from "luxon";
+import styled from 'styled-components';
 
 const HEIGHT = 50
 
 export function PersonVis({person, offset = 0}: { person: Person, offset?: number }): React.ReactElement {
-    return <a style={{
-        position: 'absolute',
-        left: calculateAbsoluteX(person.birth),
+    return <PersonBox style={{
         top: `${offset * (HEIGHT + 5)}px`,
+        left: calculateAbsoluteX(person.birth),
         width: calculateRelativeX(person.birth, person.death),
-        height: `${HEIGHT}px`,
-        borderWidth: '1px',
-        borderColor: 'red',
-        borderStyle: 'solid',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        overflow: "hidden",
-    }}><Name name={person.name}/><Years birth={person.birth} death={person.death}/></a>
+    }}><NameSpan>{person.name}</NameSpan>
+        <YearsSpan>{person.birth.year} - {person.death.year}</YearsSpan>
+    </PersonBox>
 }
 
-function Name({name}: { name: string }): React.ReactElement {
-    return <span style={{
-        textAlign: 'center',
-        overflow: "hidden",
-        whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis',
-        padding: '2px',
-        maxHeight: `${HEIGHT / 2 - 6}px`
-    }}>{name}</span>
-}
+const PersonBox = styled.div`
+  position: absolute;
+  height: ${HEIGHT}px;
+  //border-width: 1px;
+  //border-color: red;
+  background-color: teal;
+  //border-style: solid;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+`
 
-function Years({birth, death}: { birth: DateTime, death: DateTime }): React.ReactElement {
-    return <span style={{
-        textAlign: 'center',
-        padding: '2px',
-        maxHeight: `${HEIGHT / 2 - 6}px`,
-        fontSize: 'smaller'
-    }}>{birth.year} - {death.year}</span>
-}
+const NameSpan = styled.span`
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 2px;
+  max-height: ${HEIGHT / 2 - 6}px;
+`
+
+const YearsSpan = styled.span`
+  text-align: center;
+  padding: 2px;
+  max-height: ${HEIGHT / 2 - 6}px;
+  font-size: smaller;
+`
