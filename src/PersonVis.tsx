@@ -1,18 +1,25 @@
-import {Person} from './models'
-import {calculateAbsoluteX, calculateRelativeX} from "./timeUtil.ts";
-import React from "react";
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+import { Person } from './models'
+import { calculateAbsoluteX, calculateRelativeX } from './timeUtil'
 
 const HEIGHT = 50
 
-export function PersonVis({person, offset = 0}: { person: Person, offset?: number }): React.ReactElement {
-    return <PersonBox style={{
+export function PersonVis({ person, offset = 0 }: { person: Person; offset?: number }): React.ReactElement {
+  return (
+    <PersonBox
+      style={{
         top: `${offset * (HEIGHT + 5)}px`,
         left: calculateAbsoluteX(person.birth),
         width: calculateRelativeX(person.birth, person.death),
-    }}><NameSpan>{person.name}</NameSpan>
-        <YearsSpan>{person.birth.year} - {person.death.year}</YearsSpan>
+      }}
+    >
+      <NameSpan>{person.name}</NameSpan>
+      <YearsSpan>
+        {person.birth.year} - {person.death.year}
+      </YearsSpan>
     </PersonBox>
+  )
 }
 
 const PersonBox = styled.div`

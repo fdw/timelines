@@ -1,7 +1,7 @@
-import {DateTime} from "luxon";
+import { DateTime } from 'luxon'
 
 export interface Person {
-    name: string,
-    birth: DateTime,
-    death: DateTime
+  name: string
+  birth: DateTime
+  death: DateTime
 }
