@@ -17,3 +17,16 @@ export function calculateRelativeX(start: DateTime, end: DateTime): number {
 export function sortByBirth(a: Person, b: Person): number {
   return a.birth < b.birth ? -1 : a.birth > b.birth ? 1 : 0
 }
+
+export function sortByDate(a: {date: DateTime}, b: {date: DateTime}): number {
+  return a.date < b.date ? -1 : a.date > b.date ? 1 : 0
+}
+
+export function parseDate(string: string): DateTime {
+  if (string === 'now') {
+    return DateTime.local()
+  } else if (string.startsWith('-')) {
+    return DateTime.fromISO(`-00${string.substring(1)}`)
+  }
+  return DateTime.fromISO(string)
+}

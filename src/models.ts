@@ -5,3 +5,8 @@ export interface Person {
   birth: DateTime
   death: DateTime
 }
+
+export interface Event {
+  title: string
+  date: DateTime
+}

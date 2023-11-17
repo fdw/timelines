@@ -1,14 +1,13 @@
-import { DateTime } from 'luxon'
-
 import { Lanes } from './Lanes'
+import { parseDate } from './timeUtil'
 
 export function ArtFacet(): React.ReactElement {
   return (
     <Lanes
       people={people.map(it => ({
         name: it.short_name ?? it.name,
-        birth: DateTime.fromISO(it.birth),
-        death: DateTime.fromISO(it.death),
+        birth: parseDate(it.birth),
+        death: parseDate(it.death),
       }))}
     />
   )
