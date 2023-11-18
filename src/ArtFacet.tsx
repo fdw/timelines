@@ -8,6 +8,7 @@ export function ArtFacet(): React.ReactElement {
         name: it.short_name ?? it.name,
         birth: parseDate(it.birth),
         death: parseDate(it.death),
+        url: it.url
       }))}
     />
   )

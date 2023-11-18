@@ -1,6 +1,8 @@
-import { ArtFacet } from './ArtFacet.tsx'
+import { Tooltip } from 'react-tooltip'
+
+import { ArtFacet } from './ArtFacet'
+import { ScienceFacet } from './ScienceFacet'
 import { Ticks } from './Ticks'
-import { ScienceFacet } from './ScienceFacet.tsx'
 
 export function Overview() {
   return (
@@ -8,6 +10,7 @@ export function Overview() {
       <Ticks />
       {/*<ArtFacet />*/}
       <ScienceFacet />
+      <Tooltip clickable id="tooltip" openOnClick style={{ zIndex: 1000 }} />
     </div>
   )
 }

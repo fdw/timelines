@@ -4,14 +4,16 @@ import { parseDate } from './timeUtil'
 export function ScienceFacet(): React.ReactElement {
   return (
     <Lanes
+      events={events.map(it => ({
+        title: it.name,
+        date: parseDate(it.date),
+        url: it.url
+      }))}
       people={people.map(it => ({
         name: it.short_name ?? it.name,
         birth: parseDate(it.birth),
         death: parseDate(it.death),
-      }))}
-      events={events.map(it => ({
-        title: it.name,
-        date: parseDate(it.date)
+        url: it.url
       }))}
     />
   )
