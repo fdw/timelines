@@ -3,9 +3,9 @@ import ReactDOMServer from 'react-dom/server'
 
 import styled from 'styled-components'
 
-import { Person } from './models'
-import { calculateAbsoluteX, calculateRelativeX } from './timeUtil'
-import { WikipediaLink } from './WikipediaLink'
+import { Person } from '../../models'
+import { calculateAbsoluteX, calculateRelativeX } from '../../timeUtil'
+import { WikipediaLink } from '../utils/WikipediaLink'
 
 const HEIGHT = 50
 

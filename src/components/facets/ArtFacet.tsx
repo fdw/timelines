@@ -1,5 +1,5 @@
-import { Lanes } from './Lanes'
-import { parseDate } from './timeUtil'
+import { parseDate } from '../../timeUtil'
+import { Lanes } from '../utils/Lanes'
 
 export function ArtFacet(): React.ReactElement {
   return (

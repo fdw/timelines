@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon'
 import styled from 'styled-components'
 
-import { calculateAbsoluteX } from './timeUtil'
+import { calculateAbsoluteX } from '../timeUtil'
 
 const TICK_PERIOD = 25
 

@@ -1,9 +1,9 @@
 import { DateTime } from 'luxon'
 
-import { EventVis } from './EventVis.tsx'
-import { Event, Person } from './models'
-import { PersonVis } from './PersonVis'
-import { sortByDate } from './timeUtil'
+import { Event, Person } from '../../models'
+import { sortByDate } from '../../timeUtil'
+import { EventVis } from '../visualizations/EventVis'
+import { PersonVis } from '../visualizations/PersonVis'
 
 export function Lanes({ people = [], events=[] }: { people?: Person[], events?: Event[] }): React.ReactElement {
   const lanes: (Visualizable)[][] = []

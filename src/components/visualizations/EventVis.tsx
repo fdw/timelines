@@ -3,9 +3,9 @@ import ReactDOMServer from 'react-dom/server'
 
 import styled from 'styled-components'
 
-import { Event } from './models'
-import { calculateAbsoluteX } from './timeUtil'
-import { WikipediaLink } from './WikipediaLink'
+import { Event } from '../../models'
+import { calculateAbsoluteX } from '../../timeUtil'
+import { WikipediaLink } from '../utils/WikipediaLink'
 
 const HEIGHT = 50
 

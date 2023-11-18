@@ -1,7 +1,7 @@
 import { Tooltip } from 'react-tooltip'
 
-import { ArtFacet } from './ArtFacet'
-import { ScienceFacet } from './ScienceFacet'
+import { ArtFacet } from './facets/ArtFacet'
+import { ScienceFacet } from './facets/ScienceFacet'
 import { Ticks } from './Ticks'
 
 export function Overview() {
