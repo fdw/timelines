@@ -4,11 +4,10 @@ import { Event, Person } from '../../models'
 import { sortByDate } from '../../timeUtil'
 import { EventVis } from '../visualizations/EventVis'
 import { PersonVis } from '../visualizations/PersonVis'
+import { LANE_HEIGHT } from '../../constants'
 
 export function Lanes({ people = [], events = [] }: { people?: Person[], events?: Event[] }): React.ReactElement {
   const lanes: (Visualizable)[][] = []
-
-  let nextLane: 'up' | 'down' = 'up'
 
   function findLaneEndingBefore(date: DateTime): number {
     return Object.keys(lanes).map(it => ({
@@ -30,28 +29,9 @@ export function Lanes({ people = [], events = [] }: { people?: Person[], events?
 
 
   function addLane(): number {
-    const nextIndex = findIndex()
-    lanes[nextIndex] = []
-    return nextIndex
-  }
-
-  function findIndex(): number {
-    if (lanes.length === 0) {
-      return 10
-    }
-
-    let fn: (_: number[]) => number
-    switch (nextLane) {
-      case 'up':
-        fn = (values: number[]) => Math.min(...values) - 1
-        nextLane = 'down'
-        break
-      case 'down':
-        fn = (values: number[]) => Math.max(...values) + 1
-        nextLane = 'up'
-        break
-    }
-    return fn(Object.keys(lanes).map(it => Number(it)))
+    lanes.reverse()
+    lanes.push([])
+    return lanes.length - 1
   }
 
   const everything = people.map(it => ({
