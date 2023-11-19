@@ -6,8 +6,7 @@ import styled from 'styled-components'
 import { Person } from '../../models'
 import { calculateAbsoluteX, calculateRelativeX } from '../../timeUtil'
 import { WikipediaLink } from '../utils/WikipediaLink'
-
-const HEIGHT = 50
+import { LANE_HEIGHT } from '../../constants'
 
 export function PersonVis({ person, offset = 0 }: { person: Person; offset?: number }): React.ReactElement {
   return (
@@ -21,7 +20,7 @@ export function PersonVis({ person, offset = 0 }: { person: Person; offset?: num
       )}
       data-tooltip-id='tooltip'
       style={{
-        top: `${offset * (HEIGHT + 5)}px`,
+        top: `${offset * (LANE_HEIGHT)}px`,
         left: calculateAbsoluteX(person.birth),
         width: calculateRelativeX(person.birth, person.death),
       }}
@@ -36,7 +35,7 @@ export function PersonVis({ person, offset = 0 }: { person: Person; offset?: num
 
 const PersonBox = styled.div`
   position: absolute;
-  height: ${HEIGHT}px;
+  height: ${LANE_HEIGHT-5}px;
   //border-width: 1px;
   //border-color: red;
   background-color: teal;
@@ -54,13 +53,13 @@ const NameSpan = styled.span`
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 2px;
-  max-height: ${HEIGHT / 2 - 6}px;
+  max-height: ${(LANE_HEIGHT -5)/ 2 - 6}px;
 `
 
 const YearsSpan = styled.span`
   text-align: center;
   padding: 2px;
-  max-height: ${HEIGHT / 2 - 6}px;
+  max-height: ${(LANE_HEIGHT -5)/ 2 - 6}px;
   font-size: smaller;
 `
 

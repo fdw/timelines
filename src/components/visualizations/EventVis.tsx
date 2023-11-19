@@ -6,8 +6,7 @@ import styled from 'styled-components'
 import { Event } from '../../models'
 import { calculateAbsoluteX } from '../../timeUtil'
 import { WikipediaLink } from '../utils/WikipediaLink'
-
-const HEIGHT = 50
+import { LANE_HEIGHT } from '../../constants'
 
 export function EventVis({ event, offset = 0 }: { event: Event; offset?: number }): React.ReactElement {
   return (
@@ -21,7 +20,7 @@ export function EventVis({ event, offset = 0 }: { event: Event; offset?: number 
       )}
       data-tooltip-id='tooltip'
       style={{
-        top: `${offset * (HEIGHT + 5)}px`,
+        top: `${offset * (LANE_HEIGHT)}px`,
         left: calculateAbsoluteX(event.date),
       }}
     >
@@ -32,13 +31,13 @@ export function EventVis({ event, offset = 0 }: { event: Event; offset?: number 
 
 const EventBox = styled.div`
   position: absolute;
-  height: ${HEIGHT}px;
-  width: ${HEIGHT}px;
+  height: ${LANE_HEIGHT-5}px;
+  width: ${LANE_HEIGHT-5}px;
   //border-width: 1px;
   //border-color: red;
   background-color: pink;
   //border-style: solid;
-  border-radius: ${HEIGHT / 2}px;
+  border-radius: ${(LANE_HEIGHT -5)/ 2}px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +50,7 @@ const EventName = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   padding: 2px;
-  max-height: ${HEIGHT / 2 - 6}px;
+  max-height: ${(LANE_HEIGHT -5)/ 2 - 6}px;
 `
 
 const TooltipTitle = styled.div`
