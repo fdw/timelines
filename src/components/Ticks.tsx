@@ -13,7 +13,7 @@ export function Ticks({
   lastTick?: number
 }): React.ReactElement {
   return (
-    <div style={{ height: '100vh' }}>
+    <div style={{ position: 'sticky', top: 0, bottom: 0 }}>
       {[...Array((lastTick - firstTick) / TICK_PERIOD).keys()].map(it => {
         return <Tick key={`tick-${it}`} year={it * TICK_PERIOD} />
       })}
