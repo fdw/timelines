@@ -8,7 +8,7 @@ export function Overview() {
   return (
     <div style={{ width: 2 * 2500 }}>
       <Ticks />
-      {/*<ArtFacet />*/}
+      <ArtFacet />
       <ScienceFacet />
       <Tooltip clickable id="tooltip" openOnClick style={{ zIndex: 1000 }} />
     </div>

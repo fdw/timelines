@@ -40,14 +40,17 @@ export function Lanes({ people = [], events = [] }: { people?: Person[], events?
     type: 'Person',
   } as Visualizable)).concat(events.map(it => ({ date: it.date, object: it, type: 'Event' }))).sort(sortByDate)
 
+  everything.forEach(it => {
+    const lineIndex = findLaneEndingBefore(it.date)
+    lanes[lineIndex].push(it)
+  })
+
   return (
-    <>
-      {everything.map(it => {
-        const offset = findLaneEndingBefore(it.date)
-        lanes[offset].push(it)
-        return getVisualization(it, offset)
+    <div style={{ height: lanes.length * LANE_HEIGHT, position: 'relative' }}>
+      {lanes.map((lane, index) => {
+        return lane.map(it => getVisualization(it, index))
       })}
-    </>
+    </div>
   )
 }
 
