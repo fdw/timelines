@@ -1,0 +1,4 @@
+- Visualization of Events
+  - text is too long for circles
+- How to load data?
+  - dynamically, from a backend?

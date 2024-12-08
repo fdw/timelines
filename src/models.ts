@@ -1,13 +1,13 @@
 import { DateTime } from 'luxon'
 
-export interface Person {
+export interface TimeRange {
   name: string
-  birth: DateTime
-  death: DateTime
+  start: DateTime
+  stop: DateTime
   url: string
 }
 
-export interface Event {
+export interface SingularEvent {
   title: string
   date: DateTime
   url: string

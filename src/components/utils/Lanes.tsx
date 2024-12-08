@@ -1,12 +1,12 @@
 import { DateTime } from 'luxon'
 
-import { Event, Person } from '../../models'
-import { sortByDate } from '../../timeUtil'
-import { EventVis } from '../visualizations/EventVis'
-import { PersonVis } from '../visualizations/PersonVis'
 import { LANE_HEIGHT } from '../../constants'
+import { SingularEvent, TimeRange } from '../../models'
+import { sortByDate } from '../../timeUtil'
+import { SingularEventVis } from '../visualizations/SingularEventVis'
+import { TimeRangeVis } from '../visualizations/TimeRangeVis'
 
-export function Lanes({ people = [], events = [] }: { people?: Person[], events?: Event[] }): React.ReactElement {
+export function Lanes({ people = [], events = [] }: { people?: TimeRange[], events?: SingularEvent[] }): React.ReactElement {
   const lanes: (Visualizable)[][] = []
 
   function findLaneEndingBefore(date: DateTime): number {
@@ -21,7 +21,7 @@ export function Lanes({ people = [], events = [] }: { people?: Person[], events?
 
     switch (lastObject.type) {
       case 'Person':
-        return lastObject.object.death
+        return lastObject.object.stop
       case 'Event':
         return lastObject.object.date.plus({ years: 10 })
     }
@@ -35,7 +35,7 @@ export function Lanes({ people = [], events = [] }: { people?: Person[], events?
   }
 
   const everything = people.map(it => ({
-    date: it.birth,
+    date: it.start,
     object: it,
     type: 'Person',
   } as Visualizable)).concat(events.map(it => ({ date: it.date, object: it, type: 'Event' }))).sort(sortByDate)
@@ -57,18 +57,18 @@ export function Lanes({ people = [], events = [] }: { people?: Person[], events?
 function getVisualization({ object, type }: Visualizable, offset: number): React.ReactElement {
   switch (type) {
     case 'Person':
-      return <PersonVis key={object.name} offset={offset} person={object} />
+      return <TimeRangeVis key={object.name} offset={offset} event={object} />
     case 'Event':
-      return <EventVis event={object} key={object.title} offset={offset} />
+      return <SingularEventVis event={object} key={object.title} offset={offset} />
   }
 }
 
 type Visualizable = {
   date: DateTime
-  object: Person
+  object: TimeRange
   type: 'Person'
 } | {
   date: DateTime
-  object: Event
+  object: SingularEvent
   type: 'Event'
 }

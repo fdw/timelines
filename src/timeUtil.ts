@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 
-import { Person } from './models'
+import { TimeRange } from './models'
 
 export const DATE_SCALE_FACTOR = 3
 export const DATE_SCALE_UNIT = 'months'
@@ -14,8 +14,8 @@ export function calculateRelativeX(start: DateTime, end: DateTime): number {
   return end.diff(start, DATE_SCALE_UNIT).as(DATE_SCALE_UNIT) / DATE_SCALE_FACTOR
 }
 
-export function sortByBirth(a: Person, b: Person): number {
-  return a.birth < b.birth ? -1 : a.birth > b.birth ? 1 : 0
+export function sortByBirth(a: TimeRange, b: TimeRange): number {
+  return a.start < b.start ? -1 : a.start > b.start ? 1 : 0
 }
 
 export function sortByDate(a: {date: DateTime}, b: {date: DateTime}): number {

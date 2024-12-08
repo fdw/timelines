@@ -3,12 +3,12 @@ import ReactDOMServer from 'react-dom/server'
 
 import styled from 'styled-components'
 
-import { Event } from '../../models'
+import { SingularEvent } from '../../models'
 import { calculateAbsoluteX } from '../../timeUtil'
 import { WikipediaLink } from '../utils/WikipediaLink'
 import { LANE_HEIGHT } from '../../constants'
 
-export function EventVis({ event, offset = 0 }: { event: Event; offset?: number }): React.ReactElement {
+export function SingularEventVis({ event, offset = 0 }: { event: SingularEvent; offset?: number }): React.ReactElement {
   return (
     <EventBox
       data-tooltip-html={ReactDOMServer.renderToStaticMarkup(
@@ -24,6 +24,7 @@ export function EventVis({ event, offset = 0 }: { event: Event; offset?: number 
         left: calculateAbsoluteX(event.date),
       }}
     >
+      <EventCircle />
       <EventName>{event.title}</EventName>
     </EventBox>
   )
@@ -31,26 +32,26 @@ export function EventVis({ event, offset = 0 }: { event: Event; offset?: number 
 
 const EventBox = styled.div`
   position: absolute;
-  height: ${LANE_HEIGHT-5}px;
-  width: ${LANE_HEIGHT-5}px;
-  //border-width: 1px;
-  //border-color: red;
-  background-color: pink;
-  //border-style: solid;
-  border-radius: ${(LANE_HEIGHT -5)/ 2}px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
+  padding: 2px;
+`
+
+const EventCircle = styled.div`
+  height: ${LANE_HEIGHT/2-5}px;
+  width: ${LANE_HEIGHT/2-5}px;
+  background-color: pink;
+  border-radius: ${LANE_HEIGHT/ 2-5}px;
 `
 
 const EventName = styled.div`
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
-  text-overflow: ellipsis;
   padding: 2px;
   max-height: ${(LANE_HEIGHT -5)/ 2 - 6}px;
+  transform: translate(calc(-50% + ${LANE_HEIGHT/4}px), 0);
 `
 
 const TooltipTitle = styled.div`
