@@ -164,9 +164,13 @@
         "birth": "1538",
         "death": "1443",
         "url": "https://en.wikipedia.org/wiki/Askia_Muhammad_I",
-        "short_name": "Askia Muhammad I",
-        "events": [
-        ]
+        "short_name": "Askia Muhammad I"
+      },
+      {
+        "name": "Adolf Hitler",
+        "birth": "1889-04-20",
+        "death": "1945-04-30",
+        "url": "https://en.wikipedia.org/wiki/Adolf_Hitler"
       }
     ],
     "eras": [
